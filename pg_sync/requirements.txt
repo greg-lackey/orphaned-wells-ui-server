@@ -1,0 +1,6 @@
+# pg_sync dependencies
+pymongo>=4.6
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+pyyaml>=6.0
+openpyxl>=3.1        # only needed for tools/import_from_xlsx.py

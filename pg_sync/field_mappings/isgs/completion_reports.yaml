@@ -1,0 +1,272 @@
+description: Maps OGRRE processor field names to isgs.completion_reports PostgreSQL
+  columns.
+target_schema: isgs
+target_table: completion_reports
+child_tables:
+  Type_Of_Logs: completion_report_logs
+  Completion_For_Production: completion_report_completion_intervals
+  Gun_Perforating_Windows: completion_report_gun_perforating_windows
+  Acid_Or_Shooting_Record_Or_Fracture_Treatment: completion_report_acid_records
+  Casing_Record: completion_report_casing_records
+  Casing_And_Tubing_Record: completion_report_casing_records
+  Packer: completion_report_packers
+interval_fields:
+  Completion_For_Production::Open_Hole_Interval:
+    from_col: open_hole_from
+    to_col: open_hole_to
+    raw_col: open_hole_interval
+  Completion_For_Production::Perforation_Interval:
+    from_col: perf_from
+    to_col: perf_to
+    raw_col: perf_int
+  Gun_Perforating_Windows:
+    from_col: perf_from
+    to_col: perf_to
+    raw_col: perf_int
+  Interval_Cored:
+    from_col: null
+    to_col: null
+    raw_col: cored_interval
+processors:
+  IL_Ver_A_WellCompletion:
+    scalar_fields:
+      Cable_Tools_From: cable_tools_from
+      Cable_Tools_To: cable_tools_to
+      Date_Drilling_Complete: comp_date
+      Was_Well_Cored_No: cored_no
+      Was_Well_Cored_Yes: cored_yes
+      County: county
+      Deepened: report_type_deepening
+      Drilled_Out_Plugged_Hole: report_type_doph
+      Drill_Stem_Test_Run_No: dst_no
+      Drill_Stem_Test_Run_Yes: dst_yes
+      Elevation_DF: elev_df
+      Ground: elev_gr
+      KB: elev_kb
+      Date_of_First_Prod: first_prod_date
+      Name_of_Producing_or_Injection_Formation: prod_inj_form
+      Gas_MCF: gas_prod
+      Hole_Size: prod_hole_size
+      Mine_or_Intermediate_Sks_Cement: int_cem_vol
+      Mine_or_Intermediate_Depth: int_csg_depth
+      Mine_or_Intermediate_Csg_Pulled: int_csg_pulled
+      Mine_or_Intermediate_Size: int_csg_out_diam
+      Lease_Sign_Posted_No: lease_sign_no
+      Lease_Sign_Posted_Yes: lease_sign_yes
+      Liner_Sks_Cement: liner_cem_vol
+      Liner_Depth: liner_depth
+      Liner_Csg_Pulled: liner_pulled
+      Liner_Size: liner_size
+      Electric_Logs_Run_Yes: logs_run_yes
+      Electric_Logs_Run_No: logs_run_no
+      Electric_Logs_Run_Date: log_date
+      New_Well: report_type_new_well
+      Daily_Production_Bbls_Oil: oil_prod
+      Operator: operator
+      PBTD: pbtd
+      Date_Issued: permit_date
+      Permit_No: permit_number
+      Location: plss_loc
+      Producing_Sks_Cement: prod_cem_vol
+      Producing_Depth: prod_csg_depth
+      Producing_Csg_Pulled: prod_csg_pulled
+      Producing_Size: prod_csg_out_diam
+      Range: range
+      Rotary_Tools_From: rotary_tools_from
+      Rotary_Tools_To: rotary_tools_to
+      Section: section
+      Signature: signature
+      Address: signature_address
+      Date_Signed: signature_date
+      Date_Drilling_Began: spud_date
+      Surface_Sks_Cement: surf_cem_vol
+      Surface_Depth: surf_csg_depth
+      Surface_Csg_Pulled: surf_csg_pulled
+      Surface_Size: surf_csg_out_diam
+      Date_of_Test: test_date
+      Length_of_Test: test_length
+      Township: township
+      Acidized: treatment_acidized
+      List_Amount_Used: treatment_amnt
+      Intervals: treatment_interval
+      Other: treatment_other
+      Perforated: treatment_perf
+      Shot: treatment_shot
+      Fractured: treatment_fractured
+      Total_Depth: tvd
+      Conv: type_conv
+      Dry_Hole: type_dry_hole
+      Gas: type_gas
+      Gas_Input: type_gas_inj
+      Observation: type_observation
+      Oil: type_oil
+      Str_Test: type_str_test
+      SWD: type_swd
+      Water_Input: type_water_inj
+      Water_Supply: type_water_supply
+      Water: water_prod
+      Well_Name_and_No: well_name
+  IL_Ver_B_Well_Completion:
+    scalar_fields:
+      Cable_From: cable_tools_from
+      Cable_To: cable_tools_to
+      Date_Drilling_Finished: comp_date
+      Interval_Cored: cored_interval
+      Was_Well_Cored_No: cored_no
+      Was_Well_Cored_Yes: cored_yes
+      County: county
+      Drill_Stem_Test_Run_No: dst_no
+      Drill_Stem_Test_Run_Yes: dst_yes
+      Zone_Tested: dst_zone
+      Elevation_DF: elev_df
+      Elevation_GR: elev_gr
+      Elevation_KB: elev_kb
+      Date_Of_First_Production: first_prod_date
+      Source_Of_Injected_Fluid: fluid_source
+      Rate_Per_Day_Gas: gas_inj_rate
+      Initial_Production_Rate_Gas: gas_prod
+      Gas_PSI: gas_press
+      Date_Of_First_Injection: inj_date
+      Type_Of_Injection_Fluid_Freshwater: inj_fluid_freshwater
+      Type_Of_Injection_Fluid_Other: inj_fluid_other
+      Type_Of_Injection_Fluid_Other_Text: inj_fluid_other_desc
+      Type_Of_Injection_Fluid_Saltwater: inj_fluid_saltwater
+      Injection_Formation: inj_form
+      Intermedate_Mine_String_Or_Liner_Top_Of_Cement: int_cem_top
+      Intermedate_Mine_String_Or_Liner_Top_Determined_By: int_cem_top_meth
+      Intermedate_Mine_String_Or_Liner_Sacks_Cement: int_cem_vol
+      Intermedate_Mine_String_Or_Liner_Setting_Depth: int_csg_depth
+      Intermedate_Mine_String_Or_Liner_Size: int_csg_out_diam
+      Intermedate_Mine_String_Or_Liner_Hole_Size: int_hole_size
+      Type_Of_Logs:Type_Of_Log: log_type
+      Wireline_Logs_Run_Yes: logs_run_yes
+      Wireline_Logs_Run_No: logs_run_no
+      New_Well: report_type_new_well
+      Well_Not_Converted_Permit_Expired: not_converted_permit_expired
+      Well_Not_Drilled_Permit_Expired: not_drilled_permit_expired
+      Initial_Production_Rate_Oil: oil_prod
+      Permittee: operator
+      Permittee_Number: operator_number
+      Other_Top_Of_Cement: oth_cem_top
+      Other_Sacks_Cement: oth_cem_vol
+      Other_Setting_Depth: oth_csg_depth
+      Other_Size: oth_csg_out_diam
+      Other_Top_Determined_By: other_cem_top_meth
+      Other_Hole_Size: other_hole_size
+      PBTD: pbtd
+      Permit_Number: permit_number
+      Location: plss_loc
+      Production_Top_Of_Cement: prod_cem_top
+      Production_Top_Determined_By: prod_cem_top_meth
+      Production_Sacks_Cement: prod_cem_vol
+      Production_Setting_Depth: prod_csg_depth
+      Production_Size: prod_csg_out_diam
+      Producing_Formations: prod_inj_form
+      Production_Hole_Size: prod_hole_size
+      Range: range
+      Reference_Number: ref_number
+      Conversion: report_type_conversion
+      Deepening: report_type_deepening
+      DOPH: report_type_doph
+      Workover: report_type_workover
+      Rotary_From: rotary_tools_from
+      Rotary_To: rotary_tools_to
+      Section: section
+      Signature_Of_Permittee_Or_Designee: signature
+      Address: signature_address
+      City_State: signature_city_state
+      Date_Signed: signature_date
+      Title: signature_title
+      Tubing_Size: tubing_size
+      Date_Drilling_Began: spud_date
+      Surface_Top_Of_Cement: surf_cem_top
+      Surface_Top_Determined_By: surf_cem_top_meth
+      Surface_Sacks_Cement: surf_cem_vol
+      Surface_Setting_Depth: surf_csg_depth
+      Surface_Size: surf_csg_out_diam
+      Surface_Hole_Size: surf_hole_size
+      Date_Of_Test: test_date
+      Length_Of_Test: test_length
+      Township: township
+      Tubing_Type: tubing_type
+      Total_Depth: tvd
+      Type_Of_Well_Coal_Bed_Gas: type_coal_bed_gas
+      Type_Of_Well_Coal_Mine_Gas: type_coal_mine_gas
+      Type_Of_Well_D_And_A: type_da
+      Type_Of_Well_Gas_Producer: type_gas
+      Type_Of_Well_Gas_Storage: type_gas_storage
+      Type_Of_Well_Observation: type_observation
+      Type_Of_Well_Oil_Producer: type_oil
+      Type_Of_Well_Other: type_other
+      Type_Of_Well_Other_Text: type_other_text
+      Type_Of_Well_Service_Well: type_service
+      Type_Of_Well_Service_Well_Text: type_service_text
+      Type_Of_Well_Class_II_Injection_Well: type_swd
+      Type_Of_Well_Water_Supply: type_water_supply
+      Rate_Per_Day_Water: water_inj_rate
+      Initial_Production_Rate_Water: water_prod
+      Water_PSI: water_press
+      Well_Name: well_name
+    child_fields:
+      Completion_For_Production:
+        Formation_Name: comp_form
+        Lithology: lithology
+        Open_Hole_Interval: open_hole_interval
+        Perforation_Interval: perf_int
+        Shots: perf_shots
+        Acidized_Fractures_Other: treatment_acidized_fractures_other
+      Type_Of_Logs:
+        Date: log_date
+      Packer:
+        Setting_Depth: packer_depth
+        Brand_And_Type: packer_type
+  IL_WellCompletion_G:
+    scalar_fields:
+      Cable_Tools_To: cable_tools_to
+      Date_Completed: comp_date
+      County: county
+      Casing_Record: csg_type
+      Elevation: elev_gr
+      EW_Distance: ew_distance
+      EW_Line: ew_line
+      First_Quarter: first_quarter
+      Electric_Log_Run: logs_run_yes
+      NS_Distance: ns_distance
+      NS_Line: ns_line
+      Owner_Or_Operator: operator
+      PB_To: pbtd
+      Gun_Perforating_Windows: perf_int
+      Permit_No: permit_number
+      Initial_Production_After: post_test_prod
+      Initial_Production_Before: pre_test_prod
+      R: range
+      Rotary_Tools_From: rotary_tools_from
+      Cable_Tools_From: rotary_tools_to
+      Rotary_Tools_To: rotary_tools_to
+      Second_Quarter: second_quarter
+      Sec: section
+      Signed: signature
+      Date: signature_date
+      Title: signature_title
+      Date_Drilling_Began: spud_date
+      Third_Quarter: third_quarter
+      T: township
+      Total_Depth_Drilled: tvd
+      Farm: well_name_farm
+      Well_No: well_name_number
+      Type_Of_Well: well_type
+    child_fields:
+      Casing_Record:
+        Sacks_Cement: cem_vol
+        Depth: csg_depth
+        Size: csg_out_diam
+      Gun_Perforating_Windows:
+        From: perf_from
+        No_Shots: perf_shots
+        To: perf_to
+      Acid_Or_Shooting_Record_Or_Fracture_Treatment:
+        Amount_Used: treatment_amnt
+        Date: treatment_date
+        From: treatment_from
+        To: treatment_to
+
