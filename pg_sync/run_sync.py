@@ -36,6 +36,11 @@ def main() -> None:
         help="Ignore last sync timestamp and re-sync all reviewed records.",
     )
     parser.add_argument(
+        "--skip-synthesis",
+        action="store_true",
+        help="Skip Layer 2 synthesis after Layer 1 sync completes.",
+    )
+    parser.add_argument(
         "--log-level",
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
@@ -55,6 +60,7 @@ def main() -> None:
             form_type=args.form,
             collaborator=args.collaborator,
             full_sync=args.full_sync,
+            skip_synthesis=args.skip_synthesis,
         )
     except Exception as exc:
         logging.critical("Sync failed with unhandled exception: %s", exc, exc_info=True)

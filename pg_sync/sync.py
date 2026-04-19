@@ -17,6 +17,7 @@ from .pg_writer import (
     log_sync_start,
     write_record,
 )
+from .synthesizer import run_synthesis
 from .transformer import transform_record
 
 log = logging.getLogger(__name__)
@@ -35,14 +36,16 @@ def run_sync(
     form_type: str,
     collaborator: Optional[str] = None,
     full_sync: bool = False,
+    skip_synthesis: bool = False,
 ) -> tuple[int, int]:
     """
     Run the ETL pipeline for the given form_type.
 
     Args:
-        form_type:    e.g. 'completion_reports'
-        collaborator: e.g. 'isgs' (defaults to config.COLLABORATOR)
-        full_sync:    If True, ignore the last sync timestamp and sync all records.
+        form_type:       e.g. 'completion_reports'
+        collaborator:    e.g. 'isgs' (defaults to config.COLLABORATOR)
+        full_sync:       If True, ignore the last sync timestamp and sync all records.
+        skip_synthesis:  If True, skip Layer 2 synthesis after Layer 1 sync.
 
     Returns:
         (records_synced, records_failed)
@@ -75,6 +78,12 @@ def run_sync(
         apply_schema(pg_conn, str(schema_path))
     else:
         log.warning("No schema file found at %s — skipping DDL apply.", schema_path)
+
+    well_state_path = config.SCHEMA_DIR / collaborator / "well_state.sql"
+    if well_state_path.exists():
+        apply_schema(pg_conn, str(well_state_path))
+    else:
+        log.warning("No well_state schema found at %s — Layer 2 tables not created.", well_state_path)
 
     # ------------------------------------------------------------------
     # Load field mapping
@@ -146,6 +155,22 @@ def run_sync(
         raise
 
     log_sync_end(pg_conn, sync_log_id, synced, failed, schema=pg_schema)
+
+    # ------------------------------------------------------------------
+    # Layer 2 synthesis (runs after all Layer 1 writes are committed)
+    # ------------------------------------------------------------------
+    if not skip_synthesis and synced > 0:
+        pg_conn_synth = psycopg2.connect(config.PG_DSN)
+        pg_conn_synth.autocommit = False
+        try:
+            run_synthesis(pg_conn_synth, schema=pg_schema)
+        except Exception as exc:
+            log.error("Layer 2 synthesis failed (Layer 1 data is intact): %s", exc)
+        finally:
+            pg_conn_synth.close()
+    elif skip_synthesis:
+        log.info("Layer 2 synthesis skipped (--skip-synthesis)")
+
     pg_conn.close()
 
     log.info(
