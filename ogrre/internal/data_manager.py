@@ -6,7 +6,7 @@ import json
 import re
 
 from bson import ObjectId
-from pymongo import ASCENDING, DESCENDING, InsertOne, UpdateOne
+from pymongo import ASCENDING, DESCENDING, InsertOne, UpdateOne, ReturnDocument
 
 import ogrre_data_cleaning.processor_schemas.processor_api as processor_api
 from ogrre.internal.mongodb_connection import connectToDatabase
@@ -19,6 +19,12 @@ _log = logging.getLogger(__name__)
 REQUIRE_AUTH = os.getenv("REQUIRE_AUTH", "true").lower() in ("1", "true", "yes")
 
 COLLABORATORS = ["isgs", "calgem", "osage"]
+DEFAULT_UNAUTHENTICATED_TEAM = {
+    "name": "default",
+    "display_name": "Default",
+    "users": ["anonymous"],
+    "project_list": [],
+}
 
 DEFAULT_PROCESSORS = [
     {
@@ -54,7 +60,27 @@ class DataManager:
         self.lock_duration = 120
         self.using_default_processor = False
         self.use_airtable = False
+        self.ensureDefaultUnauthenticatedTeam()
         self.createProcessorsList()
+
+    def ensureDefaultUnauthenticatedTeam(self):
+        if REQUIRE_AUTH:
+            return
+
+        query = {"name": DEFAULT_UNAUTHENTICATED_TEAM["name"]}
+        update = {"$setOnInsert": DEFAULT_UNAUTHENTICATED_TEAM.copy()}
+        result = self.db.teams.update_one(query, update, upsert=True)
+        if result.upserted_id:
+            _log.info("created default unauthenticated team")
+
+    def getDefaultTeamForUser(self, email):
+        if not REQUIRE_AUTH and email == "anonymous":
+            return DEFAULT_UNAUTHENTICATED_TEAM["name"]
+
+        user_document = self.getDocument("users", ({"email": email}))
+        if user_document is None:
+            return None
+        return user_document.get("default_team", None)
 
     def getMongoProcessorByID(self, google_id):
         projection = {"_id": 0}
@@ -571,10 +597,10 @@ class DataManager:
         return projects
 
     def getUserProjectList(self, user):
-        user_query = {"email": user}
-        user_cursor = self.db.users.find(user_query)
-        user_document = user_cursor.next()
-        default_team = user_document.get("default_team", None)
+        default_team = self.getDefaultTeamForUser(user)
+        if default_team is None:
+            _log.info(f"user {user} has no default team")
+            return []
         return self.getTeamProjectList(default_team)
 
     @time_it
@@ -591,16 +617,24 @@ class DataManager:
         return stats
 
     def fetchTeamInfo(self, email):
-        user_doc = self.db.users.find({"email": email}).next()
-        team_name = user_doc["default_team"]
-        team_doc = self.db.teams.find({"name": team_name}).next()
+        team_name = self.getDefaultTeamForUser(email)
+        if team_name is None:
+            _log.error(f"unable to find default team for user {email}")
+            return None
+
+        team_doc = self.getDocument("teams", {"name": team_name})
+        if team_doc is None:
+            _log.error(f"unable to find team {team_name}")
+            return None
+
         if "projects" in team_doc:
             del team_doc["projects"]
         ## convert object ids to strings
         team_doc["_id"] = str(team_doc["_id"])
-        for i in range(len(team_doc["project_list"])):
-            project_object_id = team_doc["project_list"][i]
-            team_doc["project_list"][i] = str(project_object_id)
+        team_doc["project_list"] = [
+            str(project_object_id)
+            for project_object_id in team_doc.get("project_list", [])
+        ]
         return team_doc
 
     def fetchTeams(self, user_info):
@@ -623,14 +657,16 @@ class DataManager:
     @time_it
     def fetchProjects(self, user):
         projects = []
-        if user.get("anonymous", False):
-            _log.info(f"getting all projects for anonymous user")
-            cursor = self.db.projects.find({})
+        if user.get("anonymous", False) and not REQUIRE_AUTH:
+            _log.info(f"getting projects for anonymous user - default team")
+            user_projects = self.getTeamProjectList(
+                DEFAULT_UNAUTHENTICATED_TEAM["name"]
+            )
         else:
             _log.info(f"user is not anonymous")
             user_email = user.get("email", None)
             user_projects = self.getUserProjectList(user_email)
-            cursor = self.db.projects.find({"_id": {"$in": user_projects}})
+        cursor = self.db.projects.find({"_id": {"$in": user_projects}})
         for document in cursor:
             document["_id"] = str(document["_id"])
             projects.append(document)
@@ -1010,7 +1046,28 @@ class DataManager:
         history_cursor = self.db.history.find(
             {"record_id": record_id}, {"_id": 0}
         ).sort("timestamp", DESCENDING)
-        return list(history_cursor)
+        history_items = list(history_cursor)
+
+        for history_item in history_items:
+            action = history_item.get("action")
+
+            if action == "updateRecord":
+                query = history_item.get("query")
+                previous_state = history_item.get("previous_state")
+                if isinstance(query, (dict, list)):
+                    self._annotateHistoryPayloadNumericTypes(query)
+                if isinstance(previous_state, (dict, list)):
+                    self._annotateHistoryPayloadNumericTypes(previous_state)
+
+            if action == "cleanRecord":
+                before_attrs = history_item.get("attributesList_before")
+                after_attrs = history_item.get("attributesList_after")
+                if isinstance(before_attrs, (dict, list)):
+                    self._annotateHistoryPayloadNumericTypes(before_attrs)
+                if isinstance(after_attrs, (dict, list)):
+                    self._annotateHistoryPayloadNumericTypes(after_attrs)
+
+        return history_items
 
     @time_it
     def getRecordIndexes(self, document, filterBy, sortBy):
@@ -1075,8 +1132,7 @@ class DataManager:
     def createProject(self, project_info, user_info):
         ## get user's default team
         user_email = user_info.get("email", "")
-        user_document = self.getDocument("users", ({"email": user_email}))
-        default_team = user_document.get("default_team", None)
+        default_team = self.getDefaultTeamForUser(user_email)
         if default_team is None:
             _log.info(f"user {user_email} has no default team")
             return False
@@ -1109,8 +1165,7 @@ class DataManager:
     def createRecordGroup(self, rg_info, user_info):
         ## get user's default team
         user_email = user_info.get("email", "")
-        user_document = self.getDocument("users", ({"email": user_email}))
-        default_team = user_document.get("default_team", None)
+        default_team = self.getDefaultTeamForUser(user_email)
         if default_team is None:
             _log.info(f"user {user_email} has no default team")
             return False
@@ -1207,7 +1262,12 @@ class DataManager:
         notes=None,
         calling_function=None,
     ):
-        # _log.info(f"new_data: {new_data}")
+        # _log.info(f"updateRecord new_data: {new_data}")
+        is_insert_delete_or_coordinates_update = (
+            update_type == "insertField"
+            or update_type == "deleteField"
+            or update_type == "updateFieldCoordinates"
+        )
         attained_lock = False
         user = None
         if user_info is None and not forceUpdate:
@@ -1221,27 +1281,19 @@ class DataManager:
             _id = ObjectId(record_id)
             search_query = {"_id": _id}
             if update_type == "record":
+                # this initial block is only done by internal backend calls
                 data_update = new_data
                 update_query = {"$set": data_update}
             else:
-                # this is a little outdated. sometimes we provide update type as its own parameter,
-                # sometimes (when updating review status?) we pass it as part of the new data. TODO: clean this up
+                # this data_update definition is required for internal backend calls (such as attributesList updates)
                 data_update = {update_type: new_data.get(update_type, None)}
-                # print(f"initially making data_update: {data_update}")
+
                 ## call cleaning functions
                 if field_to_clean:
                     attributeToClean = new_data["v"]
                     self.cleanAttribute(attributeToClean, record_id=record_id)
 
-                if update_type == "attributesList":
-                    ## if an attribute is updated and the record is unreviewed, automatically move review_status to incomplete
-                    new_review_status = new_data.get("review_status", None)
-                    if new_review_status == "unreviewed":
-                        data_update["review_status"] = "incomplete"
-                    elif new_review_status:
-                        data_update["review_status"] = new_review_status
-                    data_update["attributesList"] = new_data.get("attributesList")
-                elif update_type == "attribute":
+                if update_type == "attribute":
                     is_subattribute = new_data.get("isSubattribute", False)
                     idx = new_data.get("idx", None)
                     v = new_data.get("v", None)
@@ -1262,6 +1314,212 @@ class DataManager:
                         update_key_parts = attr_key.split(".")
                     if reviewStatus == "unreviewed":
                         data_update["review_status"] = "incomplete"
+
+                elif is_insert_delete_or_coordinates_update:
+                    fieldID = new_data.get("fieldID")
+                    parentAttribute = new_data.get("parentAttribute")
+                    k = fieldID.get("key")
+                    primaryIndex = fieldID.get("primaryIndex")
+                    isSubattribute = fieldID.get("isSubattribute")
+                    subIndex = fieldID.get("subIndex")
+                    if update_type == "insertField":
+                        if not isSubattribute:
+                            newIndex = primaryIndex + 1
+                            newField = {
+                                "key": k,
+                                "ai_confidence": None,
+                                "confidence": None,
+                                "raw_text": None,
+                                "text_value": None,
+                                "value": "",
+                                "normalized_vertices": None,
+                                "normalized_value": None,
+                                "subattributes": None,
+                                "isSubattribute": False,
+                                "edited": False,
+                                "page": None,
+                                "user_added": True,
+                            }
+                            data_update = {
+                                "$push": {
+                                    "attributesList": {
+                                        "$each": [newField],
+                                        "$position": newIndex,
+                                    }
+                                }
+                            }
+                        else:
+                            newSubIndex = subIndex + 1
+                            newSubField = {
+                                "key": k,
+                                "ai_confidence": None,
+                                "confidence": None,
+                                "raw_text": None,
+                                "text_value": None,
+                                "value": "",
+                                "normalized_vertices": None,
+                                "normalized_value": None,
+                                "subattributes": None,
+                                "isSubattribute": True,
+                                "edited": False,
+                                "page": None,
+                                "user_added": True,
+                                "topLevelAttribute": parentAttribute,
+                            }
+                            parent_attribute_doc = self.db.records.find_one(
+                                {"_id": _id},
+                                {
+                                    "_id": 0,
+                                    "attributesList": {"$slice": [primaryIndex, 1]},
+                                },
+                            )
+                            parent_attribute = (
+                                parent_attribute_doc.get("attributesList", [None])[0]
+                                if parent_attribute_doc
+                                else None
+                            )
+                            _log.info(f"parent_attribute: {parent_attribute}")
+                            if not parent_attribute:
+                                _log.info(
+                                    f"Error: tried to insert child attribute to a parent attribute that doesn't exist"
+                                )
+                                return False
+                            subattributes = parent_attribute.get("subattributes")
+                            if subattributes is not None:
+                                data_update = {
+                                    "$push": {
+                                        f"attributesList.{primaryIndex}.subattributes": {
+                                            "$each": [newSubField],
+                                            "$position": newSubIndex,
+                                        }
+                                    }
+                                }
+                            else:
+                                data_update = {
+                                    "$set": {
+                                        f"attributesList.{primaryIndex}.subattributes": [
+                                            newSubField
+                                        ]
+                                    }
+                                }
+                    elif update_type == "deleteField":
+                        if not isSubattribute:
+                            data_update = {
+                                "attributesList": {
+                                    "$concatArrays": [
+                                        {"$slice": ["$attributesList", primaryIndex]},
+                                        {
+                                            "$slice": [
+                                                "$attributesList",
+                                                primaryIndex + 1,
+                                                {"$size": "$attributesList"},
+                                            ]
+                                        },
+                                    ]
+                                }
+                            }
+                        else:
+                            data_update = {
+                                "attributesList": {
+                                    "$let": {
+                                        "vars": {
+                                            "targetAttribute": {
+                                                "$arrayElemAt": [
+                                                    "$attributesList",
+                                                    primaryIndex,
+                                                ]
+                                            }
+                                        },
+                                        "in": {
+                                            "$concatArrays": [
+                                                {
+                                                    "$slice": [
+                                                        "$attributesList",
+                                                        primaryIndex,
+                                                    ]
+                                                },
+                                                [
+                                                    {
+                                                        "$mergeObjects": [
+                                                            "$$targetAttribute",
+                                                            {
+                                                                "subattributes": {
+                                                                    "$concatArrays": [
+                                                                        {
+                                                                            "$slice": [
+                                                                                "$$targetAttribute.subattributes",
+                                                                                subIndex,
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "$slice": [
+                                                                                "$$targetAttribute.subattributes",
+                                                                                subIndex
+                                                                                + 1,
+                                                                                {
+                                                                                    "$size": "$$targetAttribute.subattributes"
+                                                                                },
+                                                                            ]
+                                                                        },
+                                                                    ]
+                                                                }
+                                                            },
+                                                        ]
+                                                    }
+                                                ],
+                                                {
+                                                    "$slice": [
+                                                        "$attributesList",
+                                                        primaryIndex + 1,
+                                                        {"$size": "$attributesList"},
+                                                    ]
+                                                },
+                                            ]
+                                        },
+                                    }
+                                }
+                            }
+                    elif update_type == "updateFieldCoordinates":
+                        current_time = time.time()
+                        new_coordinates = new_data.get("new_coordinates")
+                        pageNumber = new_data.get("pageNumber")
+                        if not isSubattribute:
+                            data_update = {
+                                f"attributesList.{primaryIndex}.user_provided_coordinates": new_coordinates
+                            }
+                            data_update[
+                                f"attributesList.{primaryIndex}.page"
+                            ] = pageNumber
+                            data_update[
+                                f"attributesList.{primaryIndex}.lastUpdated"
+                            ] = current_time
+                            data_update[
+                                f"attributesList.{primaryIndex}.lastUpdatedUser"
+                            ] = user
+                            data_update[f"attributesList.{primaryIndex}.edited"] = True
+                        else:
+                            data_update = {
+                                f"attributesList.{primaryIndex}.subattributes.{subIndex}.user_provided_coordinates": new_coordinates
+                            }
+                            data_update[
+                                f"attributesList.{primaryIndex}.subattributes.{subIndex}.page"
+                            ] = pageNumber
+                            data_update[
+                                f"attributesList.{primaryIndex}.lastUpdated"
+                            ] = current_time
+                            data_update[
+                                f"attributesList.{primaryIndex}.subattributes.{subIndex}.lastUpdated"
+                            ] = current_time
+                            data_update[
+                                f"attributesList.{primaryIndex}.lastUpdatedUser"
+                            ] = user
+                            data_update[
+                                f"attributesList.{primaryIndex}.subattributes.{subIndex}.lastUpdatedUser"
+                            ] = user
+                            data_update[f"attributesList.{primaryIndex}.edited"] = True
+                            data_update[
+                                f"attributesList.{primaryIndex}.subattributes.{subIndex}.edited"
+                            ] = True
 
                 elif update_type == "verification_status" and new_data.get(
                     "review_status", None
@@ -1287,7 +1545,15 @@ class DataManager:
                     data_update["defective_description"] = new_data.get(
                         "defective_description", None
                     )
-                update_query = {"$set": data_update}
+                elif update_type != "attributesList":
+                    _log.info(f"invalid update type: {update_type}")
+                    return False
+                if update_type == "insertField":
+                    update_query = data_update
+                elif update_type == "deleteField":
+                    update_query = [{"$set": data_update}]
+                else:
+                    update_query = {"$set": data_update}
             if not forceUpdate:
                 ## fetch record's current data so we know what changed in the future
                 try:
@@ -1296,7 +1562,9 @@ class DataManager:
                     ).next()
                     previous_state = {}
                     for each in data_update:
-                        if "attributesList." in each:
+                        if is_insert_delete_or_coordinates_update:
+                            continue
+                        elif "attributesList." in each:
                             next_prev = util.getPreviousAttributeOrSubattributeValue(
                                 update_key_parts, record_doc
                             )
@@ -1315,8 +1583,16 @@ class DataManager:
                     previous_state=previous_state,
                     notes=notes,
                     calling_function=calling_function,
+                    update_type=update_type,
                 )
-            self.db.records.update_one(search_query, update_query)
+            updated_record = self.db.records.find_one_and_update(
+                search_query,
+                update_query,
+                return_document=ReturnDocument.AFTER,
+            )
+            updated_record["_id"] = str(updated_record["_id"])
+            if is_insert_delete_or_coordinates_update:
+                return updated_record
 
             return data_update
         else:
@@ -1415,6 +1691,39 @@ class DataManager:
             )
         record_doc = self.db.records.find(search_query).next()
         return record_doc.get("record_notes", [])
+
+    def create_record_group_processor_attribute_map(self):
+        try:
+            cursor = self.db.record_groups.find(
+                {},
+                {
+                    "_id": 1,
+                    "processorId": 1,
+                },
+            )
+            rg_processor_attribute_map = {}
+            for rg in cursor:
+                rg_id = str(rg["_id"])
+                google_id = str(rg.get("processorId"))
+                if not google_id:
+                    rg_processor_attribute_map[rg_id] = {}
+                    continue
+
+                processor_document = self.getProcessorById(google_id)
+                if not processor_document:
+                    print("processor lookup returned no document for ")
+                    rg_processor_attribute_map[rg_id] = {}
+                    continue
+
+                processor_attributes = processor_document.get("attributes", None) or []
+                rg_processor_attribute_map[
+                    rg_id
+                ] = util.convert_processor_attributes_to_dict(processor_attributes)
+            # _log.info(f"rg_processor_attribute_map: {rg_processor_attribute_map}")
+            return rg_processor_attribute_map
+        except Exception as e:
+            _log.error(f"failed: {e}")
+            return {}
 
     def resetRecord(self, record_id, record_data, user):
         # print(f"resetting record: {record_id}")
@@ -1614,6 +1923,7 @@ class DataManager:
         request_origin="",
     ):
         user = user_info.get("email", None)
+        rg_attribute_map = self.create_record_group_processor_attribute_map()
         ## TODO: check if user is a part of the team who owns this project
         today = time.time()
         output_dir = self.app_settings.export_dir
@@ -1626,28 +1936,35 @@ class DataManager:
         record_attributes = []
         if exportType == "csv":
             for document in records:
+                record_group_id = document["record_group_id"]
                 document_id = str(document["_id"])
                 try:
                     current_attributes = set()
+                    current_parent_attributes = set()
                     record_attribute = {}
                     for document_attribute in document.get("attributesList", []):
                         attribute_name = document_attribute["key"].replace(" ", "")
                         if attribute_name in selectedColumns or keep_all_columns:
+                            field_schema = rg_attribute_map.get(
+                                record_group_id, {}
+                            ).get(attribute_name)
+                            database_type = field_schema.get("database_data_type")
+                            if str(database_type).lower() == "table":
+                                isParent = True
+                            else:
+                                isParent = False
                             original_attribute_name = attribute_name
                             i = 2
-                            while attribute_name in current_attributes:
+                            while (
+                                attribute_name in current_attributes
+                                or attribute_name in current_parent_attributes
+                            ):
                                 ## add a number to the end of the attribute so it (and its subattributes)
                                 ## is differentiable from other instances of the attribute
                                 attribute_name = f"{original_attribute_name}_{i}"
                                 i += 1
-                            current_attributes.add(attribute_name)
-                            if attribute_name not in attributes:
-                                attributes.append(attribute_name)
-                            record_attribute[attribute_name] = document_attribute[
-                                "value"
-                            ]
-                            ## add subattributes
                             if document_attribute.get("subattributes", None):
+                                current_parent_attributes.add(attribute_name)
                                 for document_subattribute in document_attribute[
                                     "subattributes"
                                 ]:
@@ -1657,6 +1974,14 @@ class DataManager:
                                     ] = document_subattribute["value"]
                                     if subattribute_name not in subattributes:
                                         subattributes.append(subattribute_name)
+                            elif not isParent:
+                                current_attributes.add(attribute_name)
+                                if attribute_name not in attributes:
+                                    attributes.append(attribute_name)
+                                record_attribute[attribute_name] = document_attribute[
+                                    "value"
+                                ]
+
                     record_attribute["file"] = document.get("filename", "")
                     record_attribute["URL"] = f"{request_origin}/record/{document_id}"
                     record_attributes.append(record_attribute)
@@ -1769,6 +2094,96 @@ class DataManager:
         if rg is not None:
             return True
 
+    def _getHistoryNumericType(self, value):
+        if isinstance(value, bool):
+            return None
+        if isinstance(value, int):
+            return "int"
+        if isinstance(value, float):
+            return "float"
+        return None
+
+    def _annotateHistoryAttributesNumericTypes(self, attributes):
+        if not isinstance(attributes, list):
+            return
+
+        for attribute in attributes:
+            if not isinstance(attribute, dict):
+                continue
+
+            numeric_type = self._getHistoryNumericType(attribute.get("value"))
+            if numeric_type is not None:
+                attribute["value_numeric_type"] = numeric_type
+
+            subattributes = attribute.get("subattributes")
+            if isinstance(subattributes, list):
+                self._annotateHistoryAttributesNumericTypes(subattributes)
+
+    def _annotateHistoryPayloadNumericTypes(self, payload):
+        if isinstance(payload, list):
+            self._annotateHistoryAttributesNumericTypes(payload)
+            for entry in payload:
+                if isinstance(entry, (dict, list)):
+                    self._annotateHistoryPayloadNumericTypes(entry)
+            return payload
+
+        if not isinstance(payload, dict):
+            return payload
+
+        if "key" in payload and "value" in payload:
+            numeric_type = self._getHistoryNumericType(payload.get("value"))
+            if numeric_type is not None:
+                payload["value_numeric_type"] = numeric_type
+
+        for key, value in payload.items():
+            if key == "attributesList" and isinstance(value, list):
+                self._annotateHistoryAttributesNumericTypes(value)
+                continue
+            if key.startswith("attributesList.") and isinstance(value, dict):
+                self._annotateHistoryPayloadNumericTypes(value)
+                continue
+            if isinstance(value, (dict, list)):
+                self._annotateHistoryPayloadNumericTypes(value)
+
+        return payload
+
+    def _buildHistoryItem(
+        self,
+        action=None,
+        user: str = None,
+        project_id=None,
+        rg_id=None,
+        record_id=None,
+        notes=None,
+        query=None,
+        previous_state=None,
+        calling_function=None,
+        timestamp=None,
+        **kwargs,
+    ):
+        history_item = {
+            "action": action,
+            "user": user,
+            "project_id": project_id,
+            "record_group_id": rg_id,
+            "record_id": record_id,
+            "notes": notes,
+            "query": query,
+            "previous_state": previous_state,
+            "calling_function": calling_function,
+            "timestamp": timestamp if timestamp is not None else time.time(),
+        }
+
+        extra_fields = dict(kwargs)
+        if (
+            extra_fields.get("record_group_id") is None
+            and extra_fields.get("rg_id") is not None
+        ):
+            extra_fields["record_group_id"] = extra_fields["rg_id"]
+        extra_fields.pop("rg_id", None)
+        history_item.update(extra_fields)
+        return history_item
+
     def recordHistory(
         self,
         action,
@@ -1780,20 +2195,21 @@ class DataManager:
         query=None,
         previous_state=None,
         calling_function=None,
+        **kwargs,
     ):
         try:
-            history_item = {
-                "action": action,
-                "user": user,
-                "project_id": project_id,
-                "record_group_id": rg_id,
-                "record_id": record_id,
-                "notes": notes,
-                "query": query,
-                "previous_state": previous_state,
-                "calling_function": calling_function,
-                "timestamp": time.time(),
-            }
+            history_item = self._buildHistoryItem(
+                action=action,
+                user=user,
+                project_id=project_id,
+                rg_id=rg_id,
+                record_id=record_id,
+                notes=notes,
+                query=query,
+                previous_state=previous_state,
+                calling_function=calling_function,
+                **kwargs,
+            )
             self.db.history.insert_one(history_item)
         except Exception as e:
             _log.error(f"unable to record history item: {e}")
@@ -1805,20 +2221,15 @@ class DataManager:
             ts = time.time()
             history_ops = []
             for update in updates:
-                history_item = {
-                    "action": update.get("action"),
-                    "user": update.get("user"),
-                    "project_id": update.get("project_id"),
-                    "record_group_id": update.get("record_group_id"),
-                    "record_id": update.get("record_id"),
-                    "notes": update.get("notes"),
-                    "query": update.get("query"),
-                    "previous_state": update.get("previous_state"),
-                    "calling_function": update.get("calling_function"),
-                    "timestamp": update.get("timestamp", ts),
-                }
+                if not isinstance(update, dict):
+                    continue
+                history_item = self._buildHistoryItem(
+                    timestamp=update.get("timestamp", ts),
+                    **update,
+                )
                 history_ops.append(InsertOne(history_item))
-            self.db.history.bulk_write(history_ops, ordered=False)
+            if history_ops:
+                self.db.history.bulk_write(history_ops, ordered=False)
         except Exception as e:
             _log.error(f"unable to record bulk history items: {e}")
 
@@ -1872,7 +2283,7 @@ class DataManager:
             processor_attributes = util.convert_processor_attributes_to_dict(
                 processor_attributes
             )
-            util.cleanRecords(
+            attributes_list_before_and_after = util.cleanRecords(
                 processor_attributes=processor_attributes, documents=documents
             )
             update_ops = []
@@ -1881,11 +2292,19 @@ class DataManager:
                 update_ops.append(
                     UpdateOne({"_id": document["_id"]}, {"$set": document})
                 )
-
+                current_before_and_after = attributes_list_before_and_after.get(
+                    str(document["_id"]), {}
+                )
                 history_item = {
                     "user": user_info.get("email", None),
                     "action": "cleanRecord",
                     "record_id": str(document["_id"]),
+                    "attributesList_before": current_before_and_after.get(
+                        "attributesList_before"
+                    ),
+                    "attributesList_after": current_before_and_after.get(
+                        "attributesList_after"
+                    ),
                 }
                 if location == "record_group":
                     history_item["record_group_id"] = _id

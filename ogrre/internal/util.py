@@ -6,6 +6,7 @@ import functools
 import zipstream
 import csv
 import json
+import copy
 
 import ogrre_data_cleaning.clean as OGRRE_cleaning_functions
 from ogrre.internal import storage_api
@@ -96,6 +97,7 @@ def sortRecordAttributes(attributes, processor, keep_all_attributes=False):
         _log.info(f"many obsolete fields found, this is probably a mistake.")
     ## only persist when the stored list is actually different from the sorted list
     requires_db_update = sorted_attributes != attributes
+    _log.info(f"sorted attributes. requires_db_update: {requires_db_update}")
     return sorted_attributes, requires_db_update
 
 
@@ -377,6 +379,19 @@ def convert_processor_list_to_dict(processor_list):
     return processor_dict
 
 
+def convert_processor_attributes_to_dict(attributes):
+    attributes_dict = {}
+    for attr in attributes:
+        key = attr["name"]
+        attributes_dict[key] = attr
+        subattributes = attr.get("subattributes", None)
+        if subattributes:
+            for subattribute in subattributes:
+                sub_key = subattribute["name"]
+                attributes_dict[f"{key}::{sub_key}"] = subattribute
+    return attributes_dict
+
+
 def cleanRecordAttribute(processor_attributes, attribute, subattributeKey=None):
     if subattributeKey:
         attribute_key = subattributeKey
@@ -390,6 +405,7 @@ def cleanRecordAttribute(processor_attributes, attribute, subattributeKey=None):
         if cleaning_function_name == "" or cleaning_function_name is None:
             _log.debug(f"cleaning_function for {attribute_key} is empty string or none")
             attribute["cleaned"] = False
+            attribute["cleaning_error"] = False
             return False
         cleaning_function = CLEANING_FUNCTIONS.get(cleaning_function_name)
         if cleaning_function:
@@ -424,25 +440,71 @@ def cleanRecordAttribute(processor_attributes, attribute, subattributeKey=None):
 
 
 def cleanRecords(processor_attributes, documents):
+    # We want to track the before and after values of each cleaned attribute, subattribute
+    # To do so, we really only need attr[key] and attr[value] (same with subattributes)
+    # for record history
+    attributes_list_before_and_after = {}
+
     for doc in documents:
         attributes_list = doc["attributesList"]
+        current_attributes_list_before_and_after = {
+            "attributesList_before": [],
+            "attributesList_after": [],
+        }
         for attr in attributes_list:
+            attribute_before_cleaning = {
+                "key": attr.get("key"),
+                "value": attr.get("value"),
+            }
             cleanRecordAttribute(
                 processor_attributes=processor_attributes, attribute=attr
             )
+            attribute_after_cleaning = {
+                "key": attr.get("key"),
+                "value": attr.get("value"),
+            }
             subattributes = attr.get("subattributes", False)
             if subattributes:
+                attribute_before_cleaning["subattributes"] = []
+                attribute_after_cleaning["subattributes"] = []
                 for subattr in subattributes:
                     parentAttribute = subattr.get("topLevelAttribute", "")
                     subattributeKey = subattr["key"]
                     subattribute_identifier = f"{parentAttribute}::{subattributeKey}"
+                    subattribute_before_cleaning = {
+                        "key": subattr.get("key"),
+                        "value": subattr.get("value"),
+                        "subattribute_identifier": subattribute_identifier,
+                    }
                     cleanRecordAttribute(
                         processor_attributes=processor_attributes,
                         attribute=subattr,
                         subattributeKey=subattribute_identifier,
                     )
+                    subattribute_after_cleaning = {
+                        "key": subattr.get("key"),
+                        "value": subattr.get("value"),
+                        "subattribute_identifier": subattribute_identifier,
+                    }
+                    attribute_before_cleaning["subattributes"].append(
+                        subattribute_before_cleaning
+                    )
+                    attribute_after_cleaning["subattributes"].append(
+                        subattribute_after_cleaning
+                    )
 
-    return documents
+            current_attributes_list_before_and_after["attributesList_before"].append(
+                attribute_before_cleaning
+            )
+            current_attributes_list_before_and_after["attributesList_after"].append(
+                attribute_after_cleaning
+            )
+        # current_attributes_list_before_and_after["attributesList_after"] = copy.deepcopy(attributes_list)
+        attributes_list_before_and_after[
+            str(doc.get("_id"))
+        ] = current_attributes_list_before_and_after
+
+    return attributes_list_before_and_after
 
 
 def createNewAttribute(
