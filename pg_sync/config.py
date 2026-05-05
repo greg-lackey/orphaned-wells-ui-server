@@ -1,7 +1,7 @@
 """
 Configuration for the pg_sync ETL pipeline.
-All values are read from environment variables (or a .env file).
 """
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv
