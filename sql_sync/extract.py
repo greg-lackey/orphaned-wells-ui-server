@@ -1,0 +1,209 @@
+# -*- coding: utf-8 -*-
+"""
+extract.py  (sql_sync)
+
+Queries validated records from MongoDB and returns them grouped by processor
+name.  Each record's attributesList is flattened to a plain dict, and the
+API number is parsed from the filename and stored without dashes.
+
+Output shape:
+    {
+        "WellCompletion": [
+            {
+                "_mongo_id": "...",
+                "_api": "5123123450",
+                "_filename": "51-231-23450_WellCompletion.pdf",
+                "_date_created": 1234567890,
+                "_review_status": "reviewed",
+                "_processor_name": "WellCompletion",
+                "well_name": "Example Well",
+                ...
+            },
+            ...
+        ],
+        "PlugAndAbandonment": [...],
+    }
+
+Usage:
+    python sql_sync/extract.py --institution isgs
+    python sql_sync/extract.py --institution isgs --out sql_sync/data/extracted.json
+    python sql_sync/extract.py --institution isgs --dry-run
+"""
+
+import argparse
+import json
+import os
+import re
+from collections import defaultdict
+from pathlib import Path
+
+from bson import ObjectId
+from dotenv import load_dotenv
+from pymongo import MongoClient
+from pymongo.server_api import ServerApi
+
+# ── Constants ─────────────────────────────────────────────────────────────────
+
+_ENV_PATH = Path(__file__).parent / ".env"
+
+# Matches XX-XXX-XXXXX or XXXXXXXXXX (10-digit US API number)
+_API_RE = re.compile(r"(\d{2})-?(\d{3})-?(\d{5})")
+
+VALIDATED_QUERY = {
+    "review_status": {"$in": ["reviewed", "verified"]},
+    "status": {"$in": ["digitized", "reprocessed"]},
+}
+
+
+# ── Connection ────────────────────────────────────────────────────────────────
+
+def connect(env_path: Path = _ENV_PATH):
+    """Connect to MongoDB using credentials from sql_sync/.env."""
+    load_dotenv(env_path)
+    connection_str = os.getenv("DB_CONNECTION")
+    db_name = os.getenv("MONGO_DB_NAME", "ogrre")
+    client = MongoClient(connection_str, server_api=ServerApi("1"))
+    return client[db_name]
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _extract_api(filename: str) -> str | None:
+    """Parse API number from filename and return it without dashes."""
+    match = _API_RE.search(filename or "")
+    if match:
+        return match.group(1) + match.group(2) + match.group(3)
+    return None
+
+
+def _flatten_attributes(attributes_list: list) -> dict:
+    """Convert [{key, value, ...}, ...] to {key: value}."""
+    return {
+        attr["key"]: attr.get("value")
+        for attr in attributes_list
+        if "key" in attr
+    }
+
+
+def _build_processor_lookup(db, processor_ids: set) -> dict:
+    """Return {processorId: processor_name} for the given processor IDs."""
+    if not processor_ids:
+        return {}
+    docs = db.processors.find({"processorId": {"$in": list(processor_ids)}})
+    return {
+        p["processorId"]: p.get("Processor Name", p["processorId"])
+        for p in docs
+    }
+
+
+def _build_record_group_lookup(db, rg_ids: set) -> dict:
+    """Return {rg_id_str: record_group_doc} for the given record group ID strings."""
+    if not rg_ids:
+        return {}
+    object_ids = []
+    for rg_id in rg_ids:
+        try:
+            object_ids.append(ObjectId(rg_id))
+        except Exception:
+            pass
+    docs = db.record_groups.find({"_id": {"$in": object_ids}})
+    return {str(rg["_id"]): rg for rg in docs}
+
+
+# ── Main extract function ─────────────────────────────────────────────────────
+
+def extract(db, dry_run: bool = False) -> dict:
+    """
+    Query validated records from MongoDB and return them grouped by processor name.
+
+    Args:
+        db:       pymongo database object (from connect())
+        dry_run:  if True, print counts by processor and return {} without
+                  extracting field values
+
+    Returns:
+        dict mapping processor_name -> list of flat record dicts
+    """
+    records = list(db.records.find(VALIDATED_QUERY))
+    print(f"extract: found {len(records)} validated record(s)")
+
+    if not records:
+        return {}
+
+    # Batch-resolve record groups and processors to avoid per-record queries
+    rg_ids = {str(r["record_group_id"]) for r in records if r.get("record_group_id")}
+    rg_lookup = _build_record_group_lookup(db, rg_ids)
+
+    processor_ids = {rg.get("processorId") for rg in rg_lookup.values() if rg.get("processorId")}
+    proc_lookup = _build_processor_lookup(db, processor_ids)
+
+    if dry_run:
+        # Count records by processor without flattening attributes
+        counts = defaultdict(int)
+        for record in records:
+            rg = rg_lookup.get(str(record.get("record_group_id", "")), {})
+            proc_id = rg.get("processorId", "unknown")
+            proc_name = proc_lookup.get(proc_id, proc_id)
+            counts[proc_name] += 1
+        print("Record counts by processor:")
+        for name, count in sorted(counts.items()):
+            print(f"  {name}: {count}")
+        return {}
+
+    by_processor = defaultdict(list)
+
+    for record in records:
+        rg_id = str(record.get("record_group_id", ""))
+        rg = rg_lookup.get(rg_id, {})
+        proc_id = rg.get("processorId", "unknown")
+        proc_name = proc_lookup.get(proc_id, proc_id)
+
+        filename = record.get("filename", "")
+        flat = _flatten_attributes(record.get("attributesList", []))
+
+        flat["_mongo_id"] = str(record["_id"])
+        flat["_api"] = _extract_api(filename)
+        flat["_filename"] = filename
+        flat["_date_created"] = record.get("dateCreated")
+        flat["_review_status"] = record.get("review_status")
+        flat["_processor_name"] = proc_name
+
+        by_processor[proc_name].append(flat)
+
+    return dict(by_processor)
+
+
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Extract validated OGRRE records from MongoDB."
+    )
+    parser.add_argument(
+        "--institution",
+        default=None,
+        help="Institution key (e.g. 'isgs'). Currently used for context only.",
+    )
+    parser.add_argument(
+        "--out",
+        default=None,
+        help="Write JSON output to this file instead of stdout.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print record counts by processor without extracting field values.",
+    )
+    args = parser.parse_args()
+
+    db = connect()
+    result = extract(db, dry_run=args.dry_run)
+
+    if args.dry_run:
+        pass  # counts already printed inside extract()
+    elif args.out:
+        with open(args.out, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, default=str)
+        print(f"Wrote output to {args.out}")
+    else:
+        print(json.dumps(result, indent=2, default=str))
