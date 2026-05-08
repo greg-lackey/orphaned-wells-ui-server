@@ -8,7 +8,7 @@ import re
 from bson import ObjectId
 from pymongo import ASCENDING, DESCENDING, InsertOne, UpdateOne, ReturnDocument
 
-import ogrre_data_cleaning.processor_schemas.processor_api as processor_api
+import ogrre_data_cleaning.schemas.processor_api as processor_api
 from ogrre.internal.mongodb_connection import connectToDatabase
 from ogrre.internal.settings import AppSettings
 from ogrre.internal.util import get_document_image
