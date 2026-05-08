@@ -1,0 +1,47 @@
+[
+    {
+        "column_name": "id",
+        "description": "Unique identifier for packer",
+        "data_type": "int",
+        "examples": 197985,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "tubing_id",
+        "description": "Unique identifier for tubing",
+        "data_type": "big int",
+        "examples": 5123123450000,
+        "units": null,
+        "application": "General",
+        "links": "Linked to id in tubings"
+    },
+    {
+        "column_name": "type",
+        "description": "Type of packer",
+        "data_type": "string/character varying",
+        "examples": "Brown(Baker)D Hanger/Packer",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "tvd",
+        "description": "True vertical depth of packer",
+        "data_type": "float",
+        "examples": 4500,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "md",
+        "description": "Measured depth of packer",
+        "data_type": "float",
+        "examples": 4600,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    }
+]

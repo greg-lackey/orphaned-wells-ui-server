@@ -1,0 +1,92 @@
+[
+    {
+        "column_name": "id",
+        "Column Description": "Unique identifier for the injection test",
+        "Data Type": "big int",
+        "Example": 1234,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_id",
+        "Column Description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "Data Type": "big int",
+        "Example": 512312345000,
+        "units": null,
+        "application": "General",
+        "links": "Linked to id in sidetracks"
+    },
+    {
+        "column_name": "fluid_source",
+        "Column Description": "Description of the fluid source",
+        "Data Type": "string",
+        "Example": "Galesville",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "form",
+        "Column Description": "Formation in which fluid is injected",
+        "Data Type": "string",
+        "Example": "Mt Simon",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "water_inj_rate",
+        "Column Description": "Water injection rate",
+        "Data Type": "float",
+        "Example": null,
+        "units": "bbl/day",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "water_psi",
+        "Column Description": "Water injection pressure",
+        "Data Type": "float",
+        "Example": null,
+        "units": "psi",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "gas_inj_rate",
+        "Column Description": "Gas injection rate",
+        "Data Type": "float",
+        "Example": 10,
+        "units": "MCF/day",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "gas_press",
+        "Column Description": "Gas injection pressure",
+        "Data Type": "float",
+        "Example": 100,
+        "units": "psi",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "inj_date",
+        "Column Description": "Date of injection test",
+        "Data Type": "date",
+        "Example": "2014-05-10T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "fluid_type",
+        "Column Description": "Description of the fluid injected",
+        "Data Type": "string",
+        "Example": null,
+        "units": null,
+        "application": "General",
+        "links": null
+    }
+]

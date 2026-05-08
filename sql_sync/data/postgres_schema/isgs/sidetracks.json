@@ -1,0 +1,299 @@
+[
+    {
+        "column_name": "id",
+        "description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "data_type": "bigint",
+        "examples": 512312345000,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_number",
+        "description": "Number of the sidetrack starting with 00",
+        "data_type": "string/character varying",
+        "examples": "\"01\"",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "well_id",
+        "description": "Unformatted 10 digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": null,
+        "links": "id in well_headers table"
+    },
+    {
+        "column_name": "type",
+        "description": "Sidetrack type ",
+        "data_type": "string/character varying",
+        "examples": "Oil",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "permit_number",
+        "description": "Numeric value assigned to the permit",
+        "data_type": "bigint",
+        "examples": 29791515,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "permit_date",
+        "description": "Date that the permit was issued",
+        "data_type": "date",
+        "examples": "2019-12-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "API UWI 12",
+        "description": "Twelve-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "data_type": "string/character varying",
+        "examples": "51-231-23450-00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "well_id",
+        "description": "Unformatted 10-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
+        "data_type": "bigint",
+        "examples": 5123123450,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "spud_date",
+        "description": "The date that sidetrack drilling began",
+        "data_type": "date",
+        "examples": "2019-11-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "comp_date",
+        "description": "The date the sidetrack was completed (i.e., hydraulically fractured or stimulated for production)",
+        "data_type": "date",
+        "examples": "2019-12-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "first_prod_date",
+        "description": "The date that the sidetrack was first produced",
+        "data_type": "date",
+        "examples": "2020-01-01T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "plug_date",
+        "description": "Date that the well was plugged (if appropriate)",
+        "data_type": "date",
+        "examples": "2023-11-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "tvd",
+        "description": "The true vertical depth of the sidetrack in feet",
+        "data_type": "float/double precision",
+        "examples": 7000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "md",
+        "description": "The measured depth of the sidetrack in feet",
+        "data_type": "float/double precision",
+        "examples": 14000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "pbtd",
+        "description": "Plugged back total depth",
+        "data_type": "float/double precision",
+        "examples": 13950,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "status",
+        "description": "Status of the sidetrack",
+        "data_type": "string/character varying",
+        "examples": "Plugged",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "status_date",
+        "description": "Date of the reported status for the sidetrack",
+        "data_type": "date",
+        "examples": "2023-11-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "bottom_hole_latitude",
+        "description": "Bottom hole latitude in WGS84 (can be different from surface latitude if well is deviated)",
+        "data_type": "float/double precision",
+        "examples": 28.0426508,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "bottom_hole_longitude",
+        "description": "Bottom hole longitude in WGS84 (can be different from surface latitude if well is deviated)",
+        "data_type": "float/double precision",
+        "examples": -95.8586483,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "primary",
+        "description": "Designates primary sidetrack for the well",
+        "data_type": "Boolean",
+        "examples": null,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "rotary_tools_from",
+        "description": "Start depth for drilling with a rotary tool",
+        "data_type": "float/double precision",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "rotary_tools_to",
+        "description": "Stop depth for drilling with a rotary tool",
+        "data_type": "float/double precision",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cable_tools_from",
+        "description": "Start depth for drilling with a cable tool",
+        "data_type": "float/double precision",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cable_tools_to",
+        "description": "Stop depth for drilling with a cable tool",
+        "data_type": "float/double precision",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "logs_run",
+        "description": "Boolean indicating if a log has been run",
+        "data_type": "Boolean",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "last_log_date",
+        "description": "Date of the last log run",
+        "data_type": "date",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cored",
+        "description": "Boolean indicating if the well has been cored",
+        "data_type": "Boolean",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "core_from",
+        "description": "Start depth for coring",
+        "data_type": "float/double precision",
+        "examples": 4000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "core_to",
+        "description": "Stop depth for coring",
+        "data_type": "float/double precision",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "dst",
+        "description": "Boolean indicating if a drill stem test has been performed",
+        "data_type": "Boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "dst_zone",
+        "description": "Formation in which drill stem test was performed",
+        "data_type": "string/character varying",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "not_converted_permit_expired",
+        "description": "Indicator that the well was not converted because of an expired permit",
+        "data_type": "Boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "not_drilled_permit_expired",
+        "description": "Indicator that the well was not drilled because of an expired permit",
+        "data_type": "Boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    }
+]

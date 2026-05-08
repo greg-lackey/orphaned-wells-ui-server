@@ -1,0 +1,128 @@
+[
+    {
+        "column_name": "id",
+        "Column Description": "Unique identifier for completion",
+        "Data Type": "bigint ",
+        "Example": 1234,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_id",
+        "Column Description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "Data Type": "bigint ",
+        "Example": 512312345000,
+        "units": null,
+        "application": "General",
+        "links": "Linked to id in sidetracks"
+    },
+    {
+        "column_name": "form",
+        "Column Description": "Formation in which the well was completed",
+        "Data Type": "string",
+        "Example": "Mt Simon",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "lithology",
+        "Column Description": "Lithology of the target formation for production or injection",
+        "Data Type": "string",
+        "Example": "Sandstone",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "open_hole_from",
+        "Column Description": "Shallowest depth at which the well has no casing and is open",
+        "Data Type": "float",
+        "Example": 3000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "open_hole_to",
+        "Column Description": "Deepest depth at which the well has no casing and is open",
+        "Data Type": "float",
+        "Example": 3500,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "perf_from",
+        "Column Description": "Shallowest perforation depth",
+        "Data Type": "float",
+        "Example": 4100,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "perf_to",
+        "Column Description": "Deepest perforation depth",
+        "Data Type": "float",
+        "Example": 4300,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "perf_shots",
+        "Column Description": "Description of the perforation shots",
+        "Data Type": "string",
+        "Example": "8/Ft.",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "treatment_from",
+        "Column Description": "Shallowest depth of treatment",
+        "Data Type": "float",
+        "Example": 4100,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "treatment_to",
+        "Column Description": "Deepest depth of treatment",
+        "Data Type": "float",
+        "Example": 4300,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "treatment",
+        "Column Description": "Description of the treatment applied during completion",
+        "Data Type": "string",
+        "Example": "Acid",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "treatment_amnt",
+        "Column Description": "Description of the amount of treatment applied",
+        "Data Type": "string",
+        "Example": "88 bbl",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "treatment_date",
+        "Column Description": "Date that treatment was applied",
+        "Data Type": "date",
+        "Example": "2019-04-03T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    }
+]

@@ -1,0 +1,209 @@
+[
+    {
+        "column_name": "id",
+        "description": "Unique identifier for casing",
+        "data_type": "int",
+        "examples": 197985,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_id",
+        "description": "Unformatted API12 or UWI",
+        "data_type": "big int",
+        "examples": 5123123450000,
+        "units": null,
+        "application": "General",
+        "links": "id in sidetracks"
+    },
+    {
+        "column_name": "type",
+        "description": "Description of the casing (Conductor, intermediate,  production, or open  hole)",
+        "data_type": "string/character varying",
+        "examples": "Production",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "hole_size",
+        "description": "Diameter of the drilled hole in inches",
+        "data_type": "float/double precision",
+        "examples": 17.5,
+        "units": "inches",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "out_diam",
+        "description": "Casing outer diameter",
+        "data_type": "float/double precision",
+        "examples": 7.75,
+        "units": "inches",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "in_diam",
+        "description": "Casing inner diameter",
+        "data_type": "float/double precision",
+        "examples": 7,
+        "units": "inches",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "weight",
+        "description": "Casing weight",
+        "data_type": "float/double precision",
+        "examples": 9.5,
+        "units": "lb/ft",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "grade",
+        "description": "Grade of steel used ",
+        "data_type": "string/character varying",
+        "examples": "J-55",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_type",
+        "description": "Description of the cement added",
+        "data_type": "string/character varying",
+        "examples": "Unaflo",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_density",
+        "description": "Density of the cement added ",
+        "data_type": "string/character varying",
+        "examples": 12,
+        "units": "lb/gal",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_vol",
+        "description": "Cement volume injected for primary cement job",
+        "data_type": "float/double precision",
+        "examples": 200,
+        "units": "sacks",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_top_tvd",
+        "description": "Operator reported estimated true vertical depth of the cement top ",
+        "data_type": "float/double precision",
+        "examples": 3000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_top_md",
+        "description": "Operator reported estimated measured vertical depth of the cement top",
+        "data_type": "float/double precision",
+        "examples": 1000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "cem_top_method",
+        "description": "Method for determining the intermediate casing cement top",
+        "data_type": "float/double precision",
+        "examples": "visual",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "top_tvd",
+        "description": "True vertical depth of the top of the casing. ",
+        "data_type": "float/double precision",
+        "examples": 525,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "top_md",
+        "description": "Measured depth of the top of the casing.",
+        "data_type": "float/double precision",
+        "examples": 500,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "tvd",
+        "description": "True vertical depth to bottom of casing ",
+        "data_type": "float/double precision",
+        "examples": 9000,
+        "units": "feet",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "md",
+        "description": "Measured depth of the entire casing",
+        "data_type": "float/double precision",
+        "examples": 13000,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "perf_from",
+        "description": "Measured depth of the shallowest well perforation",
+        "data_type": "float/double precision",
+        "examples": 11000,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "perf_to",
+        "description": "Measured depth of the deepest well perforation",
+        "data_type": "float/double precision",
+        "examples": 12000,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "pulled",
+        "description": "Footage of the casing pulled out of the hole",
+        "data_type": "float/double precision",
+        "examples": 500,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "is_liner",
+        "description": "Boolean indicating if the casing starts top is located at surface (false) or is a liner and the casing top is located at some depth along the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "is_cut",
+        "description": "Boolean indicating if the casing has been cut from the surface",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "General",
+        "links": null
+    }
+]

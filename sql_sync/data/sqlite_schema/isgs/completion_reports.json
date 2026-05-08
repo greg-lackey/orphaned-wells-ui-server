@@ -1,0 +1,1397 @@
+[
+    {
+        "column_name": "id",
+        "description": "Unique identifier for completion report",
+        "data_type": "INTEGER",
+        "examples": 9876,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "well_id",
+        "description": "Unique well identifier",
+        "data_type": "INTEGER",
+        "examples": 12345678,
+        "units": null,
+        "application": "Illinois",
+        "links": "id in well_headers table"
+    },
+    {
+        "column_name": "sidetrack_id",
+        "description": "Unique sidetrack identifier",
+        "data_type": "INTEGER",
+        "examples": 1234567800,
+        "units": null,
+        "application": "Illinois",
+        "links": "id in sidetracks table"
+    },
+    {
+        "column_name": "report_name",
+        "description": "Unique report name",
+        "data_type": "string",
+        "examples": "120192170301_WELL_COMPLETION_REPORT_1",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "report_type_doph",
+        "description": "Indicator that the report describes a drilling out of a plugged hole",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "report_type_conversion",
+        "description": "Indicator that the report describes a well conversion",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "report_type_deepening",
+        "description": "Indicator that the report describes a well deepening",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "report_type_workover",
+        "description": "indicator that the report describes a well workover",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "report_type_new_well",
+        "description": "Indicator that the report describes the drilling of a new well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "not_converted_permit_expired",
+        "description": "Indicator that the well was not converted because of an expired permit",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "not_drilled_permit_expired",
+        "description": "Indicator that the well was not drilled because of an expired permit",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "lease_sign_no",
+        "description": "Indicator that there is no lease sign at the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "lease_sign_yes",
+        "description": "Indicator that there is a lease sign at the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "well_type",
+        "description": "Description of the well type",
+        "data_type": "string",
+        "examples": "Oil",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_conv",
+        "description": "Indicator that the well type is converted",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_da",
+        "description": "Indicator that the well type is dry and abandoned",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_dry_hole",
+        "description": "Indicator that the well type is dry hole",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_gas",
+        "description": "Indicator that the well type is gas",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_gas_inj",
+        "description": "Indicator that the well type is injection",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_gas_storage",
+        "description": "Indicator that the well type is gas storage",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_observation",
+        "description": "Indicator that the well type is observation",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_oil",
+        "description": "Indicator that the well type is oil",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_other",
+        "description": "Indicator that the well type is other",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_other_text",
+        "description": "Description of the other well type",
+        "data_type": "string",
+        "examples": "Geothermal",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_service",
+        "description": "Indicator that the well type is service",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_service_text",
+        "description": "Description of the service well type",
+        "data_type": "string",
+        "examples": "Remediation",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_str_test",
+        "description": "Indicator that the well type is stratigraphic test ",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_swd",
+        "description": "Indicator that the well type is salt water disposal",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_water_inj",
+        "description": "Indicator that the well type is injection",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_water_supply",
+        "description": "Indicator that the well type is water supply",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_coal_bed_gas",
+        "description": "Indicator that the well type is coal bed gas production",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "type_coal_mine_gas",
+        "description": "Indicator that the well type is coal mine gas production",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "operator",
+        "description": "Name of well operator",
+        "data_type": "string",
+        "examples": "Chevron",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "operator_number",
+        "description": "Number designating the operator",
+        "data_type": "string",
+        "examples": 12345,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "well_name",
+        "description": "Name of the well",
+        "data_type": "string",
+        "examples": "Smith  #15",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "well_name_farm",
+        "description": "Farm name where the well is located",
+        "data_type": "string",
+        "examples": "Smith",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "well_name_number",
+        "description": "Number assigned to the well",
+        "data_type": "string",
+        "examples": "#15",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "permit_date",
+        "description": "Date of the permit",
+        "data_type": "TEXT",
+        "examples": "1989-12-31T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "permit_number",
+        "description": "Number associated with the permit",
+        "data_type": "string",
+        "examples": 12345,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "ref_number",
+        "description": "Unclear. Number associated with well",
+        "data_type": "string",
+        "examples": 12345,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "plss_loc",
+        "description": " Catch all description of PLSS location. Includes NS distance, EW distance, and quarters",
+        "data_type": "string",
+        "examples": "330S 330W NE NE NE",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "county",
+        "description": "County name",
+        "data_type": "string",
+        "examples": "Perry",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "section",
+        "description": "PLSS section",
+        "data_type": "string",
+        "examples": 5,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "township",
+        "description": "PLSS township",
+        "data_type": "string",
+        "examples": "5S",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "range",
+        "description": "PLSS range",
+        "data_type": "string",
+        "examples": "4W",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "ns_distance",
+        "description": "Distance from the north or south line of the quarter-quarter-quarter of the section",
+        "data_type": "string",
+        "examples": 350,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "ns_line",
+        "description": "North or south line designation",
+        "data_type": "string",
+        "examples": "N",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "ew_distance",
+        "description": "Distance from the east or west line of the quarter-quarter-quarter of the section",
+        "data_type": "string",
+        "examples": 300,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "ew_line",
+        "description": "East or west line designation",
+        "data_type": "string",
+        "examples": "E",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "first_quarter",
+        "description": "Description of the first quarter",
+        "data_type": "string",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "second_quarter",
+        "description": "Description of the second quarter",
+        "data_type": "string",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "third_quarter",
+        "description": "Description of the third quarter",
+        "data_type": "string",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "elev_df",
+        "description": "Elevation of the drill rig floor in feet",
+        "data_type": "REAL",
+        "examples": 5010,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "elev_gr",
+        "description": "Elevation of the ground in feet",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "elev_kb",
+        "description": "Elevation of the kelly bushing in feet",
+        "data_type": "REAL",
+        "examples": 5015,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "tvd",
+        "description": "True vertical depth of the well in feet",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "pbtd",
+        "description": "Plug back total depth in feet",
+        "data_type": "REAL",
+        "examples": 4090,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "spud_date",
+        "description": "Date that the well was drilled",
+        "data_type": "TEXT",
+        "examples": "1970-03-31T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "comp_date",
+        "description": "Date that the well was completed",
+        "data_type": "TEXT",
+        "examples": "1970-04-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "rotary_tools_from",
+        "description": "Start depth for rotary drilling",
+        "data_type": "REAL",
+        "examples": 0,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "rotary_tools_to",
+        "description": "Finish depth for rotary drilling",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cable_tools_from",
+        "description": "Start depth for cable tool drilling",
+        "data_type": "REAL",
+        "examples": 0,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cable_tools_to",
+        "description": "Finish depth for cable tool drilling",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "logs_run_yes",
+        "description": "Indicator that wireline/electric logs were run",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "logs_run_no",
+        "description": "Indicator that wireline/electric logs were note run",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "log_date",
+        "description": "Date that wireline/electric logs were run",
+        "data_type": "TEXT",
+        "examples": "1970-05-01T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "log_type",
+        "description": "Wireline/electric log type",
+        "data_type": "string",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "dst_no",
+        "description": "Indicator that a drill stem test was not run",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "dst_yes",
+        "description": "Indicator that a drill stem test was run",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "dst_zone",
+        "description": "Zone or formation over which a drill stem test was run",
+        "data_type": "string",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cored_no",
+        "description": "Indicator that the well was not cored",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cored_yes",
+        "description": "Indicator that the well was cored",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cored_interval",
+        "description": "Interval over which the well was cored",
+        "data_type": "string",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_cem_top",
+        "description": "Depth to the top of cement in the annulus outside the surface casing",
+        "data_type": "REAL",
+        "examples": 0,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_cem_top_meth",
+        "description": "Method for determining the surface casing cement top",
+        "data_type": "string",
+        "examples": "Visual",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_cem_vol",
+        "description": "Volume of cement injected into the surface casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 200,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_csg_depth",
+        "description": "Depth of the surface casing",
+        "data_type": "REAL",
+        "examples": 800,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_csg_pulled",
+        "description": "Footage of surface casing pulled out of the hole",
+        "data_type": "string",
+        "examples": 50,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_csg_out_diam",
+        "description": "Surface casing outer diameter",
+        "data_type": "REAL",
+        "examples": 13.375,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "surf_hole_size",
+        "description": "Diameter of the surface casing hole",
+        "data_type": "REAL",
+        "examples": 17.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_cem_top",
+        "description": "Depth to the top of cement in the annulus outside the intermediate casing",
+        "data_type": "REAL",
+        "examples": 2000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_cem_top_meth",
+        "description": "Method for determining the intermediate casing cement top",
+        "data_type": "string",
+        "examples": "Calculated",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_cem_vol",
+        "description": "Volume of cement injected into the intermediate casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 400,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_csg_depth",
+        "description": "Depth of the intermediate casing",
+        "data_type": "REAL",
+        "examples": 3000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_csg_pulled",
+        "description": "Footage of intermediate casing pulled out of the hole",
+        "data_type": "string",
+        "examples": 500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_csg_out_diam",
+        "description": "Intermediate casing outer diameter",
+        "data_type": "REAL",
+        "examples": 9.625,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "int_hole_size",
+        "description": "Diameter of the intermediate casing hole",
+        "data_type": "REAL",
+        "examples": 12.25,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_cem_top",
+        "description": "Depth to the top of cement in the annulus outside the production casing",
+        "data_type": "REAL",
+        "examples": 2000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_cem_top_meth",
+        "description": "Method for determining the production casing cement top",
+        "data_type": "string",
+        "examples": "Calculated",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_cem_vol",
+        "description": "Volume of cement injected into the production casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 500,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_csg_depth",
+        "description": "Depth of the production casing",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_csg_pulled",
+        "description": "Footage of production casing pulled out of the hole",
+        "data_type": "string",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_csg_out_diam",
+        "description": "Production casing outer diameter",
+        "data_type": "REAL",
+        "examples": 7,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_hole_size",
+        "description": "Diameter of the production casing hole",
+        "data_type": "REAL",
+        "examples": 8.75,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "liner_cem_vol",
+        "description": "Volume of cement injected into the liner for the primary cement job",
+        "data_type": "REAL",
+        "examples": 200,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "liner_depth",
+        "description": "Depth of the liner",
+        "data_type": "REAL",
+        "examples": 4000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "liner_pulled",
+        "description": "Footage of liner pulled out of the hole",
+        "data_type": "string",
+        "examples": 500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "liner_size",
+        "description": "Liner outer diameter",
+        "data_type": "REAL",
+        "examples": 5.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "tubing_type",
+        "description": "Description of the tubing type",
+        "data_type": "string",
+        "examples": "Siphon string",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "tubing_size",
+        "description": "Outer diameter of the tubing",
+        "data_type": "REAL",
+        "examples": 3.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "oth_cem_top",
+        "description": "Depth to the top of cement in the annulus outside the other casing",
+        "data_type": "REAL",
+        "examples": 500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "oth_cem_vol",
+        "description": "Volume of cement injected into the other casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 300,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "oth_csg_depth",
+        "description": "Depth of the other casing",
+        "data_type": "REAL",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "oth_csg_out_diam",
+        "description": "Other casing outer diameter",
+        "data_type": "REAL",
+        "examples": 5.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "other_cem_top_meth",
+        "description": "Method for determining the other casing cement top",
+        "data_type": "string",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "other_hole_size",
+        "description": "Diameter of the other casing hole",
+        "data_type": "REAL",
+        "examples": 7.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "csg_depth",
+        "description": "Casing depth",
+        "data_type": "REAL",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "csg_out_diam",
+        "description": "Outer diameter of the casing",
+        "data_type": "REAL",
+        "examples": 9.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "csg_type",
+        "description": "Casing type",
+        "data_type": "string",
+        "examples": "production",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "cem_vol",
+        "description": "Volume of cement injected into the casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 300,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "packer_type",
+        "description": "Description of the packer used in the well",
+        "data_type": "string",
+        "examples": "Brown(Baker)D Hanger/Packer",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "packer_depth",
+        "description": "Depth of the packer in the well",
+        "data_type": "REAL",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "prod_inj_form",
+        "description": "Target formation for production or injection",
+        "data_type": "string",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "lithology",
+        "description": "Lithology of the target formation for production or injection",
+        "data_type": "string",
+        "examples": "Sandstone",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "first_prod_date",
+        "description": "Date of first production",
+        "data_type": "TEXT",
+        "examples": "2001-04-18T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "test_date",
+        "description": "Date of the drill stem test",
+        "data_type": "TEXT",
+        "examples": "2001-04-17T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "test_length",
+        "description": "Length of the drill stem test",
+        "data_type": "string",
+        "examples": 2,
+        "units": "hours",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "post_test_prod",
+        "description": "Initial production after treatment (could be oil or gas, bbl or MCF)",
+        "data_type": "string",
+        "examples": 25,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "pre_test_prod",
+        "description": "Initial production before treatment (could be oil or gas, bbl or MCF)",
+        "data_type": "string",
+        "examples": 50,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "oil_prod",
+        "description": "Initial daily oil production",
+        "data_type": "REAL",
+        "examples": 10,
+        "units": "bbls",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "gas_prod",
+        "description": "Initial daily gas production",
+        "data_type": "REAL",
+        "examples": 50,
+        "units": "mcf",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "water_prod",
+        "description": "Initial daily water production",
+        "data_type": "REAL",
+        "examples": 10,
+        "units": "bbls",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "comp_form",
+        "description": "Formation in which the well was completed",
+        "data_type": "string",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "perf_from",
+        "description": "Shallowest depth at which the well was perforated",
+        "data_type": "REAL",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "perf_int",
+        "description": "Interval over which the well was perforated",
+        "data_type": "string",
+        "examples": "4500-5000",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "perf_shots",
+        "description": "Description of the perforation shots",
+        "data_type": "string",
+        "examples": "8/ft",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "perf_to",
+        "description": "Deepest depth at which the well was perforated",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_acidized",
+        "description": "Indicator that an acide treatment was applied to the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_acidized_fractures_other",
+        "description": "Description of the treatment applied during completion",
+        "data_type": "string",
+        "examples": "9/7/84 Acidized 4000 gal 15% HCL",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_amnt",
+        "description": "Amount of the treatment applied",
+        "data_type": "string",
+        "examples": "250 get 7370 + 250 gel 15%",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_date",
+        "description": "Date that treatment was applied",
+        "data_type": "TEXT",
+        "examples": "2005-05-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_from",
+        "description": "Shallowest depth at which the well was treated",
+        "data_type": "REAL",
+        "examples": 4000,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_interval",
+        "description": "Interval over which the well was treated",
+        "data_type": "string",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_other",
+        "description": "Indicator that another type of treatment was applied to the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_perf",
+        "description": "Indicator that the well was perforated",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_shot",
+        "description": "Indicator the well was shot",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_to",
+        "description": "Deepest depth at which the treatment was applied",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "treatment_fractured",
+        "description": "Indicator that a fracture treatment was applied to the well",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "open_hole_interval",
+        "description": "Interval over which the well has an open uncased hole",
+        "data_type": "REAL",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_form",
+        "description": "Formation in which fluid is injected",
+        "data_type": "string",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_date",
+        "description": "Date of injection",
+        "data_type": "TEXT",
+        "examples": "2005-05-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_fluid_freshwater",
+        "description": "Indicator that the fluid injected is freshwater",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_fluid_other",
+        "description": "Indicator that an \"other\" fluid was injected",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_fluid_other_desc",
+        "description": "Description of the \"other\" fluid type injected",
+        "data_type": "string",
+        "examples": "Hydrogen sulfide",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "inj_fluid_saltwater",
+        "description": "Indicator that the fluid injected is salt water",
+        "data_type": "boolean",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "fluid_source",
+        "description": "Description of the fluid source",
+        "data_type": "string",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "gas_inj_rate",
+        "description": "Gas injection rate",
+        "data_type": "REAL",
+        "examples": 200,
+        "units": "MCF/day",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "gas_press",
+        "description": "Gas injection pressure",
+        "data_type": "REAL",
+        "examples": 200,
+        "units": "psi",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "water_inj_rate",
+        "description": "Water injection rate",
+        "data_type": "REAL",
+        "examples": 100,
+        "units": "bbl/day",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "water_press",
+        "description": "Water injection pressure",
+        "data_type": "REAL",
+        "examples": 200,
+        "units": "psi",
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "signature",
+        "description": "Signature of the person submitting the form",
+        "data_type": "string",
+        "examples": "John Smith",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "signature_address",
+        "description": "Address of the person signing the form",
+        "data_type": "string",
+        "examples": "1313 Mockingbird Lane",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "signature_city_state",
+        "description": "City and state of ther person signing the form",
+        "data_type": "string",
+        "examples": "Pittsburgh, Pennsylvanoa",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "signature_date",
+        "description": "Date of the signature",
+        "data_type": "TEXT",
+        "examples": "2005-05-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    },
+    {
+        "column_name": "signature_title",
+        "description": "Title of the person signing the form",
+        "data_type": "string",
+        "examples": "Mr.",
+        "units": null,
+        "application": "Illinois",
+        "links": null
+    }
+]

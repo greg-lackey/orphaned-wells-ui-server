@@ -1,0 +1,38 @@
+[
+    {
+        "column_name": "log_id",
+        "Column Description": "Unique identifier for the log",
+        "Data Type": "big int",
+        "Example": 1234,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_id",
+        "Column Description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "Data Type": "big int",
+        "Example": 512312345000,
+        "units": null,
+        "application": "General",
+        "links": "Linked to id in sidetracks"
+    },
+    {
+        "column_name": "log_date",
+        "Column Description": "Date that wireline/electric logs were run",
+        "Data Type": "date",
+        "Example": "2022-04-12T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "log_type",
+        "Column Description": "Wireline/electric log type",
+        "Data Type": "string",
+        "Example": "Cement bond log",
+        "units": null,
+        "application": "General",
+        "links": null
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "column_name": "id",
+        "Column Description": "Unique identifier for the drill stem test",
+        "Data Type": "big int",
+        "Example": 1234,
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "sidetrack_id",
+        "Column Description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "Data Type": "big int",
+        "Example": 512312345000,
+        "units": null,
+        "application": "General",
+        "links": "Linked to id in sidetracks"
+    },
+    {
+        "column_name": "form",
+        "Column Description": "Target formation for production",
+        "Data Type": "string",
+        "Example": "Mt Simon",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "test_date",
+        "Column Description": "Date of the drill stem test",
+        "Data Type": "date",
+        "Example": "1985-05-21T00:00:00",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "test_length",
+        "Column Description": "Length of the drill stem test",
+        "Data Type": "string",
+        "Example": 12,
+        "units": "hours",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "pre_test_prod",
+        "Column Description": "Initial production before treatment (could be oil or gas, bbl or MCF)",
+        "Data Type": "string",
+        "Example": "10 BBL",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "post_test_prod",
+        "Column Description": "Initial production after treatment (could be oil or gas, bbl or MCF)",
+        "Data Type": "string",
+        "Example": "12 BBL",
+        "units": null,
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "gas_prod",
+        "Column Description": "Initial daily gas production",
+        "Data Type": "float",
+        "Example": 10,
+        "units": "mcf/day",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "oil_prod",
+        "Column Description": "Initial daily oil production",
+        "Data Type": "float",
+        "Example": 50,
+        "units": "bbls/day",
+        "application": "General",
+        "links": null
+    },
+    {
+        "column_name": "water_prod",
+        "Column Description": "Initial daily water production",
+        "Data Type": "float",
+        "Example": 5,
+        "units": "bbls/day",
+        "application": "General",
+        "links": null
+    }
+]

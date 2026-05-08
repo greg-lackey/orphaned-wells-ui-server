@@ -1,0 +1,290 @@
+[
+    {
+        "column_name": "id",
+        "description": "Unformatted 10 digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
+        "data_type": "big int",
+        "examples": 5123123450,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "api_uwi",
+        "description": "Formatted 10-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
+        "data_type": "string/character varying",
+        "examples": "51-231-23450",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "api_state",
+        "description": "First two digits of API number indicating the state",
+        "data_type": "Int",
+        "examples": "\"05\"",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "api_county",
+        "description": "Third through fifth digitis indicating the county within the state",
+        "data_type": "int",
+        "examples": 123,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "api_label",
+        "description": "Final five digits indicating the well surface location",
+        "data_type": "Big int",
+        "examples": 45678,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "operator",
+        "description": "Company currently operating the well",
+        "data_type": "string/character varying",
+        "examples": "Chevron",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "original_operator",
+        "description": "The original owner of the well",
+        "data_type": "string/character varying",
+        "examples": "Kerr McGee",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "operator_number",
+        "description": "Numeric value representing the operator",
+        "data_type": "big int",
+        "examples": 29791515,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "name",
+        "description": "The name given to the well",
+        "data_type": "string/character varying",
+        "examples": "Smith Well",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "title",
+        "description": "Official well title (may differ from name)",
+        "data_type": "string/character varying",
+        "examples": "Smith Well #16",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "spud_date",
+        "description": "Date that the well was spudded. Aligns with the spud date of the first sidetrack",
+        "data_type": null,
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "elevation_gr",
+        "description": "Elevation of the well pad",
+        "data_type": "float/double precision",
+        "examples": 5550,
+        "units": "feet",
+        "application": "General"
+    },
+    {
+        "column_name": "elevation_kb",
+        "description": "Elevation of the kelly bushing",
+        "data_type": "float/double precision",
+        "examples": 5570,
+        "units": "feet",
+        "application": "General"
+    },
+    {
+        "column_name": "elevation_df",
+        "description": "Elevation of the drill rig floor",
+        "data_type": "float/double precision",
+        "examples": 5560,
+        "units": "feet",
+        "application": "General"
+    },
+    {
+        "column_name": "max_tvd",
+        "description": "The maximum vertical depth of sidetracks within the well in feet",
+        "data_type": "float/double precision",
+        "examples": 7000,
+        "units": "feet",
+        "application": "General"
+    },
+    {
+        "column_name": "max_md",
+        "description": "The maximum measured depth (can be longer than vertical depth if well is deviated) of sidetracks within the well in feet",
+        "data_type": "float/double precision",
+        "examples": 14000,
+        "units": "feet",
+        "application": "General"
+    },
+    {
+        "column_name": "field_code",
+        "description": "Numeric value representing the field that the well is in",
+        "data_type": "Int",
+        "examples": 90750,
+        "units": " ",
+        "application": "General"
+    },
+    {
+        "column_name": "field_name",
+        "description": "Name of the field where the well is located",
+        "data_type": "String/character varying",
+        "examples": "Wattenberg",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "status",
+        "description": "The current status of the well ",
+        "data_type": "string/character varying",
+        "examples": "Plugged",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "status_date",
+        "description": "The date of the reported well status (if available)",
+        "data_type": "date",
+        "examples": "2023-11-21T00:00:00",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "type",
+        "description": "The type of well",
+        "data_type": "string/character varying",
+        "examples": "Oil",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "name",
+        "description": "The name given to the well",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "type",
+        "description": "The type of well (e.g., oil, gas, injection)",
+        "data_type": "string/character varying",
+        "examples": "oil",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "configuration",
+        "description": "Indicates the configuration of the wellbore (Vertical, deviated, or horizontal)",
+        "data_type": "string/character varying",
+        "examples": "Vertical",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "surface_latitude",
+        "description": "surface latitude",
+        "data_type": "float/double precision",
+        "examples": 40.44469,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "surface_longitude",
+        "description": "surface longitude",
+        "data_type": "float/double precision",
+        "examples": -104.52919,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "county",
+        "description": "Name of county where well is located",
+        "data_type": "string/character varying",
+        "examples": "Mercer",
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "utm_x",
+        "description": "Universal transverse mercator coordinates",
+        "data_type": "bigint",
+        "examples": 539926,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "utm_y",
+        "description": "Universal transverse mercator coordinates",
+        "data_type": "bigint",
+        "examples": 4477222,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "plss_loc",
+        "description": "PLSS description of location",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "section",
+        "description": "PLSS  section",
+        "data_type": "int",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "township",
+        "description": "PLSS township",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "range",
+        "description": "PLSS range",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "meridian",
+        "description": "PLSS principle meridian",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "General"
+    },
+    {
+        "column_name": "lease_sign",
+        "description": "Boolean indicating the presence of a lease sign",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "Illinois"
+    },
+    {
+        "column_name": "ref_number",
+        "description": "Reference number for the well",
+        "data_type": "string/character varying",
+        "examples": null,
+        "units": null,
+        "application": "Illinois"
+    }
+]
