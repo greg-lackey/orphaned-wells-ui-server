@@ -1,7 +1,6 @@
 import sqlite3
 import sys
 from pathlib import Path
-from unittest.mock import MagicMock
 from bson import ObjectId
 
 import pytest
@@ -22,22 +21,24 @@ SCHEMA = {
     ],
 }
 
-MAPPING = [
-    {
-        "Google Processor": "WellCompletion",
-        "OGRRE_Name": "Well_Name",
-        "Completion Report Table Field": "well_name",
-        "Master Table": "well_headers",
-        "Master Field": "name",
-    },
-    {
-        "Google Processor": "WellCompletion",
-        "OGRRE_Name": "Comp_Date",
-        "Completion Report Table Field": "comp_date",
-        "Master Table": None,
-        "Master Field": None,
-    },
-]
+MAPPING = {
+    "completion_reports": [
+        {
+            "Google Processor": "WellCompletion",
+            "OGRRE Field": "Well_Name",
+            "Report Table Field": "well_name",
+            "Well Table": "well_headers",
+            "Well Field": "name",
+        },
+        {
+            "Google Processor": "WellCompletion",
+            "OGRRE Field": "Comp_Date",
+            "Report Table Field": "comp_date",
+            "Well Table": None,
+            "Well Field": None,
+        },
+    ]
+}
 
 EXTRACTED = {
     "WellCompletion": [

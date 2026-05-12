@@ -7,36 +7,70 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync"))
 from transform import _build_lookup, _validate_mapping_headers, transform
 
 
-MAPPING = [
-    {
-        "Google Processor": "ProcA",
-        "OGRRE_Name": "Well_Name",
-        "Completion Report Table Field": "well_name",
-        "Master Table": "well_headers",
-        "Master Field": "name",
-    },
-    {
-        "Google Processor": "ProcA",
-        "OGRRE_Name": "Spud_Date",
-        "Completion Report Table Field": "spud_date",
-        "Master Table": "well_headers",
-        "Master Field": "spud_date",
-    },
-    {
-        "Google Processor": "ProcA",
-        "OGRRE_Name": "Comp_Date",
-        "Completion Report Table Field": "comp_date",
-        "Master Table": "sidetracks",
-        "Master Field": "comp_date",
-    },
-    {
-        "Google Processor": "ProcB",
-        "OGRRE_Name": "Completion_Date",
-        "Completion Report Table Field": "comp_date",
-        "Master Table": "sidetracks",
-        "Master Field": "comp_date",
-    },
-]
+# ── Fixtures ──────────────────────────────────────────────────────────────────
+
+# Single-report-type mapping (completion_reports only)
+MAPPING = {
+    "completion_reports": [
+        {
+            "Google Processor": "ProcA",
+            "OGRRE Field": "Well_Name",
+            "Report Table Field": "well_name",
+            "Well Table": "well_headers",
+            "Well Field": "name",
+        },
+        {
+            "Google Processor": "ProcA",
+            "OGRRE Field": "Spud_Date",
+            "Report Table Field": "spud_date",
+            "Well Table": "well_headers",
+            "Well Field": "spud_date",
+        },
+        {
+            "Google Processor": "ProcA",
+            "OGRRE Field": "Comp_Date",
+            "Report Table Field": "comp_date",
+            "Well Table": "sidetracks",
+            "Well Field": "comp_date",
+        },
+        {
+            "Google Processor": "ProcB",
+            "OGRRE Field": "Completion_Date",
+            "Report Table Field": "comp_date",
+            "Well Table": "sidetracks",
+            "Well Field": "comp_date",
+        },
+    ]
+}
+
+# Multi-report-type mapping: completion_reports + plugging_reports
+MULTI_MAPPING = {
+    "completion_reports": [
+        {
+            "Google Processor": "ProcA",
+            "OGRRE Field": "Well_Name",
+            "Report Table Field": "well_name",
+            "Well Table": "well_headers",
+            "Well Field": "name",
+        },
+    ],
+    "plugging_reports": [
+        {
+            "Google Processor": "ProcPlug",
+            "OGRRE Field": "Well_Name",
+            "Report Table Field": "well_name",
+            "Well Table": "well_headers",
+            "Well Field": "name",
+        },
+        {
+            "Google Processor": "ProcPlug",
+            "OGRRE Field": "Plug_Date",
+            "Report Table Field": "plug_date",
+            "Well Table": None,
+            "Well Field": None,
+        },
+    ],
+}
 
 
 def _record(proc, api, mongo_id="abc", date_created=1000, **fields):
@@ -53,40 +87,39 @@ def _record(proc, api, mongo_id="abc", date_created=1000, **fields):
 
 # ── _build_lookup ─────────────────────────────────────────────────────────────
 
-def test_build_lookup_indexes_by_processor_and_ogrre_name():
+def test_build_lookup_indexes_by_report_table_and_processor():
     lookup = _build_lookup(MAPPING)
-    assert "ProcA" in lookup
-    assert "Well_Name" in lookup["ProcA"]
-    assert lookup["ProcA"]["Well_Name"]["report_col"] == "well_name"
-    assert lookup["ProcA"]["Well_Name"]["master_table"] == "well_headers"
-    assert lookup["ProcA"]["Well_Name"]["master_col"] == "name"
+    assert "completion_reports" in lookup
+    assert "ProcA" in lookup["completion_reports"]
+    entry = lookup["completion_reports"]["ProcA"]["Well_Name"]
+    assert entry["report_col"] == "well_name"
+    assert entry["master_table"] == "well_headers"
+    assert entry["master_col"] == "name"
 
 
 def test_build_lookup_skips_entries_missing_processor_or_ogrre_name():
-    bad = [
-        {"Google Processor": "", "OGRRE_Name": "X", "Completion Report Table Field": "x"},
-        {"Google Processor": "P", "OGRRE_Name": "", "Completion Report Table Field": "x"},
-        {"Google Processor": None, "OGRRE_Name": "X"},
-    ]
+    bad = {
+        "completion_reports": [
+            {"Google Processor": "",  "OGRRE Field": "X", "Report Table Field": "x"},
+            {"Google Processor": "P", "OGRRE Field": "",  "Report Table Field": "x"},
+            {"Google Processor": None, "OGRRE Field": "X"},
+        ]
+    }
     lookup = _build_lookup(bad)
-    assert lookup == {}
+    assert lookup == {"completion_reports": {}}
 
 
-# ── transform ─────────────────────────────────────────────────────────────────
+# ── transform — single report type ───────────────────────────────────────────
 
 def test_transform_produces_completion_reports_row():
-    extracted = {
-        "ProcA": [_record("ProcA", "1234567890", Well_Name="Test Well")]
-    }
+    extracted = {"ProcA": [_record("ProcA", "1234567890", Well_Name="Test Well")]}
     result = transform(extracted, MAPPING)
     assert len(result["completion_reports"]) == 1
     assert result["completion_reports"][0]["well_name"] == "Test Well"
 
 
-def test_transform_maps_master_table_fields():
-    extracted = {
-        "ProcA": [_record("ProcA", "1234567890", Comp_Date="2023-01-01")]
-    }
+def test_transform_maps_well_layer_fields():
+    extracted = {"ProcA": [_record("ProcA", "1234567890", Comp_Date="2023-01-01")]}
     result = transform(extracted, MAPPING)
     assert "sidetracks" in result
     assert result["sidetracks"][0]["comp_date"] == "2023-01-01"
@@ -100,9 +133,8 @@ def test_transform_well_headers_most_recent_wins():
         ]
     }
     result = transform(extracted, MAPPING)
-    well_rows = result["well_headers"]
-    assert len(well_rows) == 1
-    assert well_rows[0]["name"] == "New Name"
+    assert len(result["well_headers"]) == 1
+    assert result["well_headers"][0]["name"] == "New Name"
 
 
 def test_transform_well_headers_one_row_per_api():
@@ -116,10 +148,8 @@ def test_transform_well_headers_one_row_per_api():
     assert len(result["well_headers"]) == 2
 
 
-def test_transform_includes_meta_fields_in_completion_reports():
-    extracted = {
-        "ProcA": [_record("ProcA", "1234567890", mongo_id="m1")]
-    }
+def test_transform_includes_meta_fields_in_report_row():
+    extracted = {"ProcA": [_record("ProcA", "1234567890", mongo_id="m1")]}
     result = transform(extracted, MAPPING)
     row = result["completion_reports"][0]
     assert row["_mongo_id"] == "m1"
@@ -127,13 +157,11 @@ def test_transform_includes_meta_fields_in_completion_reports():
     assert row["_review_status"] == "reviewed"
 
 
-def test_transform_unknown_processor_produces_meta_only_report_row():
-    extracted = {
-        "UnknownProc": [_record("UnknownProc", "9999999999", Well_Name="X")]
-    }
+def test_transform_skips_unmapped_processor():
+    """Processors not found in any mapping file are skipped entirely."""
+    extracted = {"UnknownProc": [_record("UnknownProc", "9999999999", Well_Name="X")]}
     result = transform(extracted, MAPPING)
-    assert len(result["completion_reports"]) == 1
-    assert "well_name" not in result["completion_reports"][0]
+    assert result.get("completion_reports", []) == []
 
 
 def test_transform_different_processors_same_report_column():
@@ -151,10 +179,48 @@ def test_transform_empty_extracted_returns_empty():
     assert transform({}, MAPPING) == {}
 
 
+# ── transform — multiple report types ────────────────────────────────────────
+
+def test_transform_routes_processors_to_correct_report_table():
+    extracted = {
+        "ProcA":    [_record("ProcA",    "1111111111", Well_Name="Comp Well")],
+        "ProcPlug": [_record("ProcPlug", "2222222222", Well_Name="Plug Well", Plug_Date="2024-01-01")],
+    }
+    result = transform(extracted, MULTI_MAPPING)
+    assert len(result.get("completion_reports", [])) == 1
+    assert len(result.get("plugging_reports", [])) == 1
+    assert result["completion_reports"][0]["well_name"] == "Comp Well"
+    assert result["plugging_reports"][0]["plug_date"] == "2024-01-01"
+
+
+def test_transform_well_headers_shared_across_report_types():
+    """most-recent-wins on well_headers spans all report types."""
+    extracted = {
+        "ProcA":    [_record("ProcA",    "1111111111", date_created=1000, Well_Name="Old Name")],
+        "ProcPlug": [_record("ProcPlug", "1111111111", date_created=2000, Well_Name="New Name")],
+    }
+    result = transform(extracted, MULTI_MAPPING)
+    assert len(result["well_headers"]) == 1
+    assert result["well_headers"][0]["name"] == "New Name"
+
+
+def test_transform_unmapped_processor_does_not_affect_other_tables():
+    """An unmapped processor is skipped; mapped processors still produce rows."""
+    extracted = {
+        "ProcA":    [_record("ProcA",    "1111111111", Well_Name="Good Well")],
+        "BadProc":  [_record("BadProc",  "2222222222", Well_Name="Ignored")],
+    }
+    result = transform(extracted, MAPPING)
+    assert len(result["completion_reports"]) == 1
+    assert result["completion_reports"][0]["well_name"] == "Good Well"
+
+
+# ── warnings ─────────────────────────────────────────────────────────────────
+
 def test_transform_warns_on_unmapped_processor(capsys):
     extracted = {
         "UnknownProc": [_record("UnknownProc", "9999999999")],
-        "ProcA": [_record("ProcA", "1111111111")],
+        "ProcA":       [_record("ProcA",       "1111111111")],
     }
     transform(extracted, MAPPING)
     out = capsys.readouterr().out
@@ -164,8 +230,15 @@ def test_transform_warns_on_unmapped_processor(capsys):
 
 
 def test_validate_mapping_headers_warns_on_missing_column(capsys):
-    bad_mapping = [{"Google Processor": "P", "OGRRE_Name": "X"}]  # missing required cols
+    bad_mapping = [{"Google Processor": "P", "OGRRE Field": "X"}]  # missing required cols
     _validate_mapping_headers(bad_mapping)
     out = capsys.readouterr().out
     assert "WARNING" in out
-    assert "Completion Report Table Field" in out
+    assert "Report Table Field" in out
+
+
+def test_validate_mapping_headers_includes_table_name_in_warning(capsys):
+    bad_mapping = [{"Google Processor": "P", "OGRRE Field": "X"}]
+    _validate_mapping_headers(bad_mapping, table_name="plugging_reports")
+    out = capsys.readouterr().out
+    assert "plugging_reports" in out
