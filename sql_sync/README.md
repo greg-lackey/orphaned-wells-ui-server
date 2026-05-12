@@ -19,8 +19,11 @@ All three stages can be run individually via their CLIs, or together via `run.py
 ## Quick start
 
 ```bash
-# Full pipeline (SQLite)
+# Full pipeline (SQLite) — MongoDB DB name defaults to institution key
 python sql_sync/run.py --institution isgs --db-type sqlite --db-path sql_sync/data/ogrre_isgs.db
+
+# Override DB name when it differs from the institution key
+python sql_sync/run.py --institution isgs --db-name isgs_production --db-type postgres
 
 # Full pipeline (PostgreSQL — reads PG_DSN from .env)
 python sql_sync/run.py --institution isgs --db-type postgres

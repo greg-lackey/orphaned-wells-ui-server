@@ -24,12 +24,10 @@ Output shape:
         "PlugAndAbandonment": [...],
     }
 
-Note: the target institution is determined by DB_NAME in the root .env —
-the MongoDB database is per-institution, so no filtering flag is needed here.
-
 Usage:
-    python sql_sync/extract.py --out sql_sync/data/extracted/isgs.json
-    python sql_sync/extract.py --dry-run
+    python sql_sync/extract.py --db-name isgs --out sql_sync/data/extracted/isgs.json
+    python sql_sync/extract.py --db-name isgs --dry-run
+    python sql_sync/extract.py --dry-run          # falls back to DB_NAME in .env
 """
 
 import argparse
@@ -61,14 +59,19 @@ VALIDATED_QUERY = {
 
 # ── Connection ────────────────────────────────────────────────────────────────
 
-def connect():
-    """Connect to MongoDB using credentials from the project root .env."""
+def connect(db_name: str = None):
+    """Connect to MongoDB using credentials from the project root .env.
+
+    Args:
+        db_name: MongoDB database name. If omitted, falls back to DB_NAME in
+                 .env, then to "ogrre". Explicit argument takes precedence.
+    """
     load_dotenv(_ROOT_ENV, override=True)
 
     db_connection = os.getenv("DB_CONNECTION")
     db_username   = os.getenv("DB_USERNAME")
     db_password   = os.getenv("DB_PASSWORD")
-    db_name       = os.getenv("DB_NAME", "ogrre")
+    db_name       = db_name or os.getenv("DB_NAME", "ogrre")
 
     if not db_connection:
         raise ValueError(
@@ -232,6 +235,11 @@ if __name__ == "__main__":
         description="Extract validated OGRRE records from MongoDB."
     )
     parser.add_argument(
+        "--db-name",
+        default=None,
+        help="MongoDB database name (e.g. 'isgs'). Overrides DB_NAME in .env.",
+    )
+    parser.add_argument(
         "--out",
         default=None,
         help="Write JSON output to this file instead of stdout.",
@@ -243,7 +251,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    db = connect()
+    db = connect(db_name=args.db_name)
     result = extract(db, dry_run=args.dry_run)
 
     if args.dry_run:

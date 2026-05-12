@@ -12,13 +12,14 @@ Intermediate JSON files are kept in memory by default.  Pass
 sql_sync/data/transformed/ for inspection or incremental reruns.
 
 Usage:
-    # SQLite (dev)
+    # SQLite (dev) — DB name defaults to institution key
     python sql_sync/run.py --institution isgs \\
                             --db-type sqlite \\
                             --db-path sql_sync/data/ogrre_isgs.db
 
-    # PostgreSQL (prod)
-    python sql_sync/run.py --institution isgs --db-type postgres
+    # Override DB name when it differs from the institution key
+    python sql_sync/run.py --institution isgs --db-name isgs_production \\
+                            --db-type postgres
 
     # Save intermediate files for inspection
     python sql_sync/run.py --institution isgs --db-type sqlite \\
@@ -83,10 +84,11 @@ def run(
     db_path: str = None,
     truncate: bool = False,
     save_intermediates: bool = False,
+    db_name: str = None,
 ) -> None:
     """Run the full extract → transform → load pipeline."""
     print("--- Step 1: Extract ---")
-    db = connect()
+    db = connect(db_name=db_name or institution)
     extracted = extract(db)
 
     if not extracted:
@@ -121,6 +123,13 @@ if __name__ == "__main__":
         help="Institution key (e.g. 'isgs'). Selects field mapping and schema.",
     )
     parser.add_argument(
+        "--db-name", default=None,
+        help=(
+            "MongoDB database name. Defaults to the --institution value. "
+            "Use this when the database name differs from the institution key."
+        ),
+    )
+    parser.add_argument(
         "--db-type", required=True, choices=["sqlite", "postgres"],
         help="Target database type.",
     )
@@ -147,4 +156,5 @@ if __name__ == "__main__":
         db_path=args.db_path,
         truncate=args.truncate,
         save_intermediates=args.save_intermediates,
+        db_name=args.db_name,
     )
