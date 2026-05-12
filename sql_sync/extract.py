@@ -34,9 +34,11 @@ import argparse
 import json
 import os
 import re
+import urllib.parse
 from collections import defaultdict
 from pathlib import Path
 
+import certifi
 from bson import ObjectId
 from dotenv import load_dotenv
 from pymongo import MongoClient
@@ -44,7 +46,7 @@ from pymongo.server_api import ServerApi
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
-_ENV_PATH = Path(__file__).parent / ".env"
+_ROOT_ENV = Path(__file__).parent.parent / ".env"
 
 # Matches XX-XXX-XXXXX or XXXXXXXXXX (10-digit US API number)
 _API_RE = re.compile(r"(\d{2})-?(\d{3})-?(\d{5})")
@@ -57,12 +59,38 @@ VALIDATED_QUERY = {
 
 # ── Connection ────────────────────────────────────────────────────────────────
 
-def connect(env_path: Path = _ENV_PATH):
-    """Connect to MongoDB using credentials from sql_sync/.env."""
-    load_dotenv(env_path)
-    connection_str = os.getenv("DB_CONNECTION")
-    db_name = os.getenv("MONGO_DB_NAME", "ogrre")
-    client = MongoClient(connection_str, server_api=ServerApi("1"))
+def connect():
+    """Connect to MongoDB using credentials from the project root .env."""
+    load_dotenv(_ROOT_ENV, override=True)
+
+    db_connection = os.getenv("DB_CONNECTION")
+    db_username   = os.getenv("DB_USERNAME")
+    db_password   = os.getenv("DB_PASSWORD")
+    db_name       = os.getenv("DB_NAME", "ogrre")
+
+    if not db_connection:
+        raise ValueError(
+            "DB_CONNECTION is not set. Add it to the project root .env."
+        )
+
+    app_name = os.getenv("MONGO_APP_NAME", "OGRRE")
+
+    if db_connection.startswith("mongodb://") or db_connection.startswith("mongodb+srv://"):
+        uri = db_connection
+        client = MongoClient(uri, server_api=ServerApi("1"))
+    else:
+        username = urllib.parse.quote_plus(db_username)
+        password = urllib.parse.quote_plus(db_password)
+        cluster  = urllib.parse.quote_plus(db_connection)
+        uri = f"mongodb+srv://{username}:{password}@{cluster}.mongodb.net/?appName={app_name}"
+        client = MongoClient(uri, server_api=ServerApi("1"), tlsCAFile=certifi.where())
+
+    try:
+        client.admin.command("ping")
+        print("Successfully connected to MongoDB!")
+    except Exception as e:
+        print(f"Unable to connect to MongoDB: {e}")
+
     return client[db_name]
 
 
@@ -173,6 +201,28 @@ def extract(db, dry_run: bool = False) -> dict:
     return dict(by_processor)
 
 
+def _print_diagnostics(db) -> None:
+    """Print database/collection layout and status value counts to diagnose zero results."""
+    client = db.client
+    print(f"\nConnected database: {db.name}")
+    print(f"Available databases: {client.list_database_names()}")
+    print(f"Collections in '{db.name}': {db.list_collection_names()}")
+
+    total = db.records.count_documents({})
+    matched = db.records.count_documents(VALIDATED_QUERY)
+    print(f"\nrecords collection — total: {total}, matching query: {matched}")
+
+    if total == 0:
+        return
+
+    for field in ("review_status", "status"):
+        pipeline = [{"$group": {"_id": f"${field}", "count": {"$sum": 1}}}, {"$sort": {"count": -1}}]
+        buckets = list(db.records.aggregate(pipeline))
+        print(f"\n{field} value counts:")
+        for b in buckets:
+            print(f"  {b['_id']!r}: {b['count']}")
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -200,7 +250,7 @@ if __name__ == "__main__":
     result = extract(db, dry_run=args.dry_run)
 
     if args.dry_run:
-        pass  # counts already printed inside extract()
+        _print_diagnostics(db)
     elif args.out:
         with open(args.out, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, default=str)
