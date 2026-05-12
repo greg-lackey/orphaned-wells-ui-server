@@ -10,3 +10,7 @@ __pycache__/
 *.egg-info/
 build/
 deployment/secrets/
+sql_sync/**/*.xlsx
+sql_sync/data/extracted/
+sql_sync/data/transformed/
+sql_sync/data/*.db
