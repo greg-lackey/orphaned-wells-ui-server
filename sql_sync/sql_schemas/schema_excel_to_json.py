@@ -76,6 +76,35 @@ COLUMN_HEADERS = {
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+def _tables_to_sql(all_columns: dict, db_type: str) -> str:
+    """
+    Generate CREATE TABLE IF NOT EXISTS SQL for all tables.
+
+    Args:
+        all_columns: {table_name: [column_dicts]} — types already mapped by schema_to_json
+        db_type:     "postgres" uses SERIAL PRIMARY KEY; anything else uses
+                     INTEGER PRIMARY KEY AUTOINCREMENT (SQLite)
+    """
+    is_postgres = (db_type == "postgres")
+    id_def = "id SERIAL PRIMARY KEY" if is_postgres else "id INTEGER PRIMARY KEY AUTOINCREMENT"
+
+    statements = []
+    for table_name, columns in all_columns.items():
+        col_defs = [f"  {id_def}"]
+        for col in columns:
+            name = col.get("column_name", "")
+            if name == "id":
+                continue
+            sql_type = col.get("data_type") or "TEXT"
+            col_defs.append(f'  "{name}" {sql_type}')
+        statements.append(
+            f"CREATE TABLE IF NOT EXISTS {table_name} (\n"
+            + ",\n".join(col_defs)
+            + "\n);"
+        )
+    return "\n\n".join(statements) + "\n"
+
+
 def _normalize_column_name(name: str) -> str:
     """Convert a spreadsheet column name to a valid snake_case SQL identifier."""
     name = str(name).strip().lower()
@@ -166,6 +195,7 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
     print(f"schema_to_json [{institution}]: found {len(table_sheets)} table sheets: {table_sheets}")
 
     tables_index = {}
+    all_columns = {}  # accumulated for SQL generation
 
     for sheet in table_sheets:
         # Row 0 is a title row; row 1 is the column header row
@@ -214,11 +244,17 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
         print(f"  Wrote {out_path}")
 
         tables_index[sheet] = [c.get("column_name") for c in columns]
+        all_columns[sheet] = columns
 
     index_path = os.path.join(schema_dir, "tables.json")
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(tables_index, f, indent=4)
     print(f"  Wrote {index_path}")
+
+    sql_path = os.path.join(schema_dir, "create_tables.sql")
+    with open(sql_path, "w", encoding="utf-8") as f:
+        f.write(_tables_to_sql(all_columns, db_type or "sqlite"))
+    print(f"  Wrote {sql_path}")
 
 
 # ── mapping_to_json ───────────────────────────────────────────────────────────

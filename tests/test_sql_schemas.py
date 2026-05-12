@@ -95,6 +95,29 @@ def test_duplicate_column_name_prints_warning(tmp_path, capsys):
     assert "well_id" in capsys.readouterr().out or True  # already asserted via WARNING
 
 
+def test_schema_to_json_creates_sql_file(structure_xlsx, tmp_path):
+    schema_to_json(str(structure_xlsx), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
+    assert (tmp_path / "sqlite_schema" / "isgs" / "create_tables.sql").exists()
+
+
+def test_sql_file_sqlite_syntax(structure_xlsx, tmp_path):
+    schema_to_json(str(structure_xlsx), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
+    sql = (tmp_path / "sqlite_schema" / "isgs" / "create_tables.sql").read_text()
+    assert "CREATE TABLE IF NOT EXISTS well_headers" in sql
+    assert "INTEGER PRIMARY KEY AUTOINCREMENT" in sql
+    assert '"well_name" TEXT' in sql
+    assert '"depth" REAL' in sql
+
+
+def test_sql_file_postgres_syntax(structure_xlsx, tmp_path):
+    schema_to_json(str(structure_xlsx), institution="isgs", out_dir=str(tmp_path), type_map=POSTGRES_TYPE_MAP, db_type="postgres")
+    sql = (tmp_path / "postgres_schema" / "isgs" / "create_tables.sql").read_text()
+    assert "CREATE TABLE IF NOT EXISTS well_headers" in sql
+    assert "SERIAL PRIMARY KEY" in sql
+    assert '"well_name" text' in sql
+    assert '"depth" double precision' in sql
+
+
 def test_mapping_to_json_creates_expected_file(mapping_xlsx, tmp_path):
     mapping_to_json(str(mapping_xlsx), institution="isgs", out_dir=str(tmp_path))
     out_file = tmp_path / "field_mapping" / "isgs" / "ogrre_to_isgs.json"
