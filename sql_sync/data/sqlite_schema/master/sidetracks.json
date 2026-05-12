@@ -54,7 +54,7 @@
         "links": null
     },
     {
-        "column_name": "API UWI 12",
+        "column_name": "api_uwi_12",
         "description": "Twelve-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
         "data_type": "string/character varying",
         "examples": "51-231-23450-00",

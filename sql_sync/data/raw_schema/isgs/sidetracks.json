@@ -20,10 +20,10 @@
     {
         "column_name": "well_id",
         "description": "Unformatted 10 digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
-        "data_type": "string/character varying",
-        "examples": null,
+        "data_type": "big int",
+        "examples": 5123123450,
         "units": null,
-        "application": null,
+        "application": "General",
         "links": "id in well_headers table"
     },
     {
@@ -54,19 +54,10 @@
         "links": null
     },
     {
-        "column_name": "API UWI 12",
+        "column_name": "api_uwi_12",
         "description": "Twelve-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
         "data_type": "string/character varying",
         "examples": "51-231-23450-00",
-        "units": null,
-        "application": "General",
-        "links": null
-    },
-    {
-        "column_name": "well_id",
-        "description": "Unformatted 10-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
-        "data_type": "big int",
-        "examples": 5123123450,
         "units": null,
         "application": "General",
         "links": null
@@ -171,7 +162,7 @@
         "links": null
     },
     {
-        "column_name": "primary",
+        "column_name": "is_primary",
         "description": "Designates primary sidetrack for the well",
         "data_type": "Boolean",
         "examples": null,

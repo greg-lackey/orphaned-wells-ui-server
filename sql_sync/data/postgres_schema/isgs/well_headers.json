@@ -161,22 +161,6 @@
     },
     {
         "column_name": "type",
-        "description": "The type of well",
-        "data_type": "string/character varying",
-        "examples": "Oil",
-        "units": null,
-        "application": "General"
-    },
-    {
-        "column_name": "name",
-        "description": "The name given to the well",
-        "data_type": "string/character varying",
-        "examples": null,
-        "units": null,
-        "application": "General"
-    },
-    {
-        "column_name": "type",
         "description": "The type of well (e.g., oil, gas, injection)",
         "data_type": "string/character varying",
         "examples": "oil",
