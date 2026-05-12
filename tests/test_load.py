@@ -1,6 +1,7 @@
 import sqlite3
 import sys
 from pathlib import Path
+from unittest.mock import MagicMock
 
 import pytest
 
@@ -8,7 +9,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync"))
 from load import (
     _insertable_columns,
     _placeholders,
+    _postgres_type,
     _sqlite_type,
+    create_tables_postgres,
     create_tables_sqlite,
     insert_table,
     load,
@@ -41,7 +44,7 @@ def mem_db():
     return conn
 
 
-# ── _sqlite_type ──────────────────────────────────────────────────────────────
+# ── _sqlite_type / _postgres_type ────────────────────────────────────────────
 
 @pytest.mark.parametrize("data_type,expected", [
     ("bigint",    "INTEGER"),
@@ -56,6 +59,22 @@ def mem_db():
 ])
 def test_sqlite_type(data_type, expected):
     assert _sqlite_type(data_type) == expected
+
+
+@pytest.mark.parametrize("data_type,expected", [
+    ("bigint",           "bigint"),
+    ("big int",          "bigint"),
+    ("integer",          "integer"),
+    ("text",             "text"),
+    ("double precision", "double precision"),
+    ("float",            "double precision"),
+    ("boolean",          "boolean"),
+    ("date",             "date"),
+    ("BIGINT",           "bigint"),    # case-insensitive
+    ("unknown",          "text"),      # fallback
+])
+def test_postgres_type(data_type, expected):
+    assert _postgres_type(data_type) == expected
 
 
 # ── _insertable_columns ───────────────────────────────────────────────────────
@@ -97,6 +116,44 @@ def test_create_tables_id_is_primary_key(mem_db):
 
 def test_create_tables_is_idempotent(mem_db):
     create_tables_sqlite(mem_db, SCHEMA)  # second call must not raise
+
+
+def test_create_tables_sqlite_unique_constraint():
+    schema = {
+        "well_headers": [
+            {"column_name": "id",      "data_type": "INTEGER"},
+            {"column_name": "api_uwi", "data_type": "string", "unique": True},
+            {"column_name": "name",    "data_type": "string"},
+        ]
+    }
+    conn = sqlite3.connect(":memory:")
+    create_tables_sqlite(conn, schema)
+    conn.execute('INSERT INTO well_headers ("api_uwi") VALUES ("12345")')
+    conn.commit()
+    with pytest.raises(sqlite3.IntegrityError):
+        conn.execute('INSERT INTO well_headers ("api_uwi") VALUES ("12345")')
+        conn.commit()
+
+
+def test_create_tables_postgres_ddl():
+    """create_tables_postgres generates correct DDL with SERIAL PK and UNIQUE."""
+    schema = {
+        "well_headers": [
+            {"column_name": "id",      "data_type": "integer"},
+            {"column_name": "api_uwi", "data_type": "text", "unique": True},
+            {"column_name": "name",    "data_type": "text"},
+        ]
+    }
+    conn = MagicMock()
+    cur = conn.cursor.return_value
+    create_tables_postgres(conn, schema)
+    assert cur.execute.called
+    ddl = cur.execute.call_args[0][0]
+    assert "CREATE TABLE IF NOT EXISTS well_headers" in ddl
+    assert "id SERIAL PRIMARY KEY" in ddl
+    assert '"api_uwi" text UNIQUE' in ddl
+    assert '"name" text' in ddl
+    conn.commit.assert_called_once()
 
 
 # ── insert_table ──────────────────────────────────────────────────────────────

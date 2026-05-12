@@ -99,6 +99,7 @@ def connect(db_name: str):
         print("Successfully connected to MongoDB!")
     except Exception as e:
         print(f"Unable to connect to MongoDB: {e}")
+        raise
 
     return client[db_name]
 

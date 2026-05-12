@@ -38,7 +38,7 @@ from pathlib import Path
 
 from extract import connect, extract
 from transform import load_mapping, transform
-from load import connect_postgres, connect_sqlite, create_tables_sqlite, load, load_schema
+from load import connect_postgres, connect_sqlite, create_tables_postgres, create_tables_sqlite, load, load_schema
 
 _DATA_DIR = Path(__file__).parent / "data"
 
@@ -69,6 +69,7 @@ def run_pipeline(
         create_tables_sqlite(conn, schema)
     else:
         conn = connect_postgres()
+        create_tables_postgres(conn, schema)
 
     try:
         load(transformed, schema, conn, db_type, truncate=truncate)

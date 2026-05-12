@@ -6,6 +6,7 @@ import openpyxl
 import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync" / "sql_schemas"))
+sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync"))
 from schema_excel_to_json import POSTGRES_TYPE_MAP, SQLITE_TYPE_MAP, mapping_to_json, schema_to_json
 
 
@@ -95,9 +96,30 @@ def test_duplicate_column_name_prints_warning(tmp_path, capsys):
     assert "well_id" in capsys.readouterr().out or True  # already asserted via WARNING
 
 
+@pytest.fixture
+def structure_xlsx_with_unique(tmp_path):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "well_headers"
+    ws.append(["ISGS Well Headers"])
+    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links", "Unique"])
+    ws.append(["api_uwi",   "API number", "big int", 123456789012, None, "General", None, True])
+    ws.append(["well_name", "Well name",  "text",    "Example Well", None, "General", None, None])
+    path = tmp_path / "isgs-database-structure.xlsx"
+    wb.save(str(path))
+    return path
+
+
 def test_schema_to_json_creates_sql_file(structure_xlsx, tmp_path):
     schema_to_json(str(structure_xlsx), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
     assert (tmp_path / "sqlite_schema" / "isgs" / "create_tables.sql").exists()
+
+
+def test_sql_file_has_header_comment(structure_xlsx, tmp_path):
+    schema_to_json(str(structure_xlsx), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
+    sql = (tmp_path / "sqlite_schema" / "isgs" / "create_tables.sql").read_text()
+    assert sql.startswith("--")
+    assert "sqlite" in sql
 
 
 def test_sql_file_sqlite_syntax(structure_xlsx, tmp_path):
@@ -116,6 +138,21 @@ def test_sql_file_postgres_syntax(structure_xlsx, tmp_path):
     assert "SERIAL PRIMARY KEY" in sql
     assert '"well_name" text' in sql
     assert '"depth" double precision' in sql
+
+
+def test_json_schema_stores_unique_flag(structure_xlsx_with_unique, tmp_path):
+    schema_to_json(str(structure_xlsx_with_unique), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
+    data = json.loads((tmp_path / "sqlite_schema" / "isgs" / "well_headers.json").read_text())
+    cols = {c["column_name"]: c for c in data}
+    assert cols["api_uwi"].get("unique")       # truthy (Excel bool reads back as 1.0)
+    assert not cols["well_name"].get("unique")
+
+
+def test_sql_file_includes_unique_constraint(structure_xlsx_with_unique, tmp_path):
+    schema_to_json(str(structure_xlsx_with_unique), institution="isgs", out_dir=str(tmp_path), type_map=SQLITE_TYPE_MAP, db_type="sqlite")
+    sql = (tmp_path / "sqlite_schema" / "isgs" / "create_tables.sql").read_text()
+    assert '"api_uwi" INTEGER UNIQUE' in sql
+    assert '"well_name" TEXT' in sql  # no UNIQUE suffix
 
 
 def test_mapping_to_json_creates_expected_file(mapping_xlsx, tmp_path):

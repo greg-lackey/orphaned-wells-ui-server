@@ -4,14 +4,10 @@ load.py  (sql_sync)
 
 Loads transformed SQL rows into either SQLite (dev) or PostgreSQL (prod).
 
-Tables are created automatically for SQLite using the schema JSON files.
-For PostgreSQL, tables must already exist in the target database.
-
-Note: idempotent loads require a UNIQUE constraint in the target schema
-(e.g. on mongo_id for completion_reports, api_uwi for well_headers).
-Without one, INSERT OR IGNORE / ON CONFLICT DO NOTHING becomes a no-op
-and rerunning the loader will insert duplicate rows.  Use --truncate for
-a clean reload until unique constraints are in place.
+Tables are created automatically for both SQLite and PostgreSQL using the
+schema JSON files.  Columns marked unique=True in the schema get a UNIQUE
+constraint, which makes INSERT OR IGNORE / ON CONFLICT DO NOTHING actually
+deduplicate on rerun.  Use --truncate for a full reload regardless.
 
 Usage:
     # SQLite
@@ -34,7 +30,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from constants import SQLITE_TYPE_MAP
+from constants import POSTGRES_TYPE_MAP, SQLITE_TYPE_MAP
 
 _ROOT_ENV = Path(__file__).parent.parent / ".env"
 _DATA_DIR = Path(__file__).parent / "data"
@@ -70,6 +66,10 @@ def _sqlite_type(data_type: str) -> str:
     return SQLITE_TYPE_MAP.get((data_type or "").strip().lower(), "TEXT")
 
 
+def _postgres_type(data_type: str) -> str:
+    return POSTGRES_TYPE_MAP.get((data_type or "").strip().lower(), "text")
+
+
 def connect_sqlite(db_path: str) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     conn.execute("PRAGMA foreign_keys = ON")
@@ -83,13 +83,33 @@ def create_tables_sqlite(conn: sqlite3.Connection, schema: dict) -> None:
         for col in columns:
             if col["column_name"] == "id":
                 continue
-            col_defs.append(f'"{col["column_name"]}" {_sqlite_type(col["data_type"])}')
+            unique = " UNIQUE" if col.get("unique") else ""
+            col_defs.append(f'"{col["column_name"]}" {_sqlite_type(col["data_type"])}{unique}')
         ddl = (
             f"CREATE TABLE IF NOT EXISTS {table} (\n  "
             + ",\n  ".join(col_defs)
             + "\n)"
         )
         conn.execute(ddl)
+    conn.commit()
+
+
+def create_tables_postgres(conn, schema: dict) -> None:
+    """Create tables in PostgreSQL from schema definitions if they don't exist."""
+    cur = conn.cursor()
+    for table, columns in schema.items():
+        col_defs = ["id SERIAL PRIMARY KEY"]
+        for col in columns:
+            if col["column_name"] == "id":
+                continue
+            unique = " UNIQUE" if col.get("unique") else ""
+            col_defs.append(f'"{col["column_name"]}" {_postgres_type(col["data_type"])}{unique}')
+        ddl = (
+            f"CREATE TABLE IF NOT EXISTS {table} (\n  "
+            + ",\n  ".join(col_defs)
+            + "\n)"
+        )
+        cur.execute(ddl)
     conn.commit()
 
 
