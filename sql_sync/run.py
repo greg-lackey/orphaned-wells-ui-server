@@ -48,7 +48,7 @@ def run_pipeline(
     db_type: str,
     db_path: str = None,
     truncate: bool = False,
-) -> None:
+) -> dict:
     """
     Run transform → load on already-extracted data.
 

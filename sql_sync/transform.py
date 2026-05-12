@@ -29,31 +29,59 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from constants import MAPPING_COLUMNS, REPORT_TABLE, WELL_TABLE
+
 _DATA_DIR = Path(__file__).parent / "data"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def load_mapping(institution: str) -> list[dict]:
-    path = _DATA_DIR / "field_mapping" / institution / f"ogrre_to_{institution}.json"
-    if not path.exists():
-        raise FileNotFoundError(f"Field mapping not found: {path}")
-    with open(path) as f:
+    expected = _DATA_DIR / "field_mapping" / institution / f"ogrre_to_{institution}.json"
+    mapping_dir = _DATA_DIR / "field_mapping" / institution
+    if not expected.exists():
+        if not mapping_dir.exists():
+            raise FileNotFoundError(
+                f"Field mapping directory not found: {mapping_dir}\n"
+                f"Create it and add a file named: ogrre_to_{institution}.json"
+            )
+        found = [f.name for f in mapping_dir.glob("*.json")]
+        hint = f" Found: {found}" if found else " No .json files found in that directory."
+        raise FileNotFoundError(
+            f"Expected mapping file not found: {expected}\n"
+            f"The file must be named 'ogrre_to_{{institution}}.json'.{hint}"
+        )
+    with open(expected) as f:
         return json.load(f)
+
+
+def _validate_mapping_headers(mapping: list[dict]) -> None:
+    """Warn if any required column headers are absent from the mapping."""
+    if not mapping:
+        return
+    present = set(mapping[0].keys())
+    missing = [col for col in MAPPING_COLUMNS.values() if col not in present]
+    if missing:
+        print(
+            f"WARNING: field mapping is missing expected column(s): {missing}\n"
+            f"  Required columns: {list(MAPPING_COLUMNS.values())}\n"
+            f"  Found columns:    {sorted(present)}"
+        )
 
 
 def _build_lookup(mapping: list[dict]) -> dict:
     """Build {processor_name: {ogrre_name: {report_col, master_table, master_col}}}."""
+    _validate_mapping_headers(mapping)
     lookup = defaultdict(dict)
     for entry in mapping:
-        proc = (entry.get("Google Processor") or "").strip()
-        ogrre_name = (entry.get("OGRRE_Name") or "").strip()
+        proc      = (entry.get(MAPPING_COLUMNS["processor"])  or "").strip()
+        ogrre_name = (entry.get(MAPPING_COLUMNS["ogrre_name"]) or "").strip()
         if not proc or not ogrre_name:
             continue
         lookup[proc][ogrre_name] = {
-            "report_col": entry.get("Completion Report Table Field"),
-            "master_table": entry.get("Master Table"),
-            "master_col": entry.get("Master Field"),
+            "report_col":   entry.get(MAPPING_COLUMNS["report_col"]),
+            "master_table": entry.get(MAPPING_COLUMNS["master_table"]),
+            "master_col":   entry.get(MAPPING_COLUMNS["master_col"]),
         }
     return dict(lookup)
 
@@ -76,6 +104,13 @@ def transform(extracted: dict, mapping: list[dict]) -> dict:
     by_table: dict[str, list] = defaultdict(list)
     # api -> (date_created, row) — for most-recent-wins on well_headers
     well_records: dict[str, tuple] = {}
+
+    unmapped = {proc for proc in extracted if proc not in lookup}
+    if unmapped:
+        print(
+            f"WARNING: {len(unmapped)} processor(s) in extracted data have no mapping entries "
+            f"and will be skipped: {sorted(unmapped)}"
+        )
 
     for proc_name, records in extracted.items():
         proc_map = lookup.get(proc_name, {})
@@ -110,10 +145,10 @@ def transform(extracted: dict, mapping: list[dict]) -> dict:
                         master_rows[master_table] = dict(meta)
                     master_rows[master_table][master_col] = value
 
-            by_table["completion_reports"].append(report_row)
+            by_table[REPORT_TABLE].append(report_row)
 
             for table, row in master_rows.items():
-                if table == "well_headers":
+                if table == WELL_TABLE:
                     existing = well_records.get(api)
                     if existing is None or date_created > existing[0]:
                         well_records[api] = (date_created, row)
@@ -121,7 +156,7 @@ def transform(extracted: dict, mapping: list[dict]) -> dict:
                     by_table[table].append(row)
 
     if well_records:
-        by_table["well_headers"] = [row for _, row in well_records.values()]
+        by_table[WELL_TABLE] = [row for _, row in well_records.values()]
 
     return dict(by_table)
 

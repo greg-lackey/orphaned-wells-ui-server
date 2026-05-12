@@ -6,6 +6,28 @@ Shared type maps used by both the schema converter (schema_excel_to_json.py)
 and the loader (load.py).  Keys are matched case-insensitively at call sites.
 """
 
+# ── Hardcoded table name conventions ─────────────────────────────────────────
+# Every institution's schema must use these table names for the pipeline to
+# work correctly.  REPORT_TABLE receives one row per OGRRE record.
+# WELL_TABLE receives one row per unique API number (most-recent-wins).
+
+REPORT_TABLE = "completion_reports"
+WELL_TABLE   = "well_headers"
+
+# ── Field mapping column headers ──────────────────────────────────────────────
+# Required column names in the ogrre_to_{institution}.json field mapping file.
+# The mapping Excel spreadsheet must use these exact headers (case-sensitive).
+# transform.py reads these keys — if they differ, fields will silently go unmapped.
+
+MAPPING_COLUMNS = {
+    "processor":    "Google Processor",
+    "ogrre_name":   "OGRRE_Name",
+    "report_col":   "Completion Report Table Field",
+    "master_table": "Master Table",
+    "master_col":   "Master Field",
+}
+
+# ── Type maps ─────────────────────────────────────────────────────────────────
 # Maps spreadsheet/schema type strings to SQLite affinity types.
 # Covers both raw Excel strings (e.g. "big int") and already-converted
 # schema JSON values (e.g. "INTEGER") so the same map works at every stage.

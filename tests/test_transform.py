@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync"))
-from transform import _build_lookup, transform
+from transform import _build_lookup, _validate_mapping_headers, transform
 
 
 MAPPING = [
@@ -149,3 +149,23 @@ def test_transform_different_processors_same_report_column():
 
 def test_transform_empty_extracted_returns_empty():
     assert transform({}, MAPPING) == {}
+
+
+def test_transform_warns_on_unmapped_processor(capsys):
+    extracted = {
+        "UnknownProc": [_record("UnknownProc", "9999999999")],
+        "ProcA": [_record("ProcA", "1111111111")],
+    }
+    transform(extracted, MAPPING)
+    out = capsys.readouterr().out
+    assert "WARNING" in out
+    assert "UnknownProc" in out
+    assert "ProcA" not in out
+
+
+def test_validate_mapping_headers_warns_on_missing_column(capsys):
+    bad_mapping = [{"Google Processor": "P", "OGRRE_Name": "X"}]  # missing required cols
+    _validate_mapping_headers(bad_mapping)
+    out = capsys.readouterr().out
+    assert "WARNING" in out
+    assert "Completion Report Table Field" in out
