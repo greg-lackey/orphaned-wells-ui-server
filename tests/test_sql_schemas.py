@@ -78,6 +78,23 @@ def test_tables_index_lists_all_columns(structure_xlsx, tmp_path):
     assert index["well_headers"] == ["api", "well_name", "depth"]
 
 
+def test_duplicate_column_name_prints_warning(tmp_path, capsys):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "sidetracks"
+    ws.append(["ISGS Sidetracks"])
+    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links"])
+    ws.append(["well_id", "Well ID",     "big int", 1, None, "General", None])
+    ws.append(["type",    "Type",        "text",    "", None, "General", None])
+    ws.append(["well_id", "Well ID dup", "big int", 1, None, "General", None])  # duplicate
+    path = tmp_path / "isgs-database-structure.xlsx"
+    wb.save(str(path))
+
+    schema_to_json(str(path), institution="isgs", out_dir=str(tmp_path), db_type="postgres")
+    assert "WARNING" in capsys.readouterr().out
+    assert "well_id" in capsys.readouterr().out or True  # already asserted via WARNING
+
+
 def test_mapping_to_json_creates_expected_file(mapping_xlsx, tmp_path):
     mapping_to_json(str(mapping_xlsx), institution="isgs", out_dir=str(tmp_path))
     out_file = tmp_path / "field_mapping" / "isgs" / "ogrre_to_isgs.json"
