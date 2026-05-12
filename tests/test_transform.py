@@ -13,32 +13,36 @@ from transform import _build_lookup, _validate_mapping_headers, transform
 MAPPING = {
     "completion_reports": [
         {
-            "Google Processor": "ProcA",
-            "OGRRE Field": "Well_Name",
-            "Report Table Field": "well_name",
-            "Well Table": "well_headers",
-            "Well Field": "name",
+            "google_processor": "ProcA",
+            "ogrre_field": "Well_Name",
+            "report_table": "completion_reports",
+            "report_table_field": "well_name",
+            "well_table": "well_headers",
+            "well_table_field": "name",
         },
         {
-            "Google Processor": "ProcA",
-            "OGRRE Field": "Spud_Date",
-            "Report Table Field": "spud_date",
-            "Well Table": "well_headers",
-            "Well Field": "spud_date",
+            "google_processor": "ProcA",
+            "ogrre_field": "Spud_Date",
+            "report_table": "completion_reports",
+            "report_table_field": "spud_date",
+            "well_table": "well_headers",
+            "well_table_field": "spud_date",
         },
         {
-            "Google Processor": "ProcA",
-            "OGRRE Field": "Comp_Date",
-            "Report Table Field": "comp_date",
-            "Well Table": "sidetracks",
-            "Well Field": "comp_date",
+            "google_processor": "ProcA",
+            "ogrre_field": "Comp_Date",
+            "report_table": "completion_reports",
+            "report_table_field": "comp_date",
+            "well_table": "sidetracks",
+            "well_table_field": "comp_date",
         },
         {
-            "Google Processor": "ProcB",
-            "OGRRE Field": "Completion_Date",
-            "Report Table Field": "comp_date",
-            "Well Table": "sidetracks",
-            "Well Field": "comp_date",
+            "google_processor": "ProcB",
+            "ogrre_field": "Completion_Date",
+            "report_table": "completion_reports",
+            "report_table_field": "comp_date",
+            "well_table": "sidetracks",
+            "well_table_field": "comp_date",
         },
     ]
 }
@@ -47,27 +51,30 @@ MAPPING = {
 MULTI_MAPPING = {
     "completion_reports": [
         {
-            "Google Processor": "ProcA",
-            "OGRRE Field": "Well_Name",
-            "Report Table Field": "well_name",
-            "Well Table": "well_headers",
-            "Well Field": "name",
+            "google_processor": "ProcA",
+            "ogrre_field": "Well_Name",
+            "report_table": "completion_reports",
+            "report_table_field": "well_name",
+            "well_table": "well_headers",
+            "well_table_field": "name",
         },
     ],
     "plugging_reports": [
         {
-            "Google Processor": "ProcPlug",
-            "OGRRE Field": "Well_Name",
-            "Report Table Field": "well_name",
-            "Well Table": "well_headers",
-            "Well Field": "name",
+            "google_processor": "ProcPlug",
+            "ogrre_field": "Well_Name",
+            "report_table": "plugging_reports",
+            "report_table_field": "well_name",
+            "well_table": "well_headers",
+            "well_table_field": "name",
         },
         {
-            "Google Processor": "ProcPlug",
-            "OGRRE Field": "Plug_Date",
-            "Report Table Field": "plug_date",
-            "Well Table": None,
-            "Well Field": None,
+            "google_processor": "ProcPlug",
+            "ogrre_field": "Plug_Date",
+            "report_table": "plugging_reports",
+            "report_table_field": "plug_date",
+            "well_table": None,
+            "well_table_field": None,
         },
     ],
 }
@@ -100,9 +107,9 @@ def test_build_lookup_indexes_by_report_table_and_processor():
 def test_build_lookup_skips_entries_missing_processor_or_ogrre_name():
     bad = {
         "completion_reports": [
-            {"Google Processor": "",  "OGRRE Field": "X", "Report Table Field": "x"},
-            {"Google Processor": "P", "OGRRE Field": "",  "Report Table Field": "x"},
-            {"Google Processor": None, "OGRRE Field": "X"},
+            {"google_processor": "",  "ogrre_field": "X", "report_table_field": "x"},
+            {"google_processor": "P", "ogrre_field": "",  "report_table_field": "x"},
+            {"google_processor": None, "ogrre_field": "X"},
         ]
     }
     lookup = _build_lookup(bad)
@@ -230,15 +237,15 @@ def test_transform_warns_on_unmapped_processor(capsys):
 
 
 def test_validate_mapping_headers_warns_on_missing_column(capsys):
-    bad_mapping = [{"Google Processor": "P", "OGRRE Field": "X"}]  # missing required cols
+    bad_mapping = [{"google_processor": "P", "ogrre_field": "X"}]  # missing required cols
     _validate_mapping_headers(bad_mapping)
     out = capsys.readouterr().out
     assert "WARNING" in out
-    assert "Report Table Field" in out
+    assert "report_table_field" in out
 
 
 def test_validate_mapping_headers_includes_table_name_in_warning(capsys):
-    bad_mapping = [{"Google Processor": "P", "OGRRE Field": "X"}]
+    bad_mapping = [{"google_processor": "P", "ogrre_field": "X"}]
     _validate_mapping_headers(bad_mapping, table_name="plugging_reports")
     out = capsys.readouterr().out
     assert "plugging_reports" in out

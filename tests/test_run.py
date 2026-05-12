@@ -24,18 +24,20 @@ SCHEMA = {
 MAPPING = {
     "completion_reports": [
         {
-            "Google Processor": "WellCompletion",
-            "OGRRE Field": "Well_Name",
-            "Report Table Field": "well_name",
-            "Well Table": "well_headers",
-            "Well Field": "name",
+            "google_processor": "WellCompletion",
+            "ogrre_field": "Well_Name",
+            "report_table": "completion_reports",
+            "report_table_field": "well_name",
+            "well_table": "well_headers",
+            "well_table_field": "name",
         },
         {
-            "Google Processor": "WellCompletion",
-            "OGRRE Field": "Comp_Date",
-            "Report Table Field": "comp_date",
-            "Well Table": None,
-            "Well Field": None,
+            "google_processor": "WellCompletion",
+            "ogrre_field": "Comp_Date",
+            "report_table": "completion_reports",
+            "report_table_field": "comp_date",
+            "well_table": None,
+            "well_table_field": None,
         },
     ]
 }

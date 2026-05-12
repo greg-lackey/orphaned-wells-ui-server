@@ -20,11 +20,12 @@ WELL_TABLE = "well_headers"
 # transform.py reads these keys — if they differ, fields will silently go unmapped.
 
 MAPPING_COLUMNS = {
-    "processor":    "Google Processor",
-    "ogrre_name":   "OGRRE Field",
-    "report_col":   "Report Table Field",
-    "master_table": "Well Table",
-    "master_col":   "Well Field",
+    "processor":    "google_processor",
+    "ogrre_name":   "ogrre_field",
+    "report_table": "report_table",
+    "report_col":   "report_table_field",
+    "master_table": "well_table",
+    "master_col":   "well_table_field",
 }
 
 # ── Type maps ─────────────────────────────────────────────────────────────────
