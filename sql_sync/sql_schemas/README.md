@@ -3,7 +3,7 @@
 Converts SQL database structure and field mapping spreadsheets into JSON files
 consumed by the ETL pipeline.
 
-Institution folders live alongside this script.  Each folder holds two
+Institution folders are stored alongside this script.  Each folder holds two
 spreadsheets (not tracked in git — see below):
 
 ```
@@ -21,18 +21,7 @@ following the same naming convention.
 
 ## Getting the spreadsheets
 
-`.xlsx` files are **not tracked in git** (binary, large).  Fetch them from the
-shared Google Drive before running the generator:
-
-```bash
-gcloud storage cp "gs://<bucket>/isgs/isgs-database-structure.xlsx" \
-    sql_sync/sql_schemas/isgs/
-gcloud storage cp "gs://<bucket>/isgs/ogrre-to-isgs-database-mapping.xlsx" \
-    sql_sync/sql_schemas/isgs/
-```
-
-Or download them manually from Google Drive and place them in the appropriate
-institution subfolder.
+`.xlsx` files are **not tracked in git** (binary, large).  They are store on the NETL OneDrive for the project.
 
 ## Generating JSON
 
@@ -71,4 +60,4 @@ sql_sync/data/
         └── ogrre_to_master.json
 ```
 
-Commit the regenerated JSON files — they are the source of truth used at runtime.
+Commit the regenerated JSON files — they are used to build the SQL database.

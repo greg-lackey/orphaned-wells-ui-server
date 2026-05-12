@@ -15,11 +15,10 @@ def structure_xlsx(tmp_path):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "well_headers"
-    ws.append(["ISGS Well Headers"])  # title row (skipped)
-    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links"])
-    ws.append(["api",       "API number",   "big int", 123456789012, None,  "General", None])
-    ws.append(["well_name", "Well name",    "text",    "Example Well", None, "General", None])
-    ws.append(["depth",     "Total depth",  "float",   1234.5,         "ft", "General", None])
+    ws.append(["column_name", "column_description", "data_type", "examples", "units", "application", "links"])
+    ws.append(["api",       "API number",   "bigint", 123456789012, None,  "General", None])
+    ws.append(["well_name", "Well name",    "text",   "Example Well", None, "General", None])
+    ws.append(["depth",     "Total depth",  "float",  1234.5,         "ft", "General", None])
     path = tmp_path / "isgs-database-structure.xlsx"
     wb.save(str(path))
     return path
@@ -58,10 +57,9 @@ def test_type_lookup_is_case_insensitive(tmp_path):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "casings"
-    ws.append(["ISGS Casings"])
-    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links"])
-    ws.append(["id",   "ID",   "Big int", 1, None, "General", None])  # capital B
-    ws.append(["size", "Size", "Int",     4, None, "General", None])  # capital I
+    ws.append(["column_name", "column_description", "data_type", "examples", "units", "application", "links"])
+    ws.append(["id",   "ID",   "Bigint", 1, None, "General", None])  # capital B
+    ws.append(["size", "Size", "Int",    4, None, "General", None])  # capital I
     path = tmp_path / "isgs-database-structure.xlsx"
     wb.save(str(path))
 
@@ -83,11 +81,10 @@ def test_duplicate_column_name_prints_warning(tmp_path, capsys):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "sidetracks"
-    ws.append(["ISGS Sidetracks"])
-    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links"])
-    ws.append(["well_id", "Well ID",     "big int", 1, None, "General", None])
-    ws.append(["type",    "Type",        "text",    "", None, "General", None])
-    ws.append(["well_id", "Well ID dup", "big int", 1, None, "General", None])  # duplicate
+    ws.append(["column_name", "column_description", "data_type", "examples", "units", "application", "links"])
+    ws.append(["well_id", "Well ID",     "bigint", 1, None, "General", None])
+    ws.append(["type",    "Type",        "text",   "", None, "General", None])
+    ws.append(["well_id", "Well ID dup", "bigint", 1, None, "General", None])  # duplicate
     path = tmp_path / "isgs-database-structure.xlsx"
     wb.save(str(path))
 
@@ -101,10 +98,9 @@ def structure_xlsx_with_unique(tmp_path):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "well_headers"
-    ws.append(["ISGS Well Headers"])
-    ws.append(["Column Name", "Column description", "Data type", "Examples", "Units", "Application", "Links", "Unique"])
-    ws.append(["api_uwi",   "API number", "big int", 123456789012, None, "General", None, True])
-    ws.append(["well_name", "Well name",  "text",    "Example Well", None, "General", None, None])
+    ws.append(["column_name", "column_description", "data_type", "examples", "units", "application", "links", "unique"])
+    ws.append(["api_uwi",   "API number", "bigint", 123456789012, None, "General", None, True])
+    ws.append(["well_name", "Well name",  "text",   "Example Well", None, "General", None, None])
     path = tmp_path / "isgs-database-structure.xlsx"
     wb.save(str(path))
     return path

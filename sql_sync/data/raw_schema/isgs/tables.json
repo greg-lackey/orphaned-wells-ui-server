@@ -301,7 +301,7 @@
         "treatment_date"
     ],
     "logs": [
-        "log_id",
+        "id",
         "sidetrack_id",
         "log_date",
         "log_type"

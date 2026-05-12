@@ -6,7 +6,8 @@
         "Example": 1234,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -15,16 +16,18 @@
         "Example": 512312345000,
         "units": null,
         "application": "General",
-        "links": "Linked to id in sidetracks"
+        "links": "Linked to id in sidetracks",
+        "unique": null
     },
     {
         "column_name": "form",
         "description": "Target formation for production",
-        "data_type": "string",
+        "data_type": "text",
         "Example": "Mt Simon",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "test_date",
@@ -33,34 +36,38 @@
         "Example": "1985-05-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "test_length",
         "description": "Length of the drill stem test",
-        "data_type": "string",
+        "data_type": "text",
         "Example": 12,
         "units": "hours",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "pre_test_prod",
         "description": "Initial production before treatment (could be oil or gas, bbl or MCF)",
-        "data_type": "string",
+        "data_type": "text",
         "Example": "10 BBL",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "post_test_prod",
         "description": "Initial production after treatment (could be oil or gas, bbl or MCF)",
-        "data_type": "string",
+        "data_type": "text",
         "Example": "12 BBL",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_prod",
@@ -69,7 +76,8 @@
         "Example": 10,
         "units": "mcf/day",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oil_prod",
@@ -78,7 +86,8 @@
         "Example": 50,
         "units": "bbls/day",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_prod",
@@ -87,6 +96,7 @@
         "Example": 5,
         "units": "bbls/day",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

@@ -4,62 +4,71 @@
         "description": "Unique identifier for plug",
         "data_type": "INTEGER",
         "examples": 202859,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
         "description": "Unformatted API12 or UWI ",
         "data_type": "INTEGER",
         "examples": 5123123450000,
-        "Unnamed: 4": "Linked to id in sidetracks"
+        "links": "Linked to id in sidetracks",
+        "unique": null
     },
     {
         "column_name": "casing_id",
         "description": "ID for the casing in which the plug is located",
         "data_type": "INTEGER",
         "examples": 197985,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type",
         "description": "The type of plug used (cement, cast iron bridge plug)",
         "data_type": "string/character varying",
         "examples": "CIBP",
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cement_type",
         "description": "Description of the type of cement",
         "data_type": "string/character varying",
         "examples": "Class H",
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cement_density",
         "description": "Cement density in lb/gal",
         "data_type": "float/double precision",
         "examples": 12,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cement_volume",
         "description": "Volume of cement added in sacks",
         "data_type": "float/double precision",
         "examples": 500,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "top",
         "description": "Measured depth of the cement plug top",
         "data_type": "float/double precision",
         "examples": 1000,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "bot",
         "description": "Measured depth of the cement plugbottom",
         "data_type": "float/double precision",
         "examples": 13000,
-        "Unnamed: 4": null
+        "links": null,
+        "unique": null
     }
 ]

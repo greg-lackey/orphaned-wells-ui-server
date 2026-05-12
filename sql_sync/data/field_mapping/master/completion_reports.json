@@ -1,0 +1,1818 @@
+[
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Cable_Tools_From",
+        "Report Table Field": "cable_tools_from",
+        "Well Table": "sidetracks",
+        "Well Field": "cable_tools_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Cable_From",
+        "Report Table Field": "cable_tools_from",
+        "Well Table": "sidetracks",
+        "Well Field": "cable_tools_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Cable_Tools_To",
+        "Report Table Field": "cable_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "cable_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Cable_Tools_To",
+        "Report Table Field": "cable_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "cable_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Cable_To",
+        "Report Table Field": "cable_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "cable_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Casing_Record::Sacks_Cement",
+        "Report Table Field": "cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_Drilling_Complete",
+        "Report Table Field": "comp_date",
+        "Well Table": "sidetracks",
+        "Well Field": "comp_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Drilling_Finished",
+        "Report Table Field": "comp_date",
+        "Well Table": "sidetracks",
+        "Well Field": "comp_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Date_Completed",
+        "Report Table Field": "comp_date",
+        "Well Table": "sidetracks",
+        "Well Field": "comp_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Formation_Name",
+        "Report Table Field": "comp_form",
+        "Well Table": "completions",
+        "Well Field": "form",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Interval_Cored",
+        "Report Table Field": "cored_interval",
+        "Well Table": "sidetracks",
+        "Well Field": "core_from, core_to",
+        "Note": "break into two"
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Was_Well_Cored_No",
+        "Report Table Field": "cored_no",
+        "Well Table": "sidetracks",
+        "Well Field": "cored",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Was_Well_Cored_No",
+        "Report Table Field": "cored_no",
+        "Well Table": "sidetracks",
+        "Well Field": "cored",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Was_Well_Cored_Yes",
+        "Report Table Field": "cored_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "cored",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Was_Well_Cored_Yes",
+        "Report Table Field": "cored_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "cored",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "County",
+        "Report Table Field": "county",
+        "Well Table": "well_header",
+        "Well Field": "county",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "County",
+        "Report Table Field": "county",
+        "Well Table": "well_header",
+        "Well Field": "county",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "County",
+        "Report Table Field": "county",
+        "Well Table": "well_header",
+        "Well Field": "county",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Casing_Record::Depth",
+        "Report Table Field": "csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Casing_Record::Size",
+        "Report Table Field": "csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Casing_Record",
+        "Report Table Field": "csg_type",
+        "Well Table": "casings",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Deepened",
+        "Report Table Field": "report_type_deepening",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Drilled_Out_Plugged_Hole",
+        "Report Table Field": "report_type_doph",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Drill_Stem_Test_Run_No",
+        "Report Table Field": "dst_no",
+        "Well Table": "sidetracks",
+        "Well Field": "dst",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Drill_Stem_Test_Run_No",
+        "Report Table Field": "dst_no",
+        "Well Table": "sidetracks",
+        "Well Field": "dst",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Drill_Stem_Test_Run_Yes",
+        "Report Table Field": "dst_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "dst",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Drill_Stem_Test_Run_Yes",
+        "Report Table Field": "dst_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "dst",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Zone_Tested",
+        "Report Table Field": "dst_zone",
+        "Well Table": "sidetracks",
+        "Well Field": "dst_zone",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Elevation_DF",
+        "Report Table Field": "elev_df",
+        "Well Table": "well_header",
+        "Well Field": "elev_df",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Elevation_DF",
+        "Report Table Field": "elev_df",
+        "Well Table": "well_header",
+        "Well Field": "elev_df",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Ground",
+        "Report Table Field": "elev_gr",
+        "Well Table": "well_header",
+        "Well Field": "elev_gr",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Elevation_GR",
+        "Report Table Field": "elev_gr",
+        "Well Table": "well_header",
+        "Well Field": "elev_gr",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Elevation",
+        "Report Table Field": "elev_gr",
+        "Well Table": "well_header",
+        "Well Field": "elev_gr",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "KB",
+        "Report Table Field": "elev_kb",
+        "Well Table": "well_header",
+        "Well Field": "elev_kb",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Elevation_KB",
+        "Report Table Field": "elev_kb",
+        "Well Table": "well_header",
+        "Well Field": "elev_kb",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "EW_Distance",
+        "Report Table Field": "ew_distance",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "EW_Line",
+        "Report Table Field": "ew_line",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_of_First_Prod",
+        "Report Table Field": "first_prod_date",
+        "Well Table": "sidetracks",
+        "Well Field": "first_prod_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Of_First_Production",
+        "Report Table Field": "first_prod_date",
+        "Well Table": "sidetracks",
+        "Well Field": "first_prod_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "First_Quarter",
+        "Report Table Field": "first_quarter",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Source_Of_Injected_Fluid",
+        "Report Table Field": "fluid_source",
+        "Well Table": "injection_testing",
+        "Well Field": "fluid_source",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Name_of_Producing_or_Injection_Formation",
+        "Report Table Field": "prod_inj_form",
+        "Well Table": "production_testing",
+        "Well Field": "form",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Rate_Per_Day_Gas",
+        "Report Table Field": "gas_inj_rate",
+        "Well Table": "injection_testing",
+        "Well Field": "gas_inj_rate",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Gas_MCF",
+        "Report Table Field": "gas_prod",
+        "Well Table": "production_testing",
+        "Well Field": "gas_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Initial_Production_Rate_Gas",
+        "Report Table Field": "gas_prod",
+        "Well Table": "production_testing",
+        "Well Field": "gas_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Gas_PSI",
+        "Report Table Field": "gas_press",
+        "Well Table": "injection_testing",
+        "Well Field": "gas_press",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Hole_Size",
+        "Report Table Field": "prod_hole_size",
+        "Well Table": "casings",
+        "Well Field": "prod_hole_size",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Of_First_Injection",
+        "Report Table Field": "inj_date",
+        "Well Table": "injection_testing",
+        "Well Field": "inj_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Injection_Fluid_Freshwater",
+        "Report Table Field": "inj_fluid_freshwater",
+        "Well Table": "injection_testing",
+        "Well Field": "fluid_type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Injection_Fluid_Other",
+        "Report Table Field": "inj_fluid_other",
+        "Well Table": "injection_testing",
+        "Well Field": "fluid_type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Injection_Fluid_Other_Text",
+        "Report Table Field": "inj_fluid_other_desc",
+        "Well Table": "injection_testing",
+        "Well Field": "fluid_type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Injection_Fluid_Saltwater",
+        "Report Table Field": "inj_fluid_saltwater",
+        "Well Table": "injection_testing",
+        "Well Field": "fluid_type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Injection_Formation",
+        "Report Table Field": "inj_form",
+        "Well Table": "injection_testing",
+        "Well Field": "form",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Top_Of_Cement",
+        "Report Table Field": "int_cem_top",
+        "Well Table": "casings",
+        "Well Field": "cem_top",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Top_Determined_By",
+        "Report Table Field": "int_cem_top_meth",
+        "Well Table": "casings",
+        "Well Field": "cem_top_method",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Mine_or_Intermediate_Sks_Cement",
+        "Report Table Field": "int_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Sacks_Cement",
+        "Report Table Field": "int_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Mine_or_Intermediate_Depth",
+        "Report Table Field": "int_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Setting_Depth",
+        "Report Table Field": "int_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Mine_or_Intermediate_Csg_Pulled",
+        "Report Table Field": "int_csg_pulled",
+        "Well Table": "casings",
+        "Well Field": "pulled",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Mine_or_Intermediate_Size",
+        "Report Table Field": "int_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Size",
+        "Report Table Field": "int_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Intermedate_Mine_String_Or_Liner_Hole_Size",
+        "Report Table Field": "int_hole_size",
+        "Well Table": "casings",
+        "Well Field": "hole_size",
+        "Note": "many"
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Lease_Sign_Posted_No",
+        "Report Table Field": "lease_sign_no",
+        "Well Table": "well_header",
+        "Well Field": "lease_sign",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Lease_Sign_Posted_Yes",
+        "Report Table Field": "lease_sign_yes",
+        "Well Table": "well_header",
+        "Well Field": "lease_sign",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Liner_Sks_Cement",
+        "Report Table Field": "liner_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Liner_Depth",
+        "Report Table Field": "liner_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Liner_Csg_Pulled",
+        "Report Table Field": "liner_pulled",
+        "Well Table": "casings",
+        "Well Field": "pulled",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Liner_Size",
+        "Report Table Field": "liner_size",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Lithology",
+        "Report Table Field": "lithology",
+        "Well Table": "completions",
+        "Well Field": "lithology",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Logs::Date",
+        "Report Table Field": "log_date",
+        "Well Table": "logs",
+        "Well Field": "log_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Logs:Type_Of_Log",
+        "Report Table Field": "log_type",
+        "Well Table": "logs",
+        "Well Field": "log_type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Electric_Logs_Run_Yes",
+        "Report Table Field": "logs_run_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "logs_run",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Electric_Logs_Run_No",
+        "Report Table Field": "logs_run_no",
+        "Well Table": "sidetracks",
+        "Well Field": "logs_run",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Wireline_Logs_Run_Yes",
+        "Report Table Field": "logs_run_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "logs_run",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Wireline_Logs_Run_No",
+        "Report Table Field": "logs_run_no",
+        "Well Table": "sidetracks",
+        "Well Field": "logs_run",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Electric_Log_Run",
+        "Report Table Field": "logs_run_yes",
+        "Well Table": "sidetracks",
+        "Well Field": "logs_run",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Electric_Logs_Run_Date",
+        "Report Table Field": "log_date",
+        "Well Table": "logs",
+        "Well Field": "log_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "New_Well",
+        "Report Table Field": "report_type_new_well",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "New_Well",
+        "Report Table Field": "report_type_new_well",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Well_Not_Converted_Permit_Expired",
+        "Report Table Field": "not_converted_permit_expired",
+        "Well Table": "sidetracks",
+        "Well Field": "not_converted_permit_expired",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Well_Not_Drilled_Permit_Expired",
+        "Report Table Field": "not_drilled_permit_expired",
+        "Well Table": "sidetracks",
+        "Well Field": "not_drilled_permit_expired",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "NS_Distance",
+        "Report Table Field": "ns_distance",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "NS_Line",
+        "Report Table Field": "ns_line",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Daily_Production_Bbls_Oil",
+        "Report Table Field": "oil_prod",
+        "Well Table": "production_testing",
+        "Well Field": "oil_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Initial_Production_Rate_Oil",
+        "Report Table Field": "oil_prod",
+        "Well Table": "production_testing",
+        "Well Field": "oil_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Open_Hole_Interval",
+        "Report Table Field": "open_hole_interval",
+        "Well Table": "completions",
+        "Well Field": "open_hole_from, open_hole_to",
+        "Note": "break into two"
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Operator",
+        "Report Table Field": "operator",
+        "Well Table": "well_header",
+        "Well Field": "operator",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Permittee",
+        "Report Table Field": "operator",
+        "Well Table": "well_header",
+        "Well Field": "operator",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Owner_Or_Operator",
+        "Report Table Field": "operator",
+        "Well Table": "well_header",
+        "Well Field": "operator",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Permittee_Number",
+        "Report Table Field": "operator_number",
+        "Well Table": "well_header",
+        "Well Field": "operator_number",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Top_Of_Cement",
+        "Report Table Field": "oth_cem_top",
+        "Well Table": "casings",
+        "Well Field": "cem_top",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Sacks_Cement",
+        "Report Table Field": "oth_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Setting_Depth",
+        "Report Table Field": "oth_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Size",
+        "Report Table Field": "oth_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Top_Determined_By",
+        "Report Table Field": "other_cem_top_meth",
+        "Well Table": "casings",
+        "Well Field": "cem_top_meth",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Other_Hole_Size",
+        "Report Table Field": "other_hole_size",
+        "Well Table": "casings",
+        "Well Field": "hole_size",
+        "Note": "many"
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Packer::Setting_Depth",
+        "Report Table Field": "packer_depth",
+        "Well Table": "packers",
+        "Well Field": "depth",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Packer::Brand_And_Type",
+        "Report Table Field": "packer_type",
+        "Well Table": "packers",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "PBTD",
+        "Report Table Field": "pbtd",
+        "Well Table": "sidetracks",
+        "Well Field": "pbtd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "PBTD",
+        "Report Table Field": "pbtd",
+        "Well Table": "sidetracks",
+        "Well Field": "pbtd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "PB_To",
+        "Report Table Field": "pbtd",
+        "Well Table": "sidetracks",
+        "Well Field": "pbtd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Gun_Perforating_Windows::From",
+        "Report Table Field": "perf_from",
+        "Well Table": "completions",
+        "Well Field": "perf_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Gun_Perforating_Windows",
+        "Report Table Field": "perf_int",
+        "Well Table": "completions",
+        "Well Field": "perf_to, perf_from",
+        "Note": "break into two"
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Perforation_Interval",
+        "Report Table Field": "perf_int",
+        "Well Table": "completions",
+        "Well Field": "perf_from, perf_to",
+        "Note": "break into two"
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Shots",
+        "Report Table Field": "perf_shots",
+        "Well Table": "completions",
+        "Well Field": "perf_shots",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Gun_Perforating_Windows::No_Shots",
+        "Report Table Field": "perf_shots",
+        "Well Table": "completions",
+        "Well Field": "perf_shots",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Gun_Perforating_Windows::To",
+        "Report Table Field": "perf_to",
+        "Well Table": "completions",
+        "Well Field": "perf_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_Issued",
+        "Report Table Field": "permit_date",
+        "Well Table": "sidetracks",
+        "Well Field": "permit_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Permit_No",
+        "Report Table Field": "permit_number",
+        "Well Table": "sidetracks",
+        "Well Field": "permit_number",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Permit_Number",
+        "Report Table Field": "permit_number",
+        "Well Table": "sidetracks",
+        "Well Field": "permit_number",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Permit_No",
+        "Report Table Field": "permit_number",
+        "Well Table": "sidetracks",
+        "Well Field": "permit_number",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Location",
+        "Report Table Field": "plss_loc",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Location",
+        "Report Table Field": "plss_loc",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Initial_Production_After",
+        "Report Table Field": "post_test_prod",
+        "Well Table": "production_testing",
+        "Well Field": "post_test_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Initial_Production_Before",
+        "Report Table Field": "pre_test_prod",
+        "Well Table": "production_testing",
+        "Well Field": "pre_test_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Top_Of_Cement",
+        "Report Table Field": "prod_cem_top",
+        "Well Table": "casings",
+        "Well Field": "cem_top",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Top_Determined_By",
+        "Report Table Field": "prod_cem_top_meth",
+        "Well Table": "casings",
+        "Well Field": "cem_top_method",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Producing_Sks_Cement",
+        "Report Table Field": "prod_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Sacks_Cement",
+        "Report Table Field": "prod_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Setting_Depth",
+        "Report Table Field": "prod_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Producing_Depth",
+        "Report Table Field": "prod_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Producing_Csg_Pulled",
+        "Report Table Field": "prod_csg_pulled",
+        "Well Table": "casings",
+        "Well Field": "pulled",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Producing_Size",
+        "Report Table Field": "prod_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Size",
+        "Report Table Field": "prod_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Producing_Formations",
+        "Report Table Field": "prod_inj_form ",
+        "Well Table": "production_testing",
+        "Well Field": "form",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Production_Hole_Size",
+        "Report Table Field": "prod_hole_size",
+        "Well Table": "casings",
+        "Well Field": "hole_size",
+        "Note": "many"
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Range",
+        "Report Table Field": "range",
+        "Well Table": "well_header",
+        "Well Field": "range",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Range",
+        "Report Table Field": "range",
+        "Well Table": "well_header",
+        "Well Field": "range",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "R",
+        "Report Table Field": "range",
+        "Well Table": "well_header",
+        "Well Field": "range",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Reference_Number",
+        "Report Table Field": "ref_number",
+        "Well Table": "well_header",
+        "Well Field": "ref_number",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Conversion",
+        "Report Table Field": "report_type_conversion",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Deepening",
+        "Report Table Field": "report_type_deepening",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "DOPH",
+        "Report Table Field": "report_type_doph",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Workover",
+        "Report Table Field": "report_type_workover",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Rotary_Tools_From",
+        "Report Table Field": "rotary_tools_from",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Rotary_From",
+        "Report Table Field": "rotary_tools_from",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Rotary_Tools_From",
+        "Report Table Field": "rotary_tools_from",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Rotary_Tools_To",
+        "Report Table Field": "rotary_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Rotary_To",
+        "Report Table Field": "rotary_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Cable_Tools_From",
+        "Report Table Field": "rotary_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Rotary_Tools_To",
+        "Report Table Field": "rotary_tools_to",
+        "Well Table": "sidetracks",
+        "Well Field": "rotary_tools_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Second_Quarter",
+        "Report Table Field": "second_quarter",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Section",
+        "Report Table Field": "section",
+        "Well Table": "well_header",
+        "Well Field": "section",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Section",
+        "Report Table Field": "section",
+        "Well Table": "well_header",
+        "Well Field": "section",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Sec",
+        "Report Table Field": "section",
+        "Well Table": "well_header",
+        "Well Field": "section",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Signature",
+        "Report Table Field": "signature",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Signature_Of_Permittee_Or_Designee",
+        "Report Table Field": "signature",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Signed",
+        "Report Table Field": "signature",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Address",
+        "Report Table Field": "signature_address",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Address",
+        "Report Table Field": "signature_address",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "City_State",
+        "Report Table Field": "signature_city_state",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_Signed",
+        "Report Table Field": "signature_date",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Signed",
+        "Report Table Field": "signature_date",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Date",
+        "Report Table Field": "signature_date",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Title",
+        "Report Table Field": "signature_title",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Title",
+        "Report Table Field": "signature_title",
+        "Well Table": null,
+        "Well Field": null,
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Tubing_Size",
+        "Report Table Field": "tubing_size",
+        "Well Table": "tubings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_Drilling_Began",
+        "Report Table Field": "spud_date",
+        "Well Table": "sidetracks",
+        "Well Field": "spud_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Drilling_Began",
+        "Report Table Field": "spud_date",
+        "Well Table": "sidetracks",
+        "Well Field": "spud_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Date_Drilling_Began",
+        "Report Table Field": "spud_date",
+        "Well Table": "sidetracks",
+        "Well Field": "spud_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Top_Of_Cement",
+        "Report Table Field": "surf_cem_top",
+        "Well Table": "casings",
+        "Well Field": "cem_top",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Top_Determined_By",
+        "Report Table Field": "surf_cem_top_meth",
+        "Well Table": "casings",
+        "Well Field": "cem_top_method",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Surface_Sks_Cement",
+        "Report Table Field": "surf_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Sacks_Cement",
+        "Report Table Field": "surf_cem_vol",
+        "Well Table": "casings",
+        "Well Field": "cem_vol",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Surface_Depth",
+        "Report Table Field": "surf_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Setting_Depth",
+        "Report Table Field": "surf_csg_depth",
+        "Well Table": "casings",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Surface_Csg_Pulled",
+        "Report Table Field": "surf_csg_pulled",
+        "Well Table": "casings",
+        "Well Field": "pulled",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Surface_Size",
+        "Report Table Field": "surf_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Size",
+        "Report Table Field": "surf_csg_out_diam",
+        "Well Table": "casings",
+        "Well Field": "out_diam",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Surface_Hole_Size",
+        "Report Table Field": "surf_hole_size",
+        "Well Table": "casings",
+        "Well Field": "hole_size",
+        "Note": "many"
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Date_of_Test",
+        "Report Table Field": "test_date",
+        "Well Table": "production_testing",
+        "Well Field": "test_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Date_Of_Test",
+        "Report Table Field": "test_date",
+        "Well Table": "production_testing",
+        "Well Field": "test_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Length_of_Test",
+        "Report Table Field": "test_length",
+        "Well Table": "production_testing",
+        "Well Field": "test_length",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Length_Of_Test",
+        "Report Table Field": "test_length",
+        "Well Table": "production_testing",
+        "Well Field": "test_length",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Third_Quarter",
+        "Report Table Field": "third_quarter",
+        "Well Table": "well_header",
+        "Well Field": "plss_loc",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Township",
+        "Report Table Field": "township",
+        "Well Table": "well_header",
+        "Well Field": "township",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Township",
+        "Report Table Field": "township",
+        "Well Table": "well_header",
+        "Well Field": "township",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "T",
+        "Report Table Field": "township",
+        "Well Table": "well_header",
+        "Well Field": "township",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Acidized",
+        "Report Table Field": "treatment_acidized",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Completion_For_Production::Acidized_Fractures_Other",
+        "Report Table Field": "treatment_acidized_fractures_other",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "List_Amount_Used",
+        "Report Table Field": "treatment_amnt",
+        "Well Table": "completions",
+        "Well Field": "treatment_amnt",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Acid_Or_Shooting_Record_Or_Fracture_Treatment::Amount_Used",
+        "Report Table Field": "treatment_amnt",
+        "Well Table": "completions",
+        "Well Field": "treatment_amnt",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Acid_Or_Shooting_Record_Or_Fracture_Treatment::Date",
+        "Report Table Field": "treatment_date",
+        "Well Table": "completions",
+        "Well Field": "treatment_date",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Acid_Or_Shooting_Record_Or_Fracture_Treatment::From",
+        "Report Table Field": "treatment_from",
+        "Well Table": "completions",
+        "Well Field": "treatment_from",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Intervals",
+        "Report Table Field": "treatment_interval",
+        "Well Table": "completions",
+        "Well Field": "treatment_from, treatment_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Other",
+        "Report Table Field": "treatment_other",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Perforated",
+        "Report Table Field": "treatment_perf",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Shot",
+        "Report Table Field": "treatment_shot",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Acid_Or_Shooting_Record_Or_Fracture_Treatment::To",
+        "Report Table Field": "treatment_to",
+        "Well Table": "completions",
+        "Well Field": "treatment_to",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Fractured",
+        "Report Table Field": "treatment_fractured",
+        "Well Table": "completions",
+        "Well Field": "treatment",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Tubing_Type",
+        "Report Table Field": "tubing_type",
+        "Well Table": "tubings",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Total_Depth",
+        "Report Table Field": "tvd",
+        "Well Table": "sidetracks",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Total_Depth",
+        "Report Table Field": "tvd",
+        "Well Table": "sidetracks",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Total_Depth_Drilled",
+        "Report Table Field": "tvd",
+        "Well Table": "sidetracks",
+        "Well Field": "tvd",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Coal_Bed_Gas",
+        "Report Table Field": "type_coal_bed_gas",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Coal_Mine_Gas",
+        "Report Table Field": "type_coal_mine_gas",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Conv",
+        "Report Table Field": "type_conv",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_D_And_A",
+        "Report Table Field": "type_da",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Dry_Hole",
+        "Report Table Field": "type_dry_hole",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Gas",
+        "Report Table Field": "type_gas",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Gas_Producer",
+        "Report Table Field": "type_gas",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Gas_Input",
+        "Report Table Field": "type_gas_inj",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Gas_Storage",
+        "Report Table Field": "type_gas_storage",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Observation",
+        "Report Table Field": "type_observation",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Observation",
+        "Report Table Field": "type_observation",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Oil",
+        "Report Table Field": "type_oil",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Oil_Producer",
+        "Report Table Field": "type_oil",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Other",
+        "Report Table Field": "type_other",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Other_Text",
+        "Report Table Field": "type_other_text",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Service_Well",
+        "Report Table Field": "type_service",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Service_Well_Text",
+        "Report Table Field": "type_service_text",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Str_Test",
+        "Report Table Field": "type_str_test",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "SWD",
+        "Report Table Field": "type_swd",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Class_II_Injection_Well",
+        "Report Table Field": "type_swd",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Water_Input",
+        "Report Table Field": "type_water_inj",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Water_Supply",
+        "Report Table Field": "type_water_supply",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Type_Of_Well_Water_Supply",
+        "Report Table Field": "type_water_supply",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Rate_Per_Day_Water",
+        "Report Table Field": "water_inj_rate",
+        "Well Table": "injection_testing",
+        "Well Field": "water_inj_rate",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Water",
+        "Report Table Field": "water_prod",
+        "Well Table": "production_testing",
+        "Well Field": "water_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Initial_Production_Rate_Water",
+        "Report Table Field": "water_prod",
+        "Well Table": "production_testing",
+        "Well Field": "water_prod",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Water_PSI",
+        "Report Table Field": "water_press",
+        "Well Table": "injection_testing",
+        "Well Field": "water_psi",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_A_WellCompletion",
+        "OGRRE Field": "Well_Name_and_No",
+        "Report Table Field": "well_name",
+        "Well Table": "well_header",
+        "Well Field": "well_name",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_Ver_B_Well_Completion",
+        "OGRRE Field": "Well_Name",
+        "Report Table Field": "well_name",
+        "Well Table": "well_header",
+        "Well Field": "well_name",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Farm",
+        "Report Table Field": "well_name_farm",
+        "Well Table": "well_header",
+        "Well Field": "well_name",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Well_No",
+        "Report Table Field": "well_name_number",
+        "Well Table": "well_header",
+        "Well Field": "well_name",
+        "Note": null
+    },
+    {
+        "Google Processor": "IL_WellCompletion_G",
+        "OGRRE Field": "Type_Of_Well",
+        "Report Table Field": "well_type",
+        "Well Table": "sidetracks",
+        "Well Field": "type",
+        "Note": null
+    }
+]

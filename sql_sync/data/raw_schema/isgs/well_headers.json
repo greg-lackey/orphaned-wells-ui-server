@@ -5,7 +5,9 @@
         "data_type": "big int",
         "examples": 5123123450,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "api_uwi",
@@ -13,7 +15,9 @@
         "data_type": "string/character varying",
         "examples": "51-231-23450",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "api_state",
@@ -21,7 +25,9 @@
         "data_type": "Int",
         "examples": "\"05\"",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "api_county",
@@ -29,7 +35,9 @@
         "data_type": "int",
         "examples": 123,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "api_label",
@@ -37,7 +45,9 @@
         "data_type": "Big int",
         "examples": 45678,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "operator",
@@ -45,7 +55,9 @@
         "data_type": "string/character varying",
         "examples": "Chevron",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "original_operator",
@@ -53,7 +65,9 @@
         "data_type": "string/character varying",
         "examples": "Kerr McGee",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "operator_number",
@@ -61,7 +75,9 @@
         "data_type": "big int",
         "examples": 29791515,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "name",
@@ -69,7 +85,9 @@
         "data_type": "string/character varying",
         "examples": "Smith Well",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "title",
@@ -77,7 +95,9 @@
         "data_type": "string/character varying",
         "examples": "Smith Well #16",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "spud_date",
@@ -85,7 +105,9 @@
         "data_type": null,
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elevation_gr",
@@ -93,7 +115,9 @@
         "data_type": "float/double precision",
         "examples": 5550,
         "units": "feet",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elevation_kb",
@@ -101,7 +125,9 @@
         "data_type": "float/double precision",
         "examples": 5570,
         "units": "feet",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elevation_df",
@@ -109,7 +135,9 @@
         "data_type": "float/double precision",
         "examples": 5560,
         "units": "feet",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "max_tvd",
@@ -117,7 +145,9 @@
         "data_type": "float/double precision",
         "examples": 7000,
         "units": "feet",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "max_md",
@@ -125,7 +155,9 @@
         "data_type": "float/double precision",
         "examples": 14000,
         "units": "feet",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "field_code",
@@ -133,7 +165,9 @@
         "data_type": "Int",
         "examples": 90750,
         "units": " ",
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "field_name",
@@ -141,7 +175,9 @@
         "data_type": "String/character varying",
         "examples": "Wattenberg",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "status",
@@ -149,7 +185,9 @@
         "data_type": "string/character varying",
         "examples": "Plugged",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "status_date",
@@ -157,7 +195,9 @@
         "data_type": "date",
         "examples": "2023-11-21T00:00:00",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type",
@@ -165,7 +205,9 @@
         "data_type": "string/character varying",
         "examples": "oil",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "configuration",
@@ -173,7 +215,9 @@
         "data_type": "string/character varying",
         "examples": "Vertical",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surface_latitude",
@@ -181,7 +225,9 @@
         "data_type": "float/double precision",
         "examples": 40.44469,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surface_longitude",
@@ -189,7 +235,9 @@
         "data_type": "float/double precision",
         "examples": -104.52919,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "county",
@@ -197,7 +245,9 @@
         "data_type": "string/character varying",
         "examples": "Mercer",
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "utm_x",
@@ -205,7 +255,9 @@
         "data_type": "bigint",
         "examples": 539926,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "utm_y",
@@ -213,7 +265,9 @@
         "data_type": "bigint",
         "examples": 4477222,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "plss_loc",
@@ -221,7 +275,9 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "section",
@@ -229,7 +285,9 @@
         "data_type": "int",
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "township",
@@ -237,7 +295,9 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "range",
@@ -245,7 +305,9 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "meridian",
@@ -253,7 +315,9 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "General"
+        "application": "General",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "lease_sign",
@@ -261,7 +325,9 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "Illinois"
+        "application": "Illinois",
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ref_number",
@@ -269,6 +335,8 @@
         "data_type": "string/character varying",
         "examples": null,
         "units": null,
-        "application": "Illinois"
+        "application": "Illinois",
+        "links": null,
+        "unique": null
     }
 ]

@@ -6,7 +6,8 @@
         "Example": 1234,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -15,7 +16,8 @@
         "Example": 512312345000,
         "units": null,
         "application": "General",
-        "links": "Linked to id in sidetracks"
+        "links": "Linked to id in sidetracks",
+        "unique": null
     },
     {
         "column_name": "fluid_source",
@@ -24,7 +26,8 @@
         "Example": "Galesville",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "form",
@@ -33,7 +36,8 @@
         "Example": "Mt Simon",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_inj_rate",
@@ -42,7 +46,8 @@
         "Example": null,
         "units": "bbl/day",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_psi",
@@ -51,7 +56,8 @@
         "Example": null,
         "units": "psi",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_inj_rate",
@@ -60,7 +66,8 @@
         "Example": 10,
         "units": "MCF/day",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_press",
@@ -69,7 +76,8 @@
         "Example": 100,
         "units": "psi",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_date",
@@ -78,7 +86,8 @@
         "Example": "2014-05-10T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "fluid_type",
@@ -87,6 +96,7 @@
         "Example": null,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

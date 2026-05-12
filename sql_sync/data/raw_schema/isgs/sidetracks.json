@@ -6,7 +6,8 @@
         "examples": 512312345000,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_number",
@@ -15,7 +16,8 @@
         "examples": "\"01\"",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "well_id",
@@ -24,7 +26,8 @@
         "examples": 5123123450,
         "units": null,
         "application": "General",
-        "links": "id in well_headers table"
+        "links": "id in well_headers table",
+        "unique": null
     },
     {
         "column_name": "type",
@@ -33,7 +36,8 @@
         "examples": "Oil",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "permit_number",
@@ -42,7 +46,8 @@
         "examples": 29791515,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "permit_date",
@@ -51,7 +56,8 @@
         "examples": "2019-12-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "api_uwi_12",
@@ -60,7 +66,8 @@
         "examples": "51-231-23450-00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "spud_date",
@@ -69,7 +76,8 @@
         "examples": "2019-11-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "comp_date",
@@ -78,7 +86,8 @@
         "examples": "2019-12-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "first_prod_date",
@@ -87,7 +96,8 @@
         "examples": "2020-01-01T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "plug_date",
@@ -96,7 +106,8 @@
         "examples": "2023-11-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tvd",
@@ -105,7 +116,8 @@
         "examples": 7000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "md",
@@ -114,7 +126,8 @@
         "examples": 14000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "pbtd",
@@ -123,7 +136,8 @@
         "examples": 13950,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "status",
@@ -132,7 +146,8 @@
         "examples": "Plugged",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "status_date",
@@ -141,7 +156,8 @@
         "examples": "2023-11-21T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "bottom_hole_latitude",
@@ -150,7 +166,8 @@
         "examples": 28.0426508,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "bottom_hole_longitude",
@@ -159,7 +176,8 @@
         "examples": -95.8586483,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "is_primary",
@@ -168,7 +186,8 @@
         "examples": null,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "rotary_tools_from",
@@ -177,7 +196,8 @@
         "examples": null,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "rotary_tools_to",
@@ -186,7 +206,8 @@
         "examples": null,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cable_tools_from",
@@ -195,7 +216,8 @@
         "examples": null,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cable_tools_to",
@@ -204,7 +226,8 @@
         "examples": null,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "logs_run",
@@ -213,7 +236,8 @@
         "examples": null,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "last_log_date",
@@ -222,7 +246,8 @@
         "examples": null,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cored",
@@ -231,7 +256,8 @@
         "examples": null,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "core_from",
@@ -240,7 +266,8 @@
         "examples": 4000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "core_to",
@@ -249,7 +276,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "dst",
@@ -258,7 +286,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "dst_zone",
@@ -267,7 +296,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "not_converted_permit_expired",
@@ -276,7 +306,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "not_drilled_permit_expired",
@@ -285,6 +316,7 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

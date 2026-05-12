@@ -6,7 +6,8 @@
         "examples": 9876,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "well_id",
@@ -15,7 +16,8 @@
         "examples": 12345678,
         "units": null,
         "application": "Illinois",
-        "links": "id in well_headers table"
+        "links": "id in well_headers table",
+        "unique": null
     },
     {
         "column_name": "sidetrack_id",
@@ -24,7 +26,8 @@
         "examples": 1234567800,
         "units": null,
         "application": "Illinois",
-        "links": "id in sidetracks table"
+        "links": "id in sidetracks table",
+        "unique": null
     },
     {
         "column_name": "report_name",
@@ -33,7 +36,8 @@
         "examples": "120192170301_WELL_COMPLETION_REPORT_1",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "report_type_doph",
@@ -42,7 +46,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "report_type_conversion",
@@ -51,7 +56,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "report_type_deepening",
@@ -60,7 +66,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "report_type_workover",
@@ -69,7 +76,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "report_type_new_well",
@@ -78,7 +86,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "not_converted_permit_expired",
@@ -87,7 +96,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "not_drilled_permit_expired",
@@ -96,7 +106,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "lease_sign_no",
@@ -105,7 +116,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "lease_sign_yes",
@@ -114,7 +126,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "well_type",
@@ -123,7 +136,8 @@
         "examples": "Oil",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_conv",
@@ -132,7 +146,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_da",
@@ -141,7 +156,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_dry_hole",
@@ -150,7 +166,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_gas",
@@ -159,7 +176,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_gas_inj",
@@ -168,7 +186,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_gas_storage",
@@ -177,7 +196,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_observation",
@@ -186,7 +206,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_oil",
@@ -195,7 +216,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_other",
@@ -204,7 +226,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_other_text",
@@ -213,7 +236,8 @@
         "examples": "Geothermal",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_service",
@@ -222,7 +246,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_service_text",
@@ -231,7 +256,8 @@
         "examples": "Remediation",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_str_test",
@@ -240,7 +266,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_swd",
@@ -249,7 +276,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_water_inj",
@@ -258,7 +286,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_water_supply",
@@ -267,7 +296,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_coal_bed_gas",
@@ -276,7 +306,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type_coal_mine_gas",
@@ -285,7 +316,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "operator",
@@ -294,7 +326,8 @@
         "examples": "Chevron",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "operator_number",
@@ -303,7 +336,8 @@
         "examples": 12345,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "well_name",
@@ -312,7 +346,8 @@
         "examples": "Smith  #15",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "well_name_farm",
@@ -321,7 +356,8 @@
         "examples": "Smith",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "well_name_number",
@@ -330,7 +366,8 @@
         "examples": "#15",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "permit_date",
@@ -339,7 +376,8 @@
         "examples": "1989-12-31T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "permit_number",
@@ -348,7 +386,8 @@
         "examples": 12345,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ref_number",
@@ -357,7 +396,8 @@
         "examples": 12345,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "plss_loc",
@@ -366,7 +406,8 @@
         "examples": "330S 330W NE NE NE",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "county",
@@ -375,7 +416,8 @@
         "examples": "Perry",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "section",
@@ -384,7 +426,8 @@
         "examples": 5,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "township",
@@ -393,7 +436,8 @@
         "examples": "5S",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "range",
@@ -402,7 +446,8 @@
         "examples": "4W",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ns_distance",
@@ -411,7 +456,8 @@
         "examples": 350,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ns_line",
@@ -420,7 +466,8 @@
         "examples": "N",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ew_distance",
@@ -429,7 +476,8 @@
         "examples": 300,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "ew_line",
@@ -438,7 +486,8 @@
         "examples": "E",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "first_quarter",
@@ -447,7 +496,8 @@
         "examples": "SW",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "second_quarter",
@@ -456,7 +506,8 @@
         "examples": "SW",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "third_quarter",
@@ -465,7 +516,8 @@
         "examples": "SW",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elev_df",
@@ -474,7 +526,8 @@
         "examples": 5010,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elev_gr",
@@ -483,7 +536,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "elev_kb",
@@ -492,7 +546,8 @@
         "examples": 5015,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tvd",
@@ -501,7 +556,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "pbtd",
@@ -510,7 +566,8 @@
         "examples": 4090,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "spud_date",
@@ -519,7 +576,8 @@
         "examples": "1970-03-31T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "comp_date",
@@ -528,7 +586,8 @@
         "examples": "1970-04-10T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "rotary_tools_from",
@@ -537,7 +596,8 @@
         "examples": 0,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "rotary_tools_to",
@@ -546,7 +606,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cable_tools_from",
@@ -555,7 +616,8 @@
         "examples": 0,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cable_tools_to",
@@ -564,7 +626,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "logs_run_yes",
@@ -573,7 +636,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "logs_run_no",
@@ -582,7 +646,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "log_date",
@@ -591,7 +656,8 @@
         "examples": "1970-05-01T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "log_type",
@@ -600,7 +666,8 @@
         "examples": "Cement bond log",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "dst_no",
@@ -609,7 +676,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "dst_yes",
@@ -618,7 +686,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "dst_zone",
@@ -627,7 +696,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cored_no",
@@ -636,7 +706,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cored_yes",
@@ -645,7 +716,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cored_interval",
@@ -654,7 +726,8 @@
         "examples": null,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_cem_top",
@@ -663,7 +736,8 @@
         "examples": 0,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_cem_top_meth",
@@ -672,7 +746,8 @@
         "examples": "Visual",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_cem_vol",
@@ -681,7 +756,8 @@
         "examples": 200,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_csg_depth",
@@ -690,7 +766,8 @@
         "examples": 800,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_csg_pulled",
@@ -699,7 +776,8 @@
         "examples": 50,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_csg_out_diam",
@@ -708,7 +786,8 @@
         "examples": 13.375,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "surf_hole_size",
@@ -717,7 +796,8 @@
         "examples": 17.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_cem_top",
@@ -726,7 +806,8 @@
         "examples": 2000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_cem_top_meth",
@@ -735,7 +816,8 @@
         "examples": "Calculated",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_cem_vol",
@@ -744,7 +826,8 @@
         "examples": 400,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_csg_depth",
@@ -753,7 +836,8 @@
         "examples": 3000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_csg_pulled",
@@ -762,7 +846,8 @@
         "examples": 500,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_csg_out_diam",
@@ -771,7 +856,8 @@
         "examples": 9.625,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "int_hole_size",
@@ -780,7 +866,8 @@
         "examples": 12.25,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_cem_top",
@@ -789,7 +876,8 @@
         "examples": 2000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_cem_top_meth",
@@ -798,7 +886,8 @@
         "examples": "Calculated",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_cem_vol",
@@ -807,7 +896,8 @@
         "examples": 500,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_csg_depth",
@@ -816,7 +906,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_csg_pulled",
@@ -825,7 +916,8 @@
         "examples": 1000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_csg_out_diam",
@@ -834,7 +926,8 @@
         "examples": 7,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_hole_size",
@@ -843,7 +936,8 @@
         "examples": 8.75,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "liner_cem_vol",
@@ -852,7 +946,8 @@
         "examples": 200,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "liner_depth",
@@ -861,7 +956,8 @@
         "examples": 4000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "liner_pulled",
@@ -870,7 +966,8 @@
         "examples": 500,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "liner_size",
@@ -879,7 +976,8 @@
         "examples": 5.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tubing_type",
@@ -888,7 +986,8 @@
         "examples": "Siphon string",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tubing_size",
@@ -897,7 +996,8 @@
         "examples": 3.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oth_cem_top",
@@ -906,7 +1006,8 @@
         "examples": 500,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oth_cem_vol",
@@ -915,7 +1016,8 @@
         "examples": 300,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oth_csg_depth",
@@ -924,7 +1026,8 @@
         "examples": 1000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oth_csg_out_diam",
@@ -933,7 +1036,8 @@
         "examples": 5.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "other_cem_top_meth",
@@ -942,7 +1046,8 @@
         "examples": "Cement bond log",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "other_hole_size",
@@ -951,7 +1056,8 @@
         "examples": 7.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "csg_depth",
@@ -960,7 +1066,8 @@
         "examples": 1000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "csg_out_diam",
@@ -969,7 +1076,8 @@
         "examples": 9.5,
         "units": "inches",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "csg_type",
@@ -978,7 +1086,8 @@
         "examples": "production",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_vol",
@@ -987,7 +1096,8 @@
         "examples": 300,
         "units": "sacks",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "packer_type",
@@ -996,7 +1106,8 @@
         "examples": "Brown(Baker)D Hanger/Packer",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "packer_depth",
@@ -1005,7 +1116,8 @@
         "examples": 4500,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "prod_inj_form",
@@ -1014,7 +1126,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "lithology",
@@ -1023,7 +1136,8 @@
         "examples": "Sandstone",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "first_prod_date",
@@ -1032,7 +1146,8 @@
         "examples": "2001-04-18T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "test_date",
@@ -1041,7 +1156,8 @@
         "examples": "2001-04-17T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "test_length",
@@ -1050,7 +1166,8 @@
         "examples": 2,
         "units": "hours",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "post_test_prod",
@@ -1059,7 +1176,8 @@
         "examples": 25,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "pre_test_prod",
@@ -1068,7 +1186,8 @@
         "examples": 50,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "oil_prod",
@@ -1077,7 +1196,8 @@
         "examples": 10,
         "units": "bbls",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_prod",
@@ -1086,7 +1206,8 @@
         "examples": 50,
         "units": "mcf",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_prod",
@@ -1095,7 +1216,8 @@
         "examples": 10,
         "units": "bbls",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "comp_form",
@@ -1104,7 +1226,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_from",
@@ -1113,7 +1236,8 @@
         "examples": 4500,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_int",
@@ -1122,7 +1246,8 @@
         "examples": "4500-5000",
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_shots",
@@ -1131,7 +1256,8 @@
         "examples": "8/ft",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_to",
@@ -1140,7 +1266,8 @@
         "examples": 5000,
         "units": "feet",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_acidized",
@@ -1149,7 +1276,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_acidized_fractures_other",
@@ -1158,7 +1286,8 @@
         "examples": "9/7/84 Acidized 4000 gal 15% HCL",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_amnt",
@@ -1167,7 +1296,8 @@
         "examples": "250 get 7370 + 250 gel 15%",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_date",
@@ -1176,7 +1306,8 @@
         "examples": "2005-05-10T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_from",
@@ -1185,7 +1316,8 @@
         "examples": 4000,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_interval",
@@ -1194,7 +1326,8 @@
         "examples": "4000-5000",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_other",
@@ -1203,7 +1336,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_perf",
@@ -1212,7 +1346,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_shot",
@@ -1221,7 +1356,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_to",
@@ -1230,7 +1366,8 @@
         "examples": 5000,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "treatment_fractured",
@@ -1239,7 +1376,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "open_hole_interval",
@@ -1248,7 +1386,8 @@
         "examples": "4000-5000",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_form",
@@ -1257,7 +1396,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_date",
@@ -1266,7 +1406,8 @@
         "examples": "2005-05-10T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_fluid_freshwater",
@@ -1275,7 +1416,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_fluid_other",
@@ -1284,7 +1426,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_fluid_other_desc",
@@ -1293,7 +1436,8 @@
         "examples": "Hydrogen sulfide",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "inj_fluid_saltwater",
@@ -1302,7 +1446,8 @@
         "examples": true,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "fluid_source",
@@ -1311,7 +1456,8 @@
         "examples": "Mt Simon",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_inj_rate",
@@ -1320,7 +1466,8 @@
         "examples": 200,
         "units": "MCF/day",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "gas_press",
@@ -1329,7 +1476,8 @@
         "examples": 200,
         "units": "psi",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_inj_rate",
@@ -1338,7 +1486,8 @@
         "examples": 100,
         "units": "bbl/day",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "water_press",
@@ -1347,7 +1496,8 @@
         "examples": 200,
         "units": "psi",
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "signature",
@@ -1356,7 +1506,8 @@
         "examples": "John Smith",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "signature_address",
@@ -1365,7 +1516,8 @@
         "examples": "1313 Mockingbird Lane",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "signature_city_state",
@@ -1374,7 +1526,8 @@
         "examples": "Pittsburgh, Pennsylvanoa",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "signature_date",
@@ -1383,7 +1536,8 @@
         "examples": "2005-05-10T00:00:00",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "signature_title",
@@ -1392,6 +1546,7 @@
         "examples": "Mr.",
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

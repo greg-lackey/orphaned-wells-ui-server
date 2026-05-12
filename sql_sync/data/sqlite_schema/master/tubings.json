@@ -6,7 +6,8 @@
         "examples": 197985,
         "units": null,
         "application": null,
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -15,7 +16,8 @@
         "examples": 5123123450000,
         "units": null,
         "application": "Linked to id in sidetracks",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "type",
@@ -24,7 +26,8 @@
         "examples": null,
         "units": null,
         "application": null,
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "out_diam",
@@ -33,7 +36,8 @@
         "examples": 7.75,
         "units": "inches",
         "application": null,
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "in_diam",
@@ -42,7 +46,8 @@
         "examples": 7,
         "units": "inches",
         "application": null,
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "weight",
@@ -51,7 +56,8 @@
         "examples": 47,
         "units": "lb/ft",
         "application": null,
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "grade",
@@ -60,7 +66,8 @@
         "examples": "J-55",
         "units": null,
         "application": null,
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "top_tvd",
@@ -69,7 +76,8 @@
         "examples": 525,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "top_md",
@@ -78,7 +86,8 @@
         "examples": 500,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tvd",
@@ -87,7 +96,8 @@
         "examples": 9000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "md",
@@ -96,15 +106,17 @@
         "examples": 13000,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "is_cut",
         "description": "Boolean indicating if the casing has been cut from the surface",
-        "data_type": "boolean",
+        "data_type": "INTEGER",
         "examples": true,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

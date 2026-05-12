@@ -10,6 +10,13 @@ folder contains two spreadsheets:
     {institution}-database-structure.xlsx  — table/column definitions
     ogrre-to-{institution}-database-mapping.xlsx — MongoDB → SQL field mapping
 
+Spreadsheet conventions (required):
+    - No title row; row 1 is the column header row
+    - Column headers in the database-structure Excel must be snake_case and
+      include at minimum: column_name, data_type
+    - column_name values must be snake_case
+    - data_type values must be one of: text, int, bigint, boolean, date, float
+
 Usage (standalone):
     # process all institution folders, all db types
     python schema_excel_to_json.py
@@ -34,7 +41,6 @@ import json
 import math
 import datetime
 import os
-import re
 import sys
 import argparse
 from pathlib import Path
@@ -52,27 +58,6 @@ _SQL_RESERVED = {
     "check", "default", "key", "value", "values", "type", "status", "date",
     "name", "level", "end", "range", "match", "left", "right", "full",
 }
-
-# ── Column header mapping ─────────────────────────────────────────────────────
-# Maps the spreadsheet column header names to the snake_case keys used in
-# the output JSON.  Extend this if the spreadsheet gains new columns.
-
-COLUMN_HEADERS = {
-    "Column Name":        "column_name",
-    "Column description": "description",
-    "Data type":          "data_type",
-    "Examples":           "examples",
-    "Units":              "units",
-    "Application":        "application",
-    "Links":              "links",
-    "Unique":             "unique",
-}
-
-# ── Built-in type maps ────────────────────────────────────────────────────────
-# Imported from sql_sync/constants.py — edit there to keep load.py in sync.
-# Pass one of these as `type_map` to remap spreadsheet type strings to your
-# target database's type system.  If type_map=None, raw strings are kept.
-# Keys are matched case-insensitively (.strip().lower()) at call sites.
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -112,15 +97,6 @@ def _tables_to_sql(all_columns: dict, db_type: str) -> str:
             + "\n);"
         )
     return header + "\n\n".join(statements) + "\n"
-
-
-def _normalize_column_name(name: str) -> str:
-    """Convert a spreadsheet column name to a valid snake_case SQL identifier."""
-    name = str(name).strip().lower()
-    name = re.sub(r"[\s\-]+", "_", name)       # spaces/hyphens → underscores
-    name = re.sub(r"[^a-z0-9_]", "", name)     # drop everything else
-    name = re.sub(r"_+", "_", name).strip("_") # collapse duplicate underscores
-    return name
 
 
 def _clean_value(v):
@@ -189,7 +165,6 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
                                (e.g. "postgres" -> postgres_schema/isgs/).
                                If None, the directory is simply {institution}/.
     """
-
     if out_dir is None:
         out_dir = _default_out_dir()
 
@@ -204,39 +179,32 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
     print(f"schema_to_json [{institution}]: found {len(table_sheets)} table sheets: {table_sheets}")
 
     tables_index = {}
-    all_columns = {}  # accumulated for SQL generation
+    all_columns = {}
 
     for sheet in table_sheets:
-        # Row 0 is a title row; row 1 is the column header row
-        df = pd.read_excel(excel_file_path, sheet_name=sheet, header=1)
+        df = pd.read_excel(excel_file_path, sheet_name=sheet)
 
-        col_lower = {c.lower(): c for c in df.columns}
-        rename = {
-            col_lower[k.lower()]: v
-            for k, v in COLUMN_HEADERS.items()
-            if k.lower() in col_lower
-        }
-        df = df.rename(columns=rename)
+        if "column_name" not in df.columns:
+            print(f"  Skipping {sheet} (no 'column_name' column found)")
+            continue
 
-        if "column_name" in df.columns:
-            df = df[df["column_name"].notna()]
-            df["column_name"] = df["column_name"].apply(_normalize_column_name)
-
-            seen, dupes = set(), set()
-            for name in df["column_name"]:
-                if name in seen:
-                    dupes.add(name)
-                seen.add(name)
-            if dupes:
-                print(f"  WARNING: duplicate column name(s) in sheet '{sheet}': {sorted(dupes)}")
-
-            reserved = {n for n in seen if n in _SQL_RESERVED}
-            if reserved:
-                print(f"  WARNING: reserved SQL keyword(s) used as column name(s) in sheet '{sheet}': {sorted(reserved)} — consider renaming")
+        df = df[df["column_name"].notna()]
 
         if df.empty:
             print(f"  Skipping {sheet} (empty after filtering)")
             continue
+
+        seen, dupes = set(), set()
+        for name in df["column_name"]:
+            if name in seen:
+                dupes.add(name)
+            seen.add(name)
+        if dupes:
+            print(f"  WARNING: duplicate column name(s) in sheet '{sheet}': {sorted(dupes)}")
+
+        reserved = {n for n in seen if n in _SQL_RESERVED}
+        if reserved:
+            print(f"  WARNING: reserved SQL keyword(s) in sheet '{sheet}': {sorted(reserved)} — consider renaming")
 
         columns = []
         for row in df.to_dict(orient="records"):

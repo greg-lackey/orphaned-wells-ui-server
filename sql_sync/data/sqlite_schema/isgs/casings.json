@@ -6,7 +6,8 @@
         "examples": 197985,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -15,7 +16,8 @@
         "examples": 5123123450000,
         "units": null,
         "application": "General",
-        "links": "id in sidetracks"
+        "links": "id in sidetracks",
+        "unique": null
     },
     {
         "column_name": "type",
@@ -24,7 +26,8 @@
         "examples": "Production",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "hole_size",
@@ -33,7 +36,8 @@
         "examples": 17.5,
         "units": "inches",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "out_diam",
@@ -42,7 +46,8 @@
         "examples": 7.75,
         "units": "inches",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "in_diam",
@@ -51,7 +56,8 @@
         "examples": 7,
         "units": "inches",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "weight",
@@ -60,7 +66,8 @@
         "examples": 9.5,
         "units": "lb/ft",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "grade",
@@ -69,7 +76,8 @@
         "examples": "J-55",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_type",
@@ -78,7 +86,8 @@
         "examples": "Unaflo",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_density",
@@ -87,7 +96,8 @@
         "examples": 12,
         "units": "lb/gal",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_vol",
@@ -96,7 +106,8 @@
         "examples": 200,
         "units": "sacks",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_top_tvd",
@@ -105,7 +116,8 @@
         "examples": 3000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_top_md",
@@ -114,7 +126,8 @@
         "examples": 1000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "cem_top_method",
@@ -123,7 +136,8 @@
         "examples": "visual",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "top_tvd",
@@ -132,7 +146,8 @@
         "examples": 525,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "top_md",
@@ -141,7 +156,8 @@
         "examples": 500,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "tvd",
@@ -150,7 +166,8 @@
         "examples": 9000,
         "units": "feet",
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "md",
@@ -159,7 +176,8 @@
         "examples": 13000,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_from",
@@ -168,7 +186,8 @@
         "examples": 11000,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "perf_to",
@@ -177,7 +196,8 @@
         "examples": 12000,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "pulled",
@@ -186,24 +206,27 @@
         "examples": 500,
         "units": null,
         "application": "Illinois",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "is_liner",
         "description": "Boolean indicating if the casing starts top is located at surface (false) or is a liner and the casing top is located at some depth along the well",
-        "data_type": "boolean",
+        "data_type": "INTEGER",
         "examples": true,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "is_cut",
         "description": "Boolean indicating if the casing has been cut from the surface",
-        "data_type": "boolean",
+        "data_type": "INTEGER",
         "examples": true,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]

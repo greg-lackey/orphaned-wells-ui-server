@@ -1,12 +1,13 @@
 [
     {
-        "column_name": "log_id",
+        "column_name": "id",
         "description": "Unique identifier for the log",
         "data_type": "INTEGER",
         "Example": 1234,
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -15,7 +16,8 @@
         "Example": 512312345000,
         "units": null,
         "application": "General",
-        "links": "Linked to id in sidetracks"
+        "links": "Linked to id in sidetracks",
+        "unique": null
     },
     {
         "column_name": "log_date",
@@ -24,15 +26,17 @@
         "Example": "2022-04-12T00:00:00",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     },
     {
         "column_name": "log_type",
         "description": "Wireline/electric log type",
-        "data_type": "string",
+        "data_type": "TEXT",
         "Example": "Cement bond log",
         "units": null,
         "application": "General",
-        "links": null
+        "links": null,
+        "unique": null
     }
 ]
