@@ -24,10 +24,12 @@ Output shape:
         "PlugAndAbandonment": [...],
     }
 
+Note: the target institution is determined by DB_NAME in the root .env —
+the MongoDB database is per-institution, so no filtering flag is needed here.
+
 Usage:
-    python sql_sync/extract.py --institution isgs
-    python sql_sync/extract.py --institution isgs --out sql_sync/data/extracted.json
-    python sql_sync/extract.py --institution isgs --dry-run
+    python sql_sync/extract.py --out sql_sync/data/extracted/isgs.json
+    python sql_sync/extract.py --dry-run
 """
 
 import argparse
@@ -228,11 +230,6 @@ def _print_diagnostics(db) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Extract validated OGRRE records from MongoDB."
-    )
-    parser.add_argument(
-        "--institution",
-        default=None,
-        help="Institution key (e.g. 'isgs'). Currently used for context only.",
     )
     parser.add_argument(
         "--out",

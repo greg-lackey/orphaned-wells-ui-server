@@ -46,7 +46,7 @@ def mem_db():
 @pytest.mark.parametrize("data_type,expected", [
     ("bigint",    "INTEGER"),
     ("integer",   "INTEGER"),
-    ("numeric",   "REAL"),
+    ("numeric",   "NUMERIC"),
     ("string",    "TEXT"),
     ("text",      "TEXT"),
     ("date",      "TEXT"),

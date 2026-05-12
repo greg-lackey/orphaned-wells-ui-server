@@ -34,26 +34,10 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from constants import SQLITE_TYPE_MAP
+
 _ROOT_ENV = Path(__file__).parent.parent / ".env"
 _DATA_DIR = Path(__file__).parent / "data"
-
-_SQLITE_TYPE_MAP = {
-    "integer":   "INTEGER",
-    "bigint":    "INTEGER",
-    "smallint":  "INTEGER",
-    "numeric":   "REAL",
-    "real":      "REAL",
-    "float":     "REAL",
-    "double":    "REAL",
-    "boolean":   "INTEGER",
-    "bool":      "INTEGER",
-    "text":      "TEXT",
-    "string":    "TEXT",
-    "varchar":   "TEXT",
-    "char":      "TEXT",
-    "date":      "TEXT",
-    "timestamp": "TEXT",
-}
 
 
 # ── Schema ────────────────────────────────────────────────────────────────────
@@ -83,7 +67,7 @@ def _insertable_columns(table_schema: list) -> list:
 # ── SQLite ────────────────────────────────────────────────────────────────────
 
 def _sqlite_type(data_type: str) -> str:
-    return _SQLITE_TYPE_MAP.get((data_type or "").strip().lower(), "TEXT")
+    return SQLITE_TYPE_MAP.get((data_type or "").strip().lower(), "TEXT")
 
 
 def connect_sqlite(db_path: str) -> sqlite3.Connection:
@@ -143,7 +127,7 @@ def insert_table(conn, db_type: str, table: str, rows: list, col_names: list) ->
     if not rows or not col_names:
         return 0, 0
 
-    cols_sql = ", ".join(col_names)
+    cols_sql = ", ".join(f'"{c}"' for c in col_names)
     ph = _placeholders(db_type, len(col_names))
 
     if db_type == "sqlite":
@@ -151,16 +135,12 @@ def insert_table(conn, db_type: str, table: str, rows: list, col_names: list) ->
     else:
         sql = f"INSERT INTO {table} ({cols_sql}) VALUES ({ph}) ON CONFLICT DO NOTHING"
 
-    inserted = skipped = 0
+    values = [tuple(row.get(col) for col in col_names) for row in rows]
     cur = conn.cursor()
-    for row in rows:
-        values = tuple(row.get(col) for col in col_names)
-        cur.execute(sql, values)
-        if cur.rowcount > 0:
-            inserted += 1
-        else:
-            skipped += 1
+    cur.executemany(sql, values)
 
+    inserted = cur.rowcount if cur.rowcount >= 0 else len(rows)
+    skipped = len(rows) - inserted
     return inserted, skipped
 
 

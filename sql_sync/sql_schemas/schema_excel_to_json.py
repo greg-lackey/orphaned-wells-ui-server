@@ -35,9 +35,14 @@ import math
 import datetime
 import os
 import re
+import sys
 import argparse
+from pathlib import Path
 
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from constants import SQLITE_TYPE_MAP, POSTGRES_TYPE_MAP  # noqa: E402
 
 
 # SQL reserved words that are plausible column names — warn if any appear in a sheet.
@@ -63,46 +68,10 @@ COLUMN_HEADERS = {
 }
 
 # ── Built-in type maps ────────────────────────────────────────────────────────
+# Imported from sql_sync/constants.py — edit there to keep load.py in sync.
 # Pass one of these as `type_map` to remap spreadsheet type strings to your
 # target database's type system.  If type_map=None, raw strings are kept.
-#
-# Keys must be lowercase — lookups are normalised with .strip().lower() so
-# inconsistent casing in the spreadsheet ("Big int", "INT", etc.) still maps.
-
-SQLITE_TYPE_MAP = {
-    "big int":            "INTEGER",
-    "int":                "INTEGER",
-    "smallint":           "INTEGER",
-    "bool":               "INTEGER",   # SQLite has no native boolean
-    "text":               "TEXT",
-    "varchar":            "TEXT",
-    "float":              "REAL",
-    "double precision":   "REAL",
-    "numeric":            "NUMERIC",
-    "decimal":            "NUMERIC",
-    "date":               "TEXT",      # stored as ISO-8601 string
-    "timestamp":          "TEXT",
-    "timestamptz":        "TEXT",
-    "json":               "TEXT",
-    "jsonb":              "TEXT",
-}
-
-POSTGRES_TYPE_MAP = {
-    "big int":            "bigint",
-    "int":                "integer",
-    "smallint":           "smallint",
-    "bool":               "boolean",
-    "text":               "text",
-    "varchar":            "text",
-    "float":              "double precision",
-    "numeric":            "numeric",
-    "decimal":            "numeric",
-    "date":               "date",
-    "timestamp":          "timestamp",
-    "timestamptz":        "timestamptz",
-    "json":               "jsonb",
-    "jsonb":              "jsonb",
-}
+# Keys are matched case-insensitively (.strip().lower()) at call sites.
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -146,10 +115,10 @@ def _find_xlsx(institution_dir, pattern):
 
 
 def _institution_dirs(schemas_dir):
-    """Yield (institution_name, dir_path) for each non-hidden subfolder of schemas_dir."""
+    """Yield (institution_name, dir_path) for each institution subfolder of schemas_dir."""
     for name in sorted(os.listdir(schemas_dir)):
         path = os.path.join(schemas_dir, name)
-        if os.path.isdir(path) and not name.startswith("."):
+        if os.path.isdir(path) and not name.startswith((".", "__")):
             yield name, path
 
 
