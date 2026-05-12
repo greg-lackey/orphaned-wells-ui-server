@@ -1,7 +1,7 @@
 [
     {
         "column_name": "id",
-        "description": "Unique identifier for tubing",
+        "column_description": "Unique identifier for tubing",
         "data_type": "integer",
         "examples": 197985,
         "units": null,
@@ -11,7 +11,7 @@
     },
     {
         "column_name": "sidetrack_id",
-        "description": "Unformatted API12 or UWI",
+        "column_description": "Unformatted API12 or UWI",
         "data_type": "bigint",
         "examples": 5123123450000,
         "units": null,
@@ -21,8 +21,8 @@
     },
     {
         "column_name": "type",
-        "description": "Type of tubing",
-        "data_type": "string/character varying",
+        "column_description": "Type of tubing",
+        "data_type": "text",
         "examples": null,
         "units": null,
         "application": null,
@@ -31,8 +31,8 @@
     },
     {
         "column_name": "out_diam",
-        "description": "Outer diameter in inches",
-        "data_type": "float/double precision",
+        "column_description": "Outer diameter in inches",
+        "data_type": "double precision",
         "examples": 7.75,
         "units": "inches",
         "application": null,
@@ -41,8 +41,8 @@
     },
     {
         "column_name": "in_diam",
-        "description": "Inner diameter in inches",
-        "data_type": "float/double precision",
+        "column_description": "Inner diameter in inches",
+        "data_type": "double precision",
         "examples": 7,
         "units": "inches",
         "application": null,
@@ -51,8 +51,8 @@
     },
     {
         "column_name": "weight",
-        "description": "Weight in pounds",
-        "data_type": "float/double precision",
+        "column_description": "Weight in pounds",
+        "data_type": "double precision",
         "examples": 47,
         "units": "lb/ft",
         "application": null,
@@ -61,8 +61,8 @@
     },
     {
         "column_name": "grade",
-        "description": "Grade of steel used ",
-        "data_type": "string/character varying",
+        "column_description": "Grade of steel used ",
+        "data_type": "text",
         "examples": "J-55",
         "units": null,
         "application": null,
@@ -71,8 +71,8 @@
     },
     {
         "column_name": "top_tvd",
-        "description": "True vertical depth of the top of the tubing. Zero for most wells, but reflects the measured depth of the tubing top if it has been cut",
-        "data_type": "float/double precision",
+        "column_description": "True vertical depth of the top of the tubing. Zero for most wells, but reflects the measured depth of the tubing top if it has been cut",
+        "data_type": "double precision",
         "examples": 525,
         "units": "feet",
         "application": "General",
@@ -81,8 +81,8 @@
     },
     {
         "column_name": "top_md",
-        "description": "Measured depth of the top of the tubing. Zero for most wells, but reflects the measured depth of the tubing if it has been cut",
-        "data_type": "float/double precision",
+        "column_description": "Measured depth of the top of the tubing. Zero for most wells, but reflects the measured depth of the tubing if it has been cut",
+        "data_type": "double precision",
         "examples": 500,
         "units": "feet",
         "application": "General",
@@ -91,8 +91,8 @@
     },
     {
         "column_name": "tvd",
-        "description": "True vertical depth to bottom of tubing ",
-        "data_type": "float/double precision",
+        "column_description": "True vertical depth to bottom of tubing ",
+        "data_type": "double precision",
         "examples": 9000,
         "units": "feet",
         "application": "General",
@@ -101,8 +101,8 @@
     },
     {
         "column_name": "md",
-        "description": "Measured depth of the entire tubing (can be longer than true vertical depth if horizontal)",
-        "data_type": "float/double precision",
+        "column_description": "Measured depth of the entire tubing (can be longer than true vertical depth if horizontal)",
+        "data_type": "double precision",
         "examples": 13000,
         "units": null,
         "application": "General",
@@ -111,7 +111,7 @@
     },
     {
         "column_name": "is_cut",
-        "description": "Boolean indicating if the casing has been cut from the surface",
+        "column_description": "boolean indicating if the casing has been cut from the surface",
         "data_type": "boolean",
         "examples": true,
         "units": null,

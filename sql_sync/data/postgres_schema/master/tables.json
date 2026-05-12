@@ -201,7 +201,7 @@
         "type",
         "permit_number",
         "permit_date",
-        "api_uwi_12",
+        "api_uwi",
         "well_id",
         "spud_date",
         "comp_date",

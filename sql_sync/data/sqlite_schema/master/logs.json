@@ -1,9 +1,9 @@
 [
     {
         "column_name": "id",
-        "description": "Unique identifier for the log",
+        "column_description": "Unique identifier for the log",
         "data_type": "INTEGER",
-        "Example": 1234,
+        "examples": 1234,
         "units": null,
         "application": "General",
         "links": null,
@@ -11,9 +11,9 @@
     },
     {
         "column_name": "sidetrack_id",
-        "description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
+        "column_description": "Unformatted 12-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI). This is unique for each well sidetrack",
         "data_type": "INTEGER",
-        "Example": 512312345000,
+        "examples": 512312345000,
         "units": null,
         "application": "General",
         "links": "Linked to id in sidetracks",
@@ -21,9 +21,9 @@
     },
     {
         "column_name": "log_date",
-        "description": "Date that wireline/electric logs were run",
+        "column_description": "date that wireline/electric logs were run",
         "data_type": "TEXT",
-        "Example": "2022-04-12T00:00:00",
+        "examples": "2022-04-12T00:00:00",
         "units": null,
         "application": "General",
         "links": null,
@@ -31,9 +31,9 @@
     },
     {
         "column_name": "log_type",
-        "description": "Wireline/electric log type",
+        "column_description": "Wireline/electric log type",
         "data_type": "TEXT",
-        "Example": "Cement bond log",
+        "examples": "Cement bond log",
         "units": null,
         "application": "General",
         "links": null,
