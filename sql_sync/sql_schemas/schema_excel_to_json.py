@@ -174,7 +174,7 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
         schema_dir = os.path.join(out_dir, institution)
     os.makedirs(schema_dir, exist_ok=True)
 
-    excel_file = pd.ExcelFile(excel_file_path)
+    excel_file = pd.ExcelFile(excel_file_path, engine="openpyxl")
     table_sheets = excel_file.sheet_names
     print(f"schema_to_json [{institution}]: found {len(table_sheets)} table sheets: {table_sheets}")
 
@@ -182,7 +182,7 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
     all_columns = {}
 
     for sheet in table_sheets:
-        df = pd.read_excel(excel_file_path, sheet_name=sheet)
+        df = pd.read_excel(excel_file_path, sheet_name=sheet, engine="openpyxl")
 
         if "column_name" not in df.columns:
             print(f"  Skipping {sheet} (no 'column_name' column found)")
@@ -255,11 +255,11 @@ def mapping_to_json(excel_file_path, institution, out_dir=None):
     mapping_dir = os.path.join(out_dir, "field_mapping", institution)
     os.makedirs(mapping_dir, exist_ok=True)
 
-    xl = pd.ExcelFile(excel_file_path)
+    xl = pd.ExcelFile(excel_file_path, engine="openpyxl")
     print(f"mapping_to_json [{institution}]: found {len(xl.sheet_names)} sheet(s): {xl.sheet_names}")
 
     for sheet in xl.sheet_names:
-        df = pd.read_excel(excel_file_path, sheet_name=sheet, header=0)
+        df = pd.read_excel(excel_file_path, sheet_name=sheet, header=0, engine="openpyxl")
         records = [{k: _clean_value(v) for k, v in row.items()}
                    for row in df.to_dict(orient="records")]
         out_path = os.path.join(mapping_dir, f"{sheet}.json")
@@ -274,7 +274,6 @@ if __name__ == "__main__":
     _DB_TYPES = {
         "postgres": POSTGRES_TYPE_MAP,
         "sqlite":   SQLITE_TYPE_MAP,
-        "raw":      None,
     }
 
     _SCHEMAS_DIR = os.path.dirname(os.path.abspath(__file__))
