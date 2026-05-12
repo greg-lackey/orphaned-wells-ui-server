@@ -59,19 +59,23 @@ VALIDATED_QUERY = {
 
 # ── Connection ────────────────────────────────────────────────────────────────
 
-def connect(db_name: str = None):
+def connect(db_name: str):
     """Connect to MongoDB using credentials from the project root .env.
 
     Args:
-        db_name: MongoDB database name. If omitted, falls back to DB_NAME in
-                 .env, then to "ogrre". Explicit argument takes precedence.
+        db_name: MongoDB database name (required). Pass --db-name on the CLI,
+                 or use run.py which defaults this to the --institution value.
     """
+    if not db_name:
+        raise ValueError(
+            "db_name is required. Pass --db-name when running extract.py, "
+            "or use run.py which defaults it to the --institution value."
+        )
     load_dotenv(_ROOT_ENV, override=True)
 
     db_connection = os.getenv("DB_CONNECTION")
     db_username   = os.getenv("DB_USERNAME")
     db_password   = os.getenv("DB_PASSWORD")
-    db_name       = db_name or os.getenv("DB_NAME", "ogrre")
 
     if not db_connection:
         raise ValueError(
@@ -236,8 +240,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--db-name",
-        default=None,
-        help="MongoDB database name (e.g. 'isgs'). Overrides DB_NAME in .env.",
+        required=True,
+        help="MongoDB database name (e.g. 'isgs').",
     )
     parser.add_argument(
         "--out",

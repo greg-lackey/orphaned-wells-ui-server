@@ -103,8 +103,9 @@ Copy `.env.example` to `.env` and fill in:
 | `MONGO_USER` | yes | MongoDB Atlas username |
 | `MONGO_PASSWORD` | yes | MongoDB Atlas password |
 | `MONGO_CLUSTER` | yes | Atlas cluster hostname (e.g. `cluster0.abc123.mongodb.net`) |
-| `DB_NAME` | yes | MongoDB database name for this institution |
 | `PG_DSN` | postgres only | PostgreSQL connection string (`postgresql://user:pass@host/db`) |
+
+`DB_NAME` is intentionally not in `.env` — pass `--db-name` on the CLI instead (or use `run.py`, which defaults it to `--institution`). Keeping it off the credentials file prevents accidentally running against the wrong institution's database.
 
 ## Running the tests
 
