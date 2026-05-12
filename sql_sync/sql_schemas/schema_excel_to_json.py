@@ -34,10 +34,19 @@ import json
 import math
 import datetime
 import os
+import re
 import argparse
 
 import pandas as pd
 
+
+# SQL reserved words that are plausible column names — warn if any appear in a sheet.
+# Quoting handles them at load time, but renaming in the spreadsheet is cleaner.
+_SQL_RESERVED = {
+    "primary", "index", "order", "select", "where", "group", "table", "column",
+    "check", "default", "key", "value", "values", "type", "status", "date",
+    "name", "level", "end", "range", "match", "left", "right", "full",
+}
 
 # ── Column header mapping ─────────────────────────────────────────────────────
 # Maps the spreadsheet column header names to the snake_case keys used in
@@ -97,6 +106,15 @@ POSTGRES_TYPE_MAP = {
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _normalize_column_name(name: str) -> str:
+    """Convert a spreadsheet column name to a valid snake_case SQL identifier."""
+    name = str(name).strip().lower()
+    name = re.sub(r"[\s\-]+", "_", name)       # spaces/hyphens → underscores
+    name = re.sub(r"[^a-z0-9_]", "", name)     # drop everything else
+    name = re.sub(r"_+", "_", name).strip("_") # collapse duplicate underscores
+    return name
+
 
 def _clean_value(v):
     """Convert NaN -> None and non-serialisable types for clean JSON output."""
@@ -184,11 +202,29 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
         # Row 0 is a title row; row 1 is the column header row
         df = pd.read_excel(excel_file_path, sheet_name=sheet, header=1)
 
-        rename = {k: v for k, v in COLUMN_HEADERS.items() if k in df.columns}
+        col_lower = {c.lower(): c for c in df.columns}
+        rename = {
+            col_lower[k.lower()]: v
+            for k, v in COLUMN_HEADERS.items()
+            if k.lower() in col_lower
+        }
         df = df.rename(columns=rename)
 
         if "column_name" in df.columns:
             df = df[df["column_name"].notna()]
+            df["column_name"] = df["column_name"].apply(_normalize_column_name)
+
+            seen, dupes = set(), set()
+            for name in df["column_name"]:
+                if name in seen:
+                    dupes.add(name)
+                seen.add(name)
+            if dupes:
+                print(f"  WARNING: duplicate column name(s) in sheet '{sheet}': {sorted(dupes)}")
+
+            reserved = {n for n in seen if n in _SQL_RESERVED}
+            if reserved:
+                print(f"  WARNING: reserved SQL keyword(s) used as column name(s) in sheet '{sheet}': {sorted(reserved)} — consider renaming")
 
         if df.empty:
             print(f"  Skipping {sheet} (empty after filtering)")
