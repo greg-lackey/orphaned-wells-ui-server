@@ -115,12 +115,20 @@ def _extract_api(filename: str) -> str | None:
 
 
 def _flatten_attributes(attributes_list: list) -> dict:
-    """Convert [{key, value, ...}, ...] to {key: value}."""
-    return {
-        attr["key"]: attr.get("value")
-        for attr in attributes_list
-        if "key" in attr
-    }
+    """Convert [{key, normalized_value, value, ...}, ...] to {key: best_value}.
+
+    normalized_value holds the human-reviewed answer; value holds the raw AI
+    extraction. Prefer normalized_value, fall back to value when not yet reviewed.
+    """
+    result = {}
+    for attr in attributes_list:
+        if "key" not in attr:
+            continue
+        val = attr.get("normalized_value")
+        if val is None:
+            val = attr.get("value")
+        result[attr["key"]] = val
+    return result
 
 
 def _build_processor_lookup(db, processor_ids: set) -> dict:
@@ -129,7 +137,7 @@ def _build_processor_lookup(db, processor_ids: set) -> dict:
         return {}
     docs = db.processors.find({"processorId": {"$in": list(processor_ids)}})
     return {
-        p["processorId"]: p.get("Processor Name", p["processorId"])
+        p["processorId"]: p.get("name", p["processorId"])
         for p in docs
     }
 

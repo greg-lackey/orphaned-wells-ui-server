@@ -24,21 +24,33 @@ def test_extract_api(filename, expected):
 
 # ── _flatten_attributes ───────────────────────────────────────────────────────
 
-def test_flatten_attributes():
+def test_flatten_attributes_prefers_normalized_value():
     attrs = [
-        {"key": "well_name", "value": "Example Well", "edited": False},
-        {"key": "api_uwi",   "value": "51-231-23450", "edited": True},
-        {"key": "depth",     "value": "1234"},
+        {"key": "well_name", "normalized_value": "Reviewed Name", "value": "AI Name"},
+        {"key": "depth",     "normalized_value": 1234.5,           "value": None},
     ]
-    assert _flatten_attributes(attrs) == {
-        "well_name": "Example Well",
-        "api_uwi":   "51-231-23450",
-        "depth":     "1234",
-    }
+    result = _flatten_attributes(attrs)
+    assert result["well_name"] == "Reviewed Name"
+    assert result["depth"] == 1234.5
+
+
+def test_flatten_attributes_falls_back_to_value():
+    attrs = [
+        {"key": "well_name", "normalized_value": None, "value": "AI Name"},
+        {"key": "county",    "value": "Cook"},           # no normalized_value key at all
+    ]
+    result = _flatten_attributes(attrs)
+    assert result["well_name"] == "AI Name"
+    assert result["county"] == "Cook"
+
+
+def test_flatten_attributes_returns_null_when_both_absent():
+    attrs = [{"key": "depth", "normalized_value": None, "value": None}]
+    assert _flatten_attributes(attrs) == {"depth": None}
 
 
 def test_flatten_attributes_skips_entries_without_key():
-    attrs = [{"value": "orphaned"}, {"key": "api_uwi", "value": "123"}]
+    attrs = [{"value": "orphaned"}, {"key": "api_uwi", "normalized_value": "123"}]
     assert _flatten_attributes(attrs) == {"api_uwi": "123"}
 
 
@@ -71,7 +83,7 @@ def test_extract_groups_by_processor():
         }
     ]
     record_groups = [{"_id": rg_id, "processorId": proc_id}]
-    processors = [{"processorId": proc_id, "Processor Name": "WellCompletion"}]
+    processors = [{"processorId": proc_id, "name": "WellCompletion"}]
 
     db = MagicMock()
     db.records.find.return_value = records
@@ -102,7 +114,7 @@ def test_extract_parses_api_from_filename():
     db = MagicMock()
     db.records.find.return_value = records
     db.record_groups.find.return_value = [{"_id": rg_id, "processorId": proc_id}]
-    db.processors.find.return_value = [{"processorId": proc_id, "Processor Name": "WellCompletion"}]
+    db.processors.find.return_value = [{"processorId": proc_id, "name": "WellCompletion"}]
 
     result = extract(db)
     record = result["WellCompletion"][0]
@@ -129,7 +141,7 @@ def test_extract_dry_run_returns_empty(capsys):
     db = MagicMock()
     db.records.find.return_value = records
     db.record_groups.find.return_value = [{"_id": rg_id, "processorId": proc_id}]
-    db.processors.find.return_value = [{"processorId": proc_id, "Processor Name": "WellCompletion"}]
+    db.processors.find.return_value = [{"processorId": proc_id, "name": "WellCompletion"}]
 
     result = extract(db, dry_run=True)
 
