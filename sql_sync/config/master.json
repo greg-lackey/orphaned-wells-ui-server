@@ -1,5 +1,28 @@
 {
     "record_groups": [
-        {"name": "TODO", "id": "TODO"}
+        {"name": "Precambrian_WellCompletion_1",       "id": "6674a33a398907ecaeb2e574"},
+        {"name": "Precambrian_WellCompletion_2",       "id": "6674a3c866e839606b473ba9"},
+        {"name": "Precambrian_WellCompletion_3",       "id": "66a01fa4d99e9594d44e2929"},
+        {"name": "Mt-Simon_WellCompletion_1",          "id": "6674a3fd66e839606b473bae"},
+        {"name": "Mt-Simon_WellCompletion_2",          "id": "6674a4894cde4e8ee6caecc0"},
+        {"name": "Mt-Simon_WellCompletion_3",          "id": "66a01fab7dba29a5768585d4"},
+        {"name": "Eau-Claire_WellCompletion_1",        "id": "6674a502e9aacbba003a8ade"},
+        {"name": "Eau-Claire_WellCompletion_2",        "id": "6674a50a445ede9233215328"},
+        {"name": "Eau-Claire_WellCompletion_3",        "id": "66a01fb165f14ad46d8e5f89"},
+        {"name": "Precambrian_DrillingReport_1",       "id": "66c49c8c7121e0fc76b52a7e"},
+        {"name": "Mt-Simon_DrillingReport_1",          "id": "66c49c9a72386817c6acd7d2"},
+        {"name": "Eau-Claire_DrillingReport_1",        "id": "66c49ca69a4636403746a339"},
+        {"name": "Mt-Simon_Casing_and_Cement_1",       "id": "66e816a1a70bb41ec8691e23"},
+        {"name": "Eau-Claire_Casing_and_Cement_1",     "id": "66e816bfd548bf3a980a3f13"},
+        {"name": "Precambrian_Casing_and_Cement_1",    "id": "66e816d24d8b642ce39ed965"},
+        {"name": "Precambrian_PluggingReport_1",       "id": "670a5ba5b065690406bae4f4"},
+        {"name": "Precambrian_PluggingReport_2",       "id": "670a5efdb065690406bae501"},
+        {"name": "Precambrian_PluggingReport_3",       "id": "670a5fb71b45b7b78d80f03d"},
+        {"name": "Mt-Simon_PluggingReport_1",          "id": "670a5bb71b45b7b78d80f029"},
+        {"name": "Mt-Simon_PluggingReport_2",          "id": "670a5f043df6c6930420585f"},
+        {"name": "Mt-Simon_PluggingReport_3",          "id": "670a5fbd1d4f6c8a05afe349"},
+        {"name": "Eau-Claire_PluggingReport_1",        "id": "670a5bc42cf8a8186d7d8b62"},
+        {"name": "Eau-Claire_PluggingReport_2",        "id": "670a5f0b1d4f6c8a05afe347"},
+        {"name": "Eau-Claire_PluggingReport_3",        "id": "670a5fc3f70d50f0be50ef36"}
     ]
 }
