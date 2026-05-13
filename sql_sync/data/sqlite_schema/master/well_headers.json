@@ -210,26 +210,6 @@
         "unique": null
     },
     {
-        "column_name": "name",
-        "column_description": "The name given to the well",
-        "data_type": "TEXT",
-        "examples": null,
-        "units": null,
-        "application": "General",
-        "links": null,
-        "unique": null
-    },
-    {
-        "column_name": "type",
-        "column_description": "The type of well (e.g., oil, gas, injection)",
-        "data_type": "TEXT",
-        "examples": "oil",
-        "units": null,
-        "application": "General",
-        "links": null,
-        "unique": null
-    },
-    {
         "column_name": "configuration",
         "column_description": "Indicates the configuration of the wellbore (Vertical, deviated, or horizontal)",
         "data_type": "TEXT",

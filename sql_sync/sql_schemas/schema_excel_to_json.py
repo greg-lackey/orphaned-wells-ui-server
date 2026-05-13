@@ -123,6 +123,8 @@ def _default_out_dir():
 def _find_xlsx(institution_dir, pattern):
     """Return the path of the first .xlsx file in institution_dir whose name contains pattern."""
     for fname in os.listdir(institution_dir):
+        if fname.startswith("~$"):
+            continue
         if fname.endswith(".xlsx") and pattern in fname:
             return os.path.join(institution_dir, fname)
     return None

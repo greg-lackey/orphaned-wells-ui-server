@@ -70,16 +70,6 @@
         "unique": null
     },
     {
-        "column_name": "well_id",
-        "column_description": "Unformatted 10-digit American Petroleum Institute Number (API) or Unique Well Identifier (UWI)",
-        "data_type": "INTEGER",
-        "examples": 5123123450,
-        "units": null,
-        "application": "General",
-        "links": null,
-        "unique": null
-    },
-    {
         "column_name": "spud_date",
         "column_description": "The date that sidetrack drilling began",
         "data_type": "TEXT",
