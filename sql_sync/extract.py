@@ -16,6 +16,7 @@ Output shape:
                 "_date_created": 1234567890,
                 "_review_status": "reviewed",
                 "_processor_name": "WellCompletion",
+                "_record_group": "Precambrian_WellCompletion_1",
                 "well_name": "Example Well",
                 ...
             },
@@ -267,6 +268,7 @@ def extract(db, dry_run: bool = False, config: dict = None) -> dict:
         flat["_date_created"] = record.get("dateCreated")
         flat["_review_status"] = record.get("review_status")
         flat["_processor_name"] = proc_name
+        flat["_record_group"] = rg.get("name")
 
         by_processor[proc_name].append(flat)
 
