@@ -273,7 +273,7 @@ def extract(db, dry_run: bool = False, config: dict = None) -> dict:
     return dict(by_processor)
 
 
-def _print_diagnostics(db) -> None:
+def _print_diagnostics(db, config: dict = None) -> None:
     """Print database/collection layout and status value counts to diagnose zero results."""
     client = db.client
     print(f"\nConnected database: {db.name}")
@@ -293,6 +293,37 @@ def _print_diagnostics(db) -> None:
         print(f"\n{field} value counts:")
         for b in buckets:
             print(f"  {b['_id']!r}: {b['count']}")
+
+    pipeline = [
+        {"$match": VALIDATED_QUERY},
+        {"$group": {"_id": "$record_group_id", "count": {"$sum": 1}}},
+        {"$sort": {"count": -1}},
+    ]
+    rg_buckets = list(db.records.aggregate(pipeline))
+    if rg_buckets:
+        rg_ids = {str(b["_id"]) for b in rg_buckets}
+        rg_lookup = _build_record_group_lookup(db, rg_ids)
+        if config:
+            rg_lookup = _filter_record_groups(rg_lookup, config)
+            rg_buckets = [b for b in rg_buckets if str(b["_id"]) in rg_lookup]
+
+        print("\nValidated record counts by record group:")
+        for b in rg_buckets:
+            rg_id = str(b["_id"])
+            name = rg_lookup.get(rg_id, {}).get("name", rg_id)
+            print(f"  {name}: {b['count']}")
+
+        processor_ids = {rg.get("processorId") for rg in rg_lookup.values() if rg.get("processorId")}
+        proc_lookup = _build_processor_lookup(db, processor_ids)
+        proc_counts: dict[str, int] = defaultdict(int)
+        for b in rg_buckets:
+            rg = rg_lookup.get(str(b["_id"]), {})
+            proc_name = proc_lookup.get(rg.get("processorId"), rg.get("processorId", "unknown"))
+            proc_counts[proc_name] += b["count"]
+
+        print("\nValidated record counts by processor:")
+        for name, count in sorted(proc_counts.items(), key=lambda x: -x[1]):
+            print(f"  {name}: {count}")
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -323,7 +354,7 @@ if __name__ == "__main__":
     result = extract(db, dry_run=args.dry_run, config=config)
 
     if args.dry_run:
-        _print_diagnostics(db)
+        _print_diagnostics(db, config=config)
     elif args.out:
         with open(args.out, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, default=str)
