@@ -46,7 +46,8 @@ from pymongo.server_api import ServerApi
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
-_ROOT_ENV = Path(__file__).parent.parent / ".env"
+_ROOT_ENV   = Path(__file__).parent.parent / ".env"
+_CONFIG_DIR = Path(__file__).parent / "config"
 
 # Matches XX-XXX-XXXXX or XXXXXXXXXX (10-digit US API number)
 _API_RE = re.compile(r"(\d{2})-?(\d{3})-?(\d{5})")
@@ -156,9 +157,52 @@ def _build_record_group_lookup(db, rg_ids: set) -> dict:
     return {str(rg["_id"]): rg for rg in docs}
 
 
+# ── Config ───────────────────────────────────────────────────────────────────
+
+def load_config(institution: str) -> dict:
+    """
+    Load the institution config from sql_sync/config/{institution}.json.
+
+    Returns an empty dict if no config file exists for the institution.
+    """
+    path = _CONFIG_DIR / f"{institution}.json"
+    if not path.exists():
+        return {}
+    with open(path) as f:
+        return json.load(f)
+
+
+def _filter_record_groups(rg_lookup: dict, config: dict) -> dict:
+    """
+    Filter rg_lookup to only record groups listed in config["record_groups"].
+
+    A record group is included if its ObjectId string matches any entry's "id"
+    OR its name matches any entry's "name".  Returns the full rg_lookup
+    unchanged when config has no record_groups list.
+    """
+    entries = config.get("record_groups", [])
+    if not entries:
+        return rg_lookup
+
+    allowed_ids   = {e["id"]   for e in entries if e.get("id")   and e["id"]   != "TODO"}
+    allowed_names = {e["name"] for e in entries if e.get("name") and e["name"] != "TODO"}
+
+    if not allowed_ids and not allowed_names:
+        return rg_lookup
+
+    filtered = {
+        rg_id: rg for rg_id, rg in rg_lookup.items()
+        if rg_id in allowed_ids or rg.get("name") in allowed_names
+    }
+    excluded = len(rg_lookup) - len(filtered)
+    if excluded:
+        print(f"extract: excluded {excluded} record group(s) not in config allowlist")
+    return filtered
+
+
 # ── Main extract function ─────────────────────────────────────────────────────
 
-def extract(db, dry_run: bool = False) -> dict:
+def extract(db, dry_run: bool = False, config: dict = None) -> dict:
     """
     Query validated records from MongoDB and return them grouped by processor name.
 
@@ -166,6 +210,9 @@ def extract(db, dry_run: bool = False) -> dict:
         db:       pymongo database object (from connect())
         dry_run:  if True, print counts by processor and return {} without
                   extracting field values
+        config:   optional institution config dict (from load_config()).
+                  When provided, only records belonging to record groups listed
+                  in config["record_groups"] are included.
 
     Returns:
         dict mapping processor_name -> list of flat record dicts
@@ -179,6 +226,13 @@ def extract(db, dry_run: bool = False) -> dict:
     # Batch-resolve record groups and processors to avoid per-record queries
     rg_ids = {str(r["record_group_id"]) for r in records if r.get("record_group_id")}
     rg_lookup = _build_record_group_lookup(db, rg_ids)
+
+    # Apply record group allowlist from config if present
+    if config:
+        rg_lookup = _filter_record_groups(rg_lookup, config)
+        records = [r for r in records
+                   if str(r.get("record_group_id", "")) in rg_lookup]
+        print(f"extract: {len(records)} record(s) in allowed record groups")
 
     processor_ids = {rg.get("processorId") for rg in rg_lookup.values() if rg.get("processorId")}
     proc_lookup = _build_processor_lookup(db, processor_ids)
@@ -265,7 +319,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     db = connect(db_name=args.db_name)
-    result = extract(db, dry_run=args.dry_run)
+    config = load_config(args.db_name)
+    result = extract(db, dry_run=args.dry_run, config=config)
 
     if args.dry_run:
         _print_diagnostics(db)

@@ -36,7 +36,7 @@ import argparse
 import json
 from pathlib import Path
 
-from extract import connect, extract
+from extract import connect, extract, load_config
 from transform import load_mapping, transform
 from load import connect_postgres, connect_sqlite, create_tables_postgres, create_tables_sqlite, load, load_schema
 
@@ -89,8 +89,9 @@ def run(
 ) -> None:
     """Run the full extract → transform → load pipeline."""
     print("--- Step 1: Extract ---")
+    config = load_config(institution)
     db = connect(db_name=db_name or institution)
-    extracted = extract(db)
+    extracted = extract(db, config=config)
 
     if not extracted:
         print("No records extracted — pipeline complete.")
