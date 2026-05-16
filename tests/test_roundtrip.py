@@ -27,12 +27,12 @@ from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent / "sql_sync"))
 
 from load import load_schema
 from transform import load_mapping, transform
 
-_DATA_DIR = Path(__file__).parent.parent / "data"
+_DATA_DIR = Path(__file__).parent.parent / "sql_sync" / "data"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
