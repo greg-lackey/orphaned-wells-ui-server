@@ -1,1467 +1,12 @@
 [
     {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Cable_Tools_From",
-        "report_table": "completion_reports",
-        "report_table_field": "cable_tools_from",
-        "well_table": "sidetracks",
-        "well_table_field": "cable_tools_from"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Cable_From",
-        "report_table": "completion_reports",
-        "report_table_field": "cable_tools_from",
-        "well_table": "sidetracks",
-        "well_table_field": "cable_tools_from"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Cable_Tools_To",
-        "report_table": "completion_reports",
-        "report_table_field": "cable_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "cable_tools_to"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Cable_Tools_To",
-        "report_table": "completion_reports",
-        "report_table_field": "cable_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "cable_tools_to"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Cable_To",
-        "report_table": "completion_reports",
-        "report_table_field": "cable_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "cable_tools_to"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_Drilling_Complete",
-        "report_table": "completion_reports",
-        "report_table_field": "comp_date",
-        "well_table": "sidetracks",
-        "well_table_field": "comp_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Drilling_Finished",
-        "report_table": "completion_reports",
-        "report_table_field": "comp_date",
-        "well_table": "sidetracks",
-        "well_table_field": "comp_date"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Date_Completed",
-        "report_table": "completion_reports",
-        "report_table_field": "comp_date",
-        "well_table": "sidetracks",
-        "well_table_field": "comp_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Formation_Name",
-        "report_table": "completion_reports",
-        "report_table_field": "comp_form",
-        "well_table": "completions",
-        "well_table_field": "form"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Interval_Cored",
-        "report_table": "completion_reports",
-        "report_table_field": "cored_interval",
-        "well_table": "sidetracks",
-        "well_table_field": "core_from, core_to"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Was_Well_Cored_No",
-        "report_table": "completion_reports",
-        "report_table_field": "cored_no",
-        "well_table": "sidetracks",
-        "well_table_field": "cored"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Was_Well_Cored_No",
-        "report_table": "completion_reports",
-        "report_table_field": "cored_no",
-        "well_table": "sidetracks",
-        "well_table_field": "cored"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Was_Well_Cored_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "cored_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "cored"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Was_Well_Cored_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "cored_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "cored"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "County",
-        "report_table": "completion_reports",
-        "report_table_field": "county",
-        "well_table": "well_header",
-        "well_table_field": "county"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "County",
-        "report_table": "completion_reports",
-        "report_table_field": "county",
-        "well_table": "well_header",
-        "well_table_field": "county"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "County",
-        "report_table": "completion_reports",
-        "report_table_field": "county",
-        "well_table": "well_header",
-        "well_table_field": "county"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Size",
-        "report_table": "completion_reports",
-        "report_table_field": "csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record",
-        "report_table": "completion_reports",
-        "report_table_field": "csg_type",
-        "well_table": "casings",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Deepened",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_deepening",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Drilled_Out_Plugged_Hole",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_doph",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Drill_Stem_Test_Run_No",
-        "report_table": "completion_reports",
-        "report_table_field": "dst_no",
-        "well_table": "sidetracks",
-        "well_table_field": "dst"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Drill_Stem_Test_Run_No",
-        "report_table": "completion_reports",
-        "report_table_field": "dst_no",
-        "well_table": "sidetracks",
-        "well_table_field": "dst"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Drill_Stem_Test_Run_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "dst_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "dst"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Drill_Stem_Test_Run_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "dst_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "dst"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Zone_Tested",
-        "report_table": "completion_reports",
-        "report_table_field": "dst_zone",
-        "well_table": "sidetracks",
-        "well_table_field": "dst_zone"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Elevation_DF",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_df",
-        "well_table": "well_header",
-        "well_table_field": "elev_df"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Elevation_DF",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_df",
-        "well_table": "well_header",
-        "well_table_field": "elev_df"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Ground",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_gr",
-        "well_table": "well_header",
-        "well_table_field": "elev_gr"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Elevation_GR",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_gr",
-        "well_table": "well_header",
-        "well_table_field": "elev_gr"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Elevation",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_gr",
-        "well_table": "well_header",
-        "well_table_field": "elev_gr"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "KB",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_kb",
-        "well_table": "well_header",
-        "well_table_field": "elev_kb"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Elevation_KB",
-        "report_table": "completion_reports",
-        "report_table_field": "elev_kb",
-        "well_table": "well_header",
-        "well_table_field": "elev_kb"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "EW_Distance",
-        "report_table": "completion_reports",
-        "report_table_field": "ew_distance",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "EW_Line",
-        "report_table": "completion_reports",
-        "report_table_field": "ew_line",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_of_First_Prod",
-        "report_table": "completion_reports",
-        "report_table_field": "first_prod_date",
-        "well_table": "sidetracks",
-        "well_table_field": "first_prod_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Of_First_Production",
-        "report_table": "completion_reports",
-        "report_table_field": "first_prod_date",
-        "well_table": "sidetracks",
-        "well_table_field": "first_prod_date"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "First_Quarter",
-        "report_table": "completion_reports",
-        "report_table_field": "first_quarter",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Source_Of_Injected_Fluid",
-        "report_table": "completion_reports",
-        "report_table_field": "fluid_source",
-        "well_table": "injection_testing",
-        "well_table_field": "fluid_source"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Name_of_Producing_or_Injection_Formation",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_inj_form",
-        "well_table": "production_testing",
-        "well_table_field": "form"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Rate_Per_Day_Gas",
-        "report_table": "completion_reports",
-        "report_table_field": "gas_inj_rate",
-        "well_table": "injection_testing",
-        "well_table_field": "gas_inj_rate"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Gas_MCF",
-        "report_table": "completion_reports",
-        "report_table_field": "gas_prod",
-        "well_table": "production_testing",
-        "well_table_field": "gas_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Initial_Production_Rate_Gas",
-        "report_table": "completion_reports",
-        "report_table_field": "gas_prod",
-        "well_table": "production_testing",
-        "well_table_field": "gas_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Gas_PSI",
-        "report_table": "completion_reports",
-        "report_table_field": "gas_press",
-        "well_table": "injection_testing",
-        "well_table_field": "gas_press"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_hole_size",
-        "well_table": "casings",
-        "well_table_field": "prod_hole_size"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Of_First_Injection",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_date",
-        "well_table": "injection_testing",
-        "well_table_field": "inj_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Injection_Fluid_Freshwater",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_fluid_freshwater",
-        "well_table": "injection_testing",
-        "well_table_field": "fluid_type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Injection_Fluid_Other",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_fluid_other",
-        "well_table": "injection_testing",
-        "well_table_field": "fluid_type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Injection_Fluid_Other_Text",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_fluid_other_desc",
-        "well_table": "injection_testing",
-        "well_table_field": "fluid_type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Injection_Fluid_Saltwater",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_fluid_saltwater",
-        "well_table": "injection_testing",
-        "well_table_field": "fluid_type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Injection_Formation",
-        "report_table": "completion_reports",
-        "report_table_field": "inj_form",
-        "well_table": "injection_testing",
-        "well_table_field": "form"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Lease_Sign_Posted_No",
-        "report_table": "completion_reports",
-        "report_table_field": "lease_sign_no",
-        "well_table": "well_header",
-        "well_table_field": "lease_sign"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Lease_Sign_Posted_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "lease_sign_yes",
-        "well_table": "well_header",
-        "well_table_field": "lease_sign"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_size",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Lithology",
-        "report_table": "completion_reports",
-        "report_table_field": "lithology",
-        "well_table": "completions",
-        "well_table_field": "lithology"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Logs::Date",
-        "report_table": "completion_reports",
-        "report_table_field": "log_date",
-        "well_table": "logs",
-        "well_table_field": "log_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Logs:Type_Of_Log",
-        "report_table": "completion_reports",
-        "report_table_field": "log_type",
-        "well_table": "logs",
-        "well_table_field": "log_type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Electric_Logs_Run_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "logs_run_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "logs_run"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Electric_Logs_Run_No",
-        "report_table": "completion_reports",
-        "report_table_field": "logs_run_no",
-        "well_table": "sidetracks",
-        "well_table_field": "logs_run"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Wireline_Logs_Run_Yes",
-        "report_table": "completion_reports",
-        "report_table_field": "logs_run_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "logs_run"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Wireline_Logs_Run_No",
-        "report_table": "completion_reports",
-        "report_table_field": "logs_run_no",
-        "well_table": "sidetracks",
-        "well_table_field": "logs_run"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Electric_Log_Run",
-        "report_table": "completion_reports",
-        "report_table_field": "logs_run_yes",
-        "well_table": "sidetracks",
-        "well_table_field": "logs_run"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Electric_Logs_Run_Date",
-        "report_table": "completion_reports",
-        "report_table_field": "log_date",
-        "well_table": "logs",
-        "well_table_field": "log_date"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "New_Well",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_new_well",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "New_Well",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_new_well",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Well_Not_Converted_Permit_Expired",
-        "report_table": "completion_reports",
-        "report_table_field": "not_converted_permit_expired",
-        "well_table": "sidetracks",
-        "well_table_field": "not_converted_permit_expired"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Well_Not_Drilled_Permit_Expired",
-        "report_table": "completion_reports",
-        "report_table_field": "not_drilled_permit_expired",
-        "well_table": "sidetracks",
-        "well_table_field": "not_drilled_permit_expired"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "NS_Distance",
-        "report_table": "completion_reports",
-        "report_table_field": "ns_distance",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "NS_Line",
-        "report_table": "completion_reports",
-        "report_table_field": "ns_line",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Daily_Production_Bbls_Oil",
-        "report_table": "completion_reports",
-        "report_table_field": "oil_prod",
-        "well_table": "production_testing",
-        "well_table_field": "oil_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Initial_Production_Rate_Oil",
-        "report_table": "completion_reports",
-        "report_table_field": "oil_prod",
-        "well_table": "production_testing",
-        "well_table_field": "oil_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Open_Hole_Interval",
-        "report_table": "completion_reports",
-        "report_table_field": "open_hole_interval",
-        "well_table": "completions",
-        "well_table_field": "open_hole_from, open_hole_to"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Operator",
-        "report_table": "completion_reports",
-        "report_table_field": "operator",
-        "well_table": "well_header",
-        "well_table_field": "operator"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Permittee",
-        "report_table": "completion_reports",
-        "report_table_field": "operator",
-        "well_table": "well_header",
-        "well_table_field": "operator"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Owner_Or_Operator",
-        "report_table": "completion_reports",
-        "report_table_field": "operator",
-        "well_table": "well_header",
-        "well_table_field": "operator"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Permittee_Number",
-        "report_table": "completion_reports",
-        "report_table_field": "operator_number",
-        "well_table": "well_header",
-        "well_table_field": "operator_number"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "other_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_meth"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "other_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Packer::Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "packer_depth",
-        "well_table": "packers",
-        "well_table_field": "depth"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Packer::Brand_And_Type",
-        "report_table": "completion_reports",
-        "report_table_field": "packer_type",
-        "well_table": "packers",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "PBTD",
-        "report_table": "completion_reports",
-        "report_table_field": "pbtd",
-        "well_table": "sidetracks",
-        "well_table_field": "pbtd"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "PBTD",
-        "report_table": "completion_reports",
-        "report_table_field": "pbtd",
-        "well_table": "sidetracks",
-        "well_table_field": "pbtd"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "PB_To",
-        "report_table": "completion_reports",
-        "report_table_field": "pbtd",
-        "well_table": "sidetracks",
-        "well_table_field": "pbtd"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Gun_Perforating_Windows::From",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_from",
-        "well_table": "completions",
-        "well_table_field": "perf_from"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Gun_Perforating_Windows",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_int",
-        "well_table": "completions",
-        "well_table_field": "perf_to, perf_from"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Perforation_Interval",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_int",
-        "well_table": "completions",
-        "well_table_field": "perf_from, perf_to"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Shots",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_shots",
-        "well_table": "completions",
-        "well_table_field": "perf_shots"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Gun_Perforating_Windows::No_Shots",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_shots",
-        "well_table": "completions",
-        "well_table_field": "perf_shots"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Gun_Perforating_Windows::To",
-        "report_table": "completion_reports",
-        "report_table_field": "perf_to",
-        "well_table": "completions",
-        "well_table_field": "perf_to"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_Issued",
-        "report_table": "completion_reports",
-        "report_table_field": "permit_date",
-        "well_table": "sidetracks",
-        "well_table_field": "permit_date"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Permit_No",
-        "report_table": "completion_reports",
-        "report_table_field": "permit_number",
-        "well_table": "sidetracks",
-        "well_table_field": "permit_number"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Permit_Number",
-        "report_table": "completion_reports",
-        "report_table_field": "permit_number",
-        "well_table": "sidetracks",
-        "well_table_field": "permit_number"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Permit_No",
-        "report_table": "completion_reports",
-        "report_table_field": "permit_number",
-        "well_table": "sidetracks",
-        "well_table_field": "permit_number"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Location",
-        "report_table": "completion_reports",
-        "report_table_field": "plss_loc",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Location",
-        "report_table": "completion_reports",
-        "report_table_field": "plss_loc",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Initial_Production_After",
-        "report_table": "completion_reports",
-        "report_table_field": "post_test_prod",
-        "well_table": "production_testing",
-        "well_table_field": "post_test_prod"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Initial_Production_Before",
-        "report_table": "completion_reports",
-        "report_table_field": "pre_test_prod",
-        "well_table": "production_testing",
-        "well_table_field": "pre_test_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Producing_Formations",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_inj_form ",
-        "well_table": "production_testing",
-        "well_table_field": "form"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Range",
-        "report_table": "completion_reports",
-        "report_table_field": "range",
-        "well_table": "well_header",
-        "well_table_field": "range"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Range",
-        "report_table": "completion_reports",
-        "report_table_field": "range",
-        "well_table": "well_header",
-        "well_table_field": "range"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "R",
-        "report_table": "completion_reports",
-        "report_table_field": "range",
-        "well_table": "well_header",
-        "well_table_field": "range"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Reference_Number",
-        "report_table": "completion_reports",
-        "report_table_field": "ref_number",
-        "well_table": "well_header",
-        "well_table_field": "ref_number"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Conversion",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_conversion",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Deepening",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_deepening",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "DOPH",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_doph",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Workover",
-        "report_table": "completion_reports",
-        "report_table_field": "report_type_workover",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Rotary_Tools_From",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_from",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_from"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Rotary_From",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_from",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_from"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Rotary_Tools_From",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_from",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_from"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Rotary_Tools_To",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_to"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Rotary_To",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_to"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Cable_Tools_From",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_to"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Rotary_Tools_To",
-        "report_table": "completion_reports",
-        "report_table_field": "rotary_tools_to",
-        "well_table": "sidetracks",
-        "well_table_field": "rotary_tools_to"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Second_Quarter",
-        "report_table": "completion_reports",
-        "report_table_field": "second_quarter",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Section",
-        "report_table": "completion_reports",
-        "report_table_field": "section",
-        "well_table": "well_header",
-        "well_table_field": "section"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Section",
-        "report_table": "completion_reports",
-        "report_table_field": "section",
-        "well_table": "well_header",
-        "well_table_field": "section"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Sec",
-        "report_table": "completion_reports",
-        "report_table_field": "section",
-        "well_table": "well_header",
-        "well_table_field": "section"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Signature",
-        "report_table": "completion_reports",
-        "report_table_field": "signature",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Signature_Of_Permittee_Or_Designee",
-        "report_table": "completion_reports",
-        "report_table_field": "signature",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Signed",
-        "report_table": "completion_reports",
-        "report_table_field": "signature",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Address",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_address",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Address",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_address",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "City_State",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_city_state",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_Signed",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_date",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Signed",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_date",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Date",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_date",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Title",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_title",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Title",
-        "report_table": "completion_reports",
-        "report_table_field": "signature_title",
-        "well_table": null,
-        "well_table_field": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Tubing_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "tubing_size",
-        "well_table": "tubings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_Drilling_Began",
-        "report_table": "completion_reports",
-        "report_table_field": "spud_date",
-        "well_table": "sidetracks",
-        "well_table_field": "spud_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Drilling_Began",
-        "report_table": "completion_reports",
-        "report_table_field": "spud_date",
-        "well_table": "sidetracks",
-        "well_table_field": "spud_date"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Date_Drilling_Began",
-        "report_table": "completion_reports",
-        "report_table_field": "spud_date",
-        "well_table": "sidetracks",
-        "well_table_field": "spud_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Date_of_Test",
-        "report_table": "completion_reports",
-        "report_table_field": "test_date",
-        "well_table": "production_testing",
-        "well_table_field": "test_date"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Date_Of_Test",
-        "report_table": "completion_reports",
-        "report_table_field": "test_date",
-        "well_table": "production_testing",
-        "well_table_field": "test_date"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Length_of_Test",
-        "report_table": "completion_reports",
-        "report_table_field": "test_length",
-        "well_table": "production_testing",
-        "well_table_field": "test_length"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Length_Of_Test",
-        "report_table": "completion_reports",
-        "report_table_field": "test_length",
-        "well_table": "production_testing",
-        "well_table_field": "test_length"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Third_Quarter",
-        "report_table": "completion_reports",
-        "report_table_field": "third_quarter",
-        "well_table": "well_header",
-        "well_table_field": "plss_loc"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Township",
-        "report_table": "completion_reports",
-        "report_table_field": "township",
-        "well_table": "well_header",
-        "well_table_field": "township"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Township",
-        "report_table": "completion_reports",
-        "report_table_field": "township",
-        "well_table": "well_header",
-        "well_table_field": "township"
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "T",
-        "report_table": "completion_reports",
-        "report_table_field": "township",
-        "well_table": "well_header",
-        "well_table_field": "township"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Acidized",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_acidized",
-        "well_table": "completions",
-        "well_table_field": "treatment"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Completion_For_Production::Acidized_Fractures_Other",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_acidized_fractures_other",
-        "well_table": "completions",
-        "well_table_field": "treatment"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "List_Amount_Used",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_amnt",
-        "well_table": "completions",
-        "well_table_field": "treatment_amnt"
-    },
-    {
         "google_processor": "IL_WellCompletion_G",
         "ogrre_field": "Acid_Or_Shooting_Record_Or_Fracture_Treatment::Amount_Used",
         "report_table": "completion_reports",
         "report_table_field": "treatment_amnt",
         "well_table": "completions",
-        "well_table_field": "treatment_amnt"
+        "well_table_field": "treatment_amnt",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
@@ -1469,7 +14,8 @@
         "report_table": "completion_reports",
         "report_table_field": "treatment_date",
         "well_table": "completions",
-        "well_table_field": "treatment_date"
+        "well_table_field": "treatment_date",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
@@ -1477,39 +23,8 @@
         "report_table": "completion_reports",
         "report_table_field": "treatment_from",
         "well_table": "completions",
-        "well_table_field": "treatment_from"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Intervals",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_interval",
-        "well_table": "completions",
-        "well_table_field": "treatment_from, treatment_to"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Other",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_other",
-        "well_table": "completions",
-        "well_table_field": "treatment"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Perforated",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_perf",
-        "well_table": "completions",
-        "well_table_field": "treatment"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Shot",
-        "report_table": "completion_reports",
-        "report_table_field": "treatment_shot",
-        "well_table": "completions",
-        "well_table_field": "treatment"
+        "well_table_field": "treatment_from",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
@@ -1517,63 +32,179 @@
         "report_table": "completion_reports",
         "report_table_field": "treatment_to",
         "well_table": "completions",
-        "well_table_field": "treatment_to"
+        "well_table_field": "treatment_to",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Fractured",
+        "ogrre_field": "Acidized",
         "report_table": "completion_reports",
-        "report_table_field": "treatment_fractured",
+        "report_table_field": "treatment_acidized",
         "well_table": "completions",
-        "well_table_field": "treatment"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Tubing_Type",
-        "report_table": "completion_reports",
-        "report_table_field": "tubing_type",
-        "well_table": "tubings",
-        "well_table_field": "type"
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Total_Depth",
+        "ogrre_field": "Address",
         "report_table": "completion_reports",
-        "report_table_field": "tvd",
-        "well_table": "sidetracks",
-        "well_table_field": "tvd"
+        "report_table_field": "signature_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Total_Depth",
+        "ogrre_field": "Address",
         "report_table": "completion_reports",
-        "report_table_field": "tvd",
+        "report_table_field": "signature_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Cable_From",
+        "report_table": "completion_reports",
+        "report_table_field": "cable_tools_from",
         "well_table": "sidetracks",
-        "well_table_field": "tvd"
+        "well_table_field": "cable_tools_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Cable_To",
+        "report_table": "completion_reports",
+        "report_table_field": "cable_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "cable_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Cable_Tools_From",
+        "report_table": "completion_reports",
+        "report_table_field": "cable_tools_from",
+        "well_table": "sidetracks",
+        "well_table_field": "cable_tools_from",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Total_Depth_Drilled",
+        "ogrre_field": "Cable_Tools_From",
         "report_table": "completion_reports",
-        "report_table_field": "tvd",
+        "report_table_field": "cable_tools_from",
         "well_table": "sidetracks",
-        "well_table_field": "tvd"
+        "well_table_field": "cable_tools_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Cable_Tools_To",
+        "report_table": "completion_reports",
+        "report_table_field": "cable_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "cable_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Cable_Tools_To",
+        "report_table": "completion_reports",
+        "report_table_field": "cable_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "cable_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record::Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record::Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record::Size",
+        "report_table": "completion_reports",
+        "report_table_field": "csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Coal_Bed_Gas",
+        "ogrre_field": "City_State",
         "report_table": "completion_reports",
-        "report_table_field": "type_coal_bed_gas",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
+        "report_table_field": "signature_city_state",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Coal_Mine_Gas",
+        "ogrre_field": "Completion_For_Production::Acidized_Fractures_Other",
         "report_table": "completion_reports",
-        "report_table_field": "type_coal_mine_gas",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
+        "report_table_field": "treatment_acidized_fractures_other",
+        "well_table": "completions",
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Completion_For_Production::Formation_Name",
+        "report_table": "completion_reports",
+        "report_table_field": "comp_form",
+        "well_table": "completions",
+        "well_table_field": "form",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Completion_For_Production::Lithology",
+        "report_table": "completion_reports",
+        "report_table_field": "lithology",
+        "well_table": "completions",
+        "well_table_field": "lithology",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Completion_For_Production::Open_Hole_Interval",
+        "report_table": "completion_reports",
+        "report_table_field": "open_hole_interval",
+        "well_table": "completions",
+        "well_table_field": "open_hole_from, open_hole_to",
+        "Unnamed: 6": "break into two"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Completion_For_Production::Perforation_Interval",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_int",
+        "well_table": "completions",
+        "well_table_field": "perf_from, perf_to",
+        "Unnamed: 6": "break into two"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Completion_For_Production::Shots",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_shots",
+        "well_table": "completions",
+        "well_table_field": "perf_shots",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
@@ -1581,15 +212,260 @@
         "report_table": "completion_reports",
         "report_table_field": "type_conv",
         "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "type",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_D_And_A",
+        "ogrre_field": "Conversion",
         "report_table": "completion_reports",
-        "report_table_field": "type_da",
+        "report_table_field": "report_type_conversion",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "County",
+        "report_table": "completion_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "County",
+        "report_table": "completion_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "County",
+        "report_table": "completion_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Daily_Production_Bbls_Oil",
+        "report_table": "completion_reports",
+        "report_table_field": "oil_prod",
+        "well_table": "production_testing",
+        "well_table_field": "oil_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Date",
+        "report_table": "completion_reports",
+        "report_table_field": "signature_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Date_Completed",
+        "report_table": "completion_reports",
+        "report_table_field": "comp_date",
         "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "comp_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_Drilling_Began",
+        "report_table": "completion_reports",
+        "report_table_field": "spud_date",
+        "well_table": "sidetracks",
+        "well_table_field": "spud_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Drilling_Began",
+        "report_table": "completion_reports",
+        "report_table_field": "spud_date",
+        "well_table": "sidetracks",
+        "well_table_field": "spud_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Date_Drilling_Began",
+        "report_table": "completion_reports",
+        "report_table_field": "spud_date",
+        "well_table": "sidetracks",
+        "well_table_field": "spud_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_Drilling_Complete",
+        "report_table": "completion_reports",
+        "report_table_field": "comp_date",
+        "well_table": "sidetracks",
+        "well_table_field": "comp_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Drilling_Finished",
+        "report_table": "completion_reports",
+        "report_table_field": "comp_date",
+        "well_table": "sidetracks",
+        "well_table_field": "comp_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_Issued",
+        "report_table": "completion_reports",
+        "report_table_field": "permit_date",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Of_First_Injection",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_date",
+        "well_table": "injection_testing",
+        "well_table_field": "inj_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_of_First_Prod",
+        "report_table": "completion_reports",
+        "report_table_field": "first_prod_date",
+        "well_table": "sidetracks",
+        "well_table_field": "first_prod_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Of_First_Production",
+        "report_table": "completion_reports",
+        "report_table_field": "first_prod_date",
+        "well_table": "sidetracks",
+        "well_table_field": "first_prod_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_of_Test",
+        "report_table": "completion_reports",
+        "report_table_field": "test_date",
+        "well_table": "production_testing",
+        "well_table_field": "test_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Of_Test",
+        "report_table": "completion_reports",
+        "report_table_field": "test_date",
+        "well_table": "production_testing",
+        "well_table_field": "test_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Date_Signed",
+        "report_table": "completion_reports",
+        "report_table_field": "signature_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Date_Signed",
+        "report_table": "completion_reports",
+        "report_table_field": "signature_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Deepened",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_deepening",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Deepening",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_deepening",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "DOPH",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_doph",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Drill_Stem_Test_Run_No",
+        "report_table": "completion_reports",
+        "report_table_field": "dst_no",
+        "well_table": "sidetracks",
+        "well_table_field": "dst",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Drill_Stem_Test_Run_No",
+        "report_table": "completion_reports",
+        "report_table_field": "dst_no",
+        "well_table": "sidetracks",
+        "well_table_field": "dst",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Drill_Stem_Test_Run_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "dst_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "dst",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Drill_Stem_Test_Run_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "dst_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "dst",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Drilled_Out_Plugged_Hole",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_doph",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
@@ -1597,199 +473,107 @@
         "report_table": "completion_reports",
         "report_table_field": "type_dry_hole",
         "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Electric_Log_Run",
+        "report_table": "completion_reports",
+        "report_table_field": "logs_run_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "logs_run",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Gas",
+        "ogrre_field": "Electric_Logs_Run_Date",
         "report_table": "completion_reports",
-        "report_table_field": "type_gas",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Gas_Producer",
-        "report_table": "completion_reports",
-        "report_table_field": "type_gas",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
+        "report_table_field": "log_date",
+        "well_table": "logs",
+        "well_table_field": "log_date",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Gas_Input",
+        "ogrre_field": "Electric_Logs_Run_No",
         "report_table": "completion_reports",
-        "report_table_field": "type_gas_inj",
+        "report_table_field": "logs_run_no",
         "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Gas_Storage",
-        "report_table": "completion_reports",
-        "report_table_field": "type_gas_storage",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "logs_run",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Observation",
+        "ogrre_field": "Electric_Logs_Run_Yes",
         "report_table": "completion_reports",
-        "report_table_field": "type_observation",
+        "report_table_field": "logs_run_yes",
         "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "logs_run",
+        "Unnamed: 6": null
     },
     {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Observation",
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Elevation",
         "report_table": "completion_reports",
-        "report_table_field": "type_observation",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Oil",
-        "report_table": "completion_reports",
-        "report_table_field": "type_oil",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Oil_Producer",
-        "report_table": "completion_reports",
-        "report_table_field": "type_oil",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Other",
-        "report_table": "completion_reports",
-        "report_table_field": "type_other",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Other_Text",
-        "report_table": "completion_reports",
-        "report_table_field": "type_other_text",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Service_Well",
-        "report_table": "completion_reports",
-        "report_table_field": "type_service",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Service_Well_Text",
-        "report_table": "completion_reports",
-        "report_table_field": "type_service_text",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Str_Test",
-        "report_table": "completion_reports",
-        "report_table_field": "type_str_test",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "SWD",
-        "report_table": "completion_reports",
-        "report_table_field": "type_swd",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Class_II_Injection_Well",
-        "report_table": "completion_reports",
-        "report_table_field": "type_swd",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Water_Input",
-        "report_table": "completion_reports",
-        "report_table_field": "type_water_inj",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Water_Supply",
-        "report_table": "completion_reports",
-        "report_table_field": "type_water_supply",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Well_Water_Supply",
-        "report_table": "completion_reports",
-        "report_table_field": "type_water_supply",
-        "well_table": "sidetracks",
-        "well_table_field": "type"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Rate_Per_Day_Water",
-        "report_table": "completion_reports",
-        "report_table_field": "water_inj_rate",
-        "well_table": "injection_testing",
-        "well_table_field": "water_inj_rate"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Water",
-        "report_table": "completion_reports",
-        "report_table_field": "water_prod",
-        "well_table": "production_testing",
-        "well_table_field": "water_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Initial_Production_Rate_Water",
-        "report_table": "completion_reports",
-        "report_table_field": "water_prod",
-        "well_table": "production_testing",
-        "well_table_field": "water_prod"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Water_PSI",
-        "report_table": "completion_reports",
-        "report_table_field": "water_press",
-        "well_table": "injection_testing",
-        "well_table_field": "water_psi"
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Well_Name_and_No",
-        "report_table": "completion_reports",
-        "report_table_field": "well_name",
+        "report_table_field": "elev_gr",
         "well_table": "well_header",
-        "well_table_field": "well_name"
+        "well_table_field": "elev_gr",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Elevation_DF",
+        "report_table": "completion_reports",
+        "report_table_field": "elev_df",
+        "well_table": "well_header",
+        "well_table_field": "elev_df",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Well_Name",
+        "ogrre_field": "Elevation_DF",
         "report_table": "completion_reports",
-        "report_table_field": "well_name",
+        "report_table_field": "elev_df",
         "well_table": "well_header",
-        "well_table_field": "well_name"
+        "well_table_field": "elev_df",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Elevation_GR",
+        "report_table": "completion_reports",
+        "report_table_field": "elev_gr",
+        "well_table": "well_header",
+        "well_table_field": "elev_gr",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Elevation_KB",
+        "report_table": "completion_reports",
+        "report_table_field": "elev_kb",
+        "well_table": "well_header",
+        "well_table_field": "elev_kb",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "EW_Distance",
+        "report_table": "completion_reports",
+        "report_table_field": "ew_distance",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "EW_Line",
+        "report_table": "completion_reports",
+        "report_table_field": "ew_line",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
@@ -1797,15 +581,1178 @@
         "report_table": "completion_reports",
         "report_table_field": "well_name_farm",
         "well_table": "well_header",
-        "well_table_field": "well_name"
+        "well_table_field": "well_name",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Well_No",
+        "ogrre_field": "First_Quarter",
         "report_table": "completion_reports",
-        "report_table_field": "well_name_number",
+        "report_table_field": "first_quarter",
         "well_table": "well_header",
-        "well_table_field": "well_name"
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Fractured",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_fractured",
+        "well_table": "completions",
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Gas",
+        "report_table": "completion_reports",
+        "report_table_field": "type_gas",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Gas_Input",
+        "report_table": "completion_reports",
+        "report_table_field": "type_gas_inj",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Gas_MCF",
+        "report_table": "completion_reports",
+        "report_table_field": "gas_prod",
+        "well_table": "production_testing",
+        "well_table_field": "gas_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Gas_PSI",
+        "report_table": "completion_reports",
+        "report_table_field": "gas_press",
+        "well_table": "injection_testing",
+        "well_table_field": "gas_press",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Ground",
+        "report_table": "completion_reports",
+        "report_table_field": "elev_gr",
+        "well_table": "well_header",
+        "well_table_field": "elev_gr",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Gun_Perforating_Windows",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_int",
+        "well_table": "completions",
+        "well_table_field": "perf_from, perf_to",
+        "Unnamed: 6": "break into two"
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Gun_Perforating_Windows::From",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_from",
+        "well_table": "completions",
+        "well_table_field": "perf_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Gun_Perforating_Windows::No_Shots",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_shots",
+        "well_table": "completions",
+        "well_table_field": "perf_shots",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Gun_Perforating_Windows::To",
+        "report_table": "completion_reports",
+        "report_table_field": "perf_to",
+        "well_table": "completions",
+        "well_table_field": "perf_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Initial_Production_After",
+        "report_table": "completion_reports",
+        "report_table_field": "post_test_prod",
+        "well_table": "production_testing",
+        "well_table_field": "post_test_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Initial_Production_Before",
+        "report_table": "completion_reports",
+        "report_table_field": "pre_test_prod",
+        "well_table": "production_testing",
+        "well_table_field": "pre_test_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Initial_Production_Rate_Gas",
+        "report_table": "completion_reports",
+        "report_table_field": "gas_prod",
+        "well_table": "production_testing",
+        "well_table_field": "gas_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Initial_Production_Rate_Oil",
+        "report_table": "completion_reports",
+        "report_table_field": "oil_prod",
+        "well_table": "production_testing",
+        "well_table_field": "oil_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Initial_Production_Rate_Water",
+        "report_table": "completion_reports",
+        "report_table_field": "water_prod",
+        "well_table": "production_testing",
+        "well_table_field": "water_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Injection_Formation",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_form",
+        "well_table": "injection_testing",
+        "well_table_field": "form",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Interval_Cored",
+        "report_table": "completion_reports",
+        "report_table_field": "cored_interval",
+        "well_table": "sidetracks",
+        "well_table_field": "core_from, core_to",
+        "Unnamed: 6": "break into two"
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Intervals",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_interval",
+        "well_table": "completions",
+        "well_table_field": "treatment_from, treatment_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "KB",
+        "report_table": "completion_reports",
+        "report_table_field": "elev_kb",
+        "well_table": "well_header",
+        "well_table_field": "elev_kb",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Lease_Sign_Posted_No",
+        "report_table": "completion_reports",
+        "report_table_field": "lease_sign_no",
+        "well_table": "well_header",
+        "well_table_field": "lease_sign",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Lease_Sign_Posted_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "lease_sign_yes",
+        "well_table": "well_header",
+        "well_table_field": "lease_sign",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Length_of_Test",
+        "report_table": "completion_reports",
+        "report_table_field": "test_length",
+        "well_table": "production_testing",
+        "well_table_field": "test_length",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Length_Of_Test",
+        "report_table": "completion_reports",
+        "report_table_field": "test_length",
+        "well_table": "production_testing",
+        "well_table_field": "test_length",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_size",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "List_Amount_Used",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_amnt",
+        "well_table": "completions",
+        "well_table_field": "treatment_amnt",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Location",
+        "report_table": "completion_reports",
+        "report_table_field": "plss_loc",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Location",
+        "report_table": "completion_reports",
+        "report_table_field": "plss_loc",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Name_of_Producing_or_Injection_Formation",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_inj_form",
+        "well_table": "production_testing",
+        "well_table_field": "form",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "New_Well",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_new_well",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "New_Well",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_new_well",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "NS_Distance",
+        "report_table": "completion_reports",
+        "report_table_field": "ns_distance",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "NS_Line",
+        "report_table": "completion_reports",
+        "report_table_field": "ns_line",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Observation",
+        "report_table": "completion_reports",
+        "report_table_field": "type_observation",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Oil",
+        "report_table": "completion_reports",
+        "report_table_field": "type_oil",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Operator",
+        "report_table": "completion_reports",
+        "report_table_field": "operator",
+        "well_table": "well_header",
+        "well_table_field": "operator",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Other",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_other",
+        "well_table": "completions",
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "other_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "other_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Owner_Or_Operator",
+        "report_table": "completion_reports",
+        "report_table_field": "operator",
+        "well_table": "well_header",
+        "well_table_field": "operator",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Packer::Brand_And_Type",
+        "report_table": "completion_reports",
+        "report_table_field": "packer_type",
+        "well_table": "packers",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Packer::Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "packer_depth",
+        "well_table": "packers",
+        "well_table_field": "depth",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "PB_To",
+        "report_table": "completion_reports",
+        "report_table_field": "pbtd",
+        "well_table": "sidetracks",
+        "well_table_field": "pbtd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "PBTD",
+        "report_table": "completion_reports",
+        "report_table_field": "pbtd",
+        "well_table": "sidetracks",
+        "well_table_field": "pbtd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "PBTD",
+        "report_table": "completion_reports",
+        "report_table_field": "pbtd",
+        "well_table": "sidetracks",
+        "well_table_field": "pbtd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Perforated",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_perf",
+        "well_table": "completions",
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Permit_No",
+        "report_table": "completion_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Permit_No",
+        "report_table": "completion_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Permit_Number",
+        "report_table": "completion_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Permittee",
+        "report_table": "completion_reports",
+        "report_table_field": "operator",
+        "well_table": "well_header",
+        "well_table_field": "operator",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Permittee_Number",
+        "report_table": "completion_reports",
+        "report_table_field": "operator_number",
+        "well_table": "well_header",
+        "well_table_field": "operator_number",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Producing_Formations",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_inj_form",
+        "well_table": "production_testing",
+        "well_table_field": "form",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "R",
+        "report_table": "completion_reports",
+        "report_table_field": "range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Range",
+        "report_table": "completion_reports",
+        "report_table_field": "range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Range",
+        "report_table": "completion_reports",
+        "report_table_field": "range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Rate_Per_Day_Gas",
+        "report_table": "completion_reports",
+        "report_table_field": "gas_inj_rate",
+        "well_table": "injection_testing",
+        "well_table_field": "gas_inj_rate",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Rate_Per_Day_Water",
+        "report_table": "completion_reports",
+        "report_table_field": "water_inj_rate",
+        "well_table": "injection_testing",
+        "well_table_field": "water_inj_rate",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Reference_Number",
+        "report_table": "completion_reports",
+        "report_table_field": "ref_number",
+        "well_table": "well_header",
+        "well_table_field": "ref_number",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Rotary_From",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_from",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Rotary_To",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Rotary_Tools_From",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_from",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Rotary_Tools_From",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_from",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_from",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Rotary_Tools_To",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Rotary_Tools_To",
+        "report_table": "completion_reports",
+        "report_table_field": "rotary_tools_to",
+        "well_table": "sidetracks",
+        "well_table_field": "rotary_tools_to",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Sec",
+        "report_table": "completion_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Second_Quarter",
+        "report_table": "completion_reports",
+        "report_table_field": "second_quarter",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Section",
+        "report_table": "completion_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Section",
+        "report_table": "completion_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Shot",
+        "report_table": "completion_reports",
+        "report_table_field": "treatment_shot",
+        "well_table": "completions",
+        "well_table_field": "treatment",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Signature",
+        "report_table": "completion_reports",
+        "report_table_field": "signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Signature_Of_Permittee_Or_Designee",
+        "report_table": "completion_reports",
+        "report_table_field": "signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Signed",
+        "report_table": "completion_reports",
+        "report_table_field": "signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Source_Of_Injected_Fluid",
+        "report_table": "completion_reports",
+        "report_table_field": "fluid_source",
+        "well_table": "injection_testing",
+        "well_table_field": "fluid_source",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Str_Test",
+        "report_table": "completion_reports",
+        "report_table_field": "type_str_test",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "SWD",
+        "report_table": "completion_reports",
+        "report_table_field": "type_swd",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "T",
+        "report_table": "completion_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Third_Quarter",
+        "report_table": "completion_reports",
+        "report_table_field": "third_quarter",
+        "well_table": "well_header",
+        "well_table_field": "plss_loc",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Title",
+        "report_table": "completion_reports",
+        "report_table_field": "signature_title",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Title",
+        "report_table": "completion_reports",
+        "report_table_field": "signature_title",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Total_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Total_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Total_Depth_Drilled",
+        "report_table": "completion_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Township",
+        "report_table": "completion_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Township",
+        "report_table": "completion_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Tubing_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "tubing_size",
+        "well_table": "tubings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Tubing_Type",
+        "report_table": "completion_reports",
+        "report_table_field": "tubing_type",
+        "well_table": "tubings",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Injection_Fluid_Freshwater",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_fluid_freshwater",
+        "well_table": "injection_testing",
+        "well_table_field": "fluid_type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Injection_Fluid_Other",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_fluid_other",
+        "well_table": "injection_testing",
+        "well_table_field": "fluid_type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Injection_Fluid_Other_Text",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_fluid_other_desc",
+        "well_table": "injection_testing",
+        "well_table_field": "fluid_type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Injection_Fluid_Saltwater",
+        "report_table": "completion_reports",
+        "report_table_field": "inj_fluid_saltwater",
+        "well_table": "injection_testing",
+        "well_table_field": "fluid_type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Logs::Date",
+        "report_table": "completion_reports",
+        "report_table_field": "log_date",
+        "well_table": "logs",
+        "well_table_field": "log_date",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Logs:Type_Of_Log",
+        "report_table": "completion_reports",
+        "report_table_field": "log_type",
+        "well_table": "logs",
+        "well_table_field": "log_type",
+        "Unnamed: 6": null
     },
     {
         "google_processor": "IL_WellCompletion_G",
@@ -1813,6 +1760,286 @@
         "report_table": "completion_reports",
         "report_table_field": "well_type",
         "well_table": "sidetracks",
-        "well_table_field": "type"
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Class_II_Injection_Well",
+        "report_table": "completion_reports",
+        "report_table_field": "type_swd",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Coal_Bed_Gas",
+        "report_table": "completion_reports",
+        "report_table_field": "type_coal_bed_gas",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Coal_Mine_Gas",
+        "report_table": "completion_reports",
+        "report_table_field": "type_coal_mine_gas",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_D_And_A",
+        "report_table": "completion_reports",
+        "report_table_field": "type_da",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Gas_Producer",
+        "report_table": "completion_reports",
+        "report_table_field": "type_gas",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Gas_Storage",
+        "report_table": "completion_reports",
+        "report_table_field": "type_gas_storage",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Observation",
+        "report_table": "completion_reports",
+        "report_table_field": "type_observation",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Oil_Producer",
+        "report_table": "completion_reports",
+        "report_table_field": "type_oil",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Other",
+        "report_table": "completion_reports",
+        "report_table_field": "type_other",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Other_Text",
+        "report_table": "completion_reports",
+        "report_table_field": "type_other_text",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Service_Well",
+        "report_table": "completion_reports",
+        "report_table_field": "type_service",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Service_Well_Text",
+        "report_table": "completion_reports",
+        "report_table_field": "type_service_text",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Type_Of_Well_Water_Supply",
+        "report_table": "completion_reports",
+        "report_table_field": "type_water_supply",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Was_Well_Cored_No",
+        "report_table": "completion_reports",
+        "report_table_field": "cored_no",
+        "well_table": "sidetracks",
+        "well_table_field": "cored",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Was_Well_Cored_No",
+        "report_table": "completion_reports",
+        "report_table_field": "cored_no",
+        "well_table": "sidetracks",
+        "well_table_field": "cored",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Was_Well_Cored_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "cored_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "cored",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Was_Well_Cored_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "cored_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "cored",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Water",
+        "report_table": "completion_reports",
+        "report_table_field": "water_prod",
+        "well_table": "production_testing",
+        "well_table_field": "water_prod",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Water_Input",
+        "report_table": "completion_reports",
+        "report_table_field": "type_water_inj",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Water_PSI",
+        "report_table": "completion_reports",
+        "report_table_field": "water_press",
+        "well_table": "injection_testing",
+        "well_table_field": "water_psi",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Water_Supply",
+        "report_table": "completion_reports",
+        "report_table_field": "type_water_supply",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Well_Name",
+        "report_table": "completion_reports",
+        "report_table_field": "well_name",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Well_Name_and_No",
+        "report_table": "completion_reports",
+        "report_table_field": "well_name",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Well_No",
+        "report_table": "completion_reports",
+        "report_table_field": "well_name_number",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Well_Not_Converted_Permit_Expired",
+        "report_table": "completion_reports",
+        "report_table_field": "not_converted_permit_expired",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_expired",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Well_Not_Drilled_Converted_Permit_Expired",
+        "report_table": "completion_reports",
+        "report_table_field": "not_drilled_converted_permit_expired",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_expired",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Well_Not_Drilled_Permit_Expired",
+        "report_table": "completion_reports",
+        "report_table_field": "not_drilled_permit_expired",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_expired",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Wireline_Logs_Run_No",
+        "report_table": "completion_reports",
+        "report_table_field": "logs_run_no",
+        "well_table": "sidetracks",
+        "well_table_field": "logs_run",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Wireline_Logs_Run_Yes",
+        "report_table": "completion_reports",
+        "report_table_field": "logs_run_yes",
+        "well_table": "sidetracks",
+        "well_table_field": "logs_run",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Workover",
+        "report_table": "completion_reports",
+        "report_table_field": "report_type_workover",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Zone_Tested",
+        "report_table": "completion_reports",
+        "report_table_field": "dst_zone",
+        "well_table": "sidetracks",
+        "well_table_field": "dst_zone",
+        "Unnamed: 6": null
     }
 ]

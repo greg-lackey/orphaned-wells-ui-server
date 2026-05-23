@@ -7,7 +7,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": 1.0
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": "Linked to id in sidetracks",
-        "unique": null
+        "unique": null,
+        "not_null": 1.0
     },
     {
         "column_name": "form",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "lithology",
@@ -37,7 +40,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "open_hole_from",
@@ -47,7 +51,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "open_hole_to",
@@ -57,7 +62,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "perf_from",
@@ -67,7 +73,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "perf_to",
@@ -77,7 +84,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "perf_shots",
@@ -87,7 +95,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "treatment_from",
@@ -97,7 +106,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "treatment_to",
@@ -107,7 +117,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "treatment",
@@ -117,7 +128,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "treatment_amnt",
@@ -127,7 +139,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "treatment_date",
@@ -137,6 +150,7 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

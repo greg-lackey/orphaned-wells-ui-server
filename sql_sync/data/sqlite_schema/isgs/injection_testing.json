@@ -7,7 +7,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": 1.0
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": "Linked to id in sidetracks",
-        "unique": null
+        "unique": null,
+        "not_null": 1.0
     },
     {
         "column_name": "fluid_source",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "form",
@@ -37,7 +40,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "water_inj_rate",
@@ -47,7 +51,8 @@
         "units": "bbl/day",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "water_psi",
@@ -57,7 +62,8 @@
         "units": "psi",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "gas_inj_rate",
@@ -67,7 +73,8 @@
         "units": "MCF/day",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "gas_press",
@@ -77,7 +84,8 @@
         "units": "psi",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "inj_date",
@@ -87,7 +95,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "fluid_type",
@@ -97,6 +106,7 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

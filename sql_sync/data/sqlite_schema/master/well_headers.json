@@ -6,8 +6,9 @@
         "examples": 5123123450,
         "units": null,
         "application": "General",
-        "links": 1.0,
-        "unique": null
+        "links": null,
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "api_uwi",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "api_state",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "api_county",
@@ -37,7 +40,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "api_label",
@@ -47,7 +51,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "operator",
@@ -57,7 +62,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "original_operator",
@@ -67,7 +73,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "operator_number",
@@ -77,7 +84,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "name",
@@ -87,7 +95,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "title",
@@ -97,7 +106,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "spud_date",
@@ -107,7 +117,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "elevation_gr",
@@ -117,7 +128,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "elevation_kb",
@@ -127,7 +139,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "elevation_df",
@@ -137,7 +150,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "max_tvd",
@@ -147,7 +161,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "max_md",
@@ -157,7 +172,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "field_code",
@@ -167,7 +183,8 @@
         "units": " ",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "field_name",
@@ -177,7 +194,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "status",
@@ -187,7 +205,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "status_date",
@@ -197,7 +216,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "type",
@@ -207,7 +227,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "configuration",
@@ -217,7 +238,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "surface_latitude",
@@ -227,7 +249,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "surface_longitude",
@@ -237,7 +260,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "county",
@@ -247,7 +271,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "utm_x",
@@ -257,7 +282,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "utm_y",
@@ -267,7 +293,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "plss_loc",
@@ -277,7 +304,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "section",
@@ -287,7 +315,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "township",
@@ -297,7 +326,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "range",
@@ -307,7 +337,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "meridian",
@@ -317,7 +348,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "lease_sign",
@@ -327,7 +359,8 @@
         "units": null,
         "application": "Illinois",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "ref_number",
@@ -337,6 +370,7 @@
         "units": null,
         "application": "Illinois",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

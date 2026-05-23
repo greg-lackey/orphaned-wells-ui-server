@@ -7,7 +7,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": 1.0
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": "id in sidetracks",
-        "unique": null
+        "unique": null,
+        "not_null": 1.0
     },
     {
         "column_name": "type",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "hole_size",
@@ -37,7 +40,8 @@
         "units": "inches",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "out_diam",
@@ -47,7 +51,8 @@
         "units": "inches",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "in_diam",
@@ -57,7 +62,8 @@
         "units": "inches",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "weight",
@@ -67,7 +73,8 @@
         "units": "lb/ft",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "grade",
@@ -77,7 +84,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_type",
@@ -87,7 +95,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_density",
@@ -97,7 +106,8 @@
         "units": "lb/gal",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_vol",
@@ -107,7 +117,8 @@
         "units": "sacks",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_top_tvd",
@@ -117,7 +128,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_top_md",
@@ -127,7 +139,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "cem_top_method",
@@ -137,7 +150,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "top_tvd",
@@ -147,7 +161,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "top_md",
@@ -157,7 +172,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "tvd",
@@ -167,7 +183,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "md",
@@ -177,7 +194,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "perf_from",
@@ -187,7 +205,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "perf_to",
@@ -197,7 +216,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "pulled",
@@ -207,7 +227,8 @@
         "units": null,
         "application": "Illinois",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "is_liner",
@@ -217,7 +238,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "is_cut",
@@ -227,6 +249,7 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

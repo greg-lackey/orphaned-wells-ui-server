@@ -7,7 +7,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": 1.0
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "tubing_id",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": "Linked to id in tubings",
-        "unique": null
+        "unique": null,
+        "not_null": 1.0
     },
     {
         "column_name": "type",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "tvd",
@@ -37,7 +40,8 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "md",
@@ -47,6 +51,7 @@
         "units": "feet",
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

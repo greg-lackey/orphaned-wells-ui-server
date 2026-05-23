@@ -30,7 +30,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from constants import POSTGRES_TYPE_MAP, SQLITE_TYPE_MAP
+from constants import NATURAL_KEY_TABLES, POSTGRES_TYPE_MAP, SQLITE_TYPE_MAP
 
 _ROOT_ENV = Path(__file__).parent.parent / ".env"
 _DATA_DIR = Path(__file__).parent / "data"
@@ -55,9 +55,13 @@ def load_schema(institution: str, db_type: str) -> dict:
     return schema
 
 
-def _insertable_columns(table_schema: list) -> list:
-    """Return column names suitable for INSERT, excluding the auto-generated id PK."""
-    return [c["column_name"] for c in table_schema if c["column_name"] != "id"]
+def _insertable_columns(table_schema: list, natural_key: bool = False) -> list:
+    """Return column names suitable for INSERT.
+
+    Excludes the auto-generated id PK unless natural_key=True, in which case
+    id is a caller-supplied value (e.g. the API number for well_headers).
+    """
+    return [c["column_name"] for c in table_schema if c["column_name"] != "id" or natural_key]
 
 
 # ── SQLite ────────────────────────────────────────────────────────────────────
@@ -79,7 +83,13 @@ def connect_sqlite(db_path: str) -> sqlite3.Connection:
 def create_tables_sqlite(conn: sqlite3.Connection, schema: dict) -> None:
     """Create tables in SQLite from schema definitions if they don't exist."""
     for table, columns in schema.items():
-        col_defs = ["id INTEGER PRIMARY KEY AUTOINCREMENT"]
+        id_col = next((c for c in columns if c.get("column_name") == "id"), None)
+        if table in NATURAL_KEY_TABLES and id_col:
+            id_def = f"id {_sqlite_type(id_col['data_type'])} PRIMARY KEY"
+        else:
+            id_def = "id INTEGER PRIMARY KEY AUTOINCREMENT"
+
+        col_defs = [id_def]
         for col in columns:
             if col["column_name"] == "id":
                 continue
@@ -98,7 +108,13 @@ def create_tables_postgres(conn, schema: dict) -> None:
     """Create tables in PostgreSQL from schema definitions if they don't exist."""
     cur = conn.cursor()
     for table, columns in schema.items():
-        col_defs = ["id SERIAL PRIMARY KEY"]
+        id_col = next((c for c in columns if c.get("column_name") == "id"), None)
+        if table in NATURAL_KEY_TABLES and id_col:
+            id_def = f"id {_postgres_type(id_col['data_type'])} PRIMARY KEY"
+        else:
+            id_def = "id SERIAL PRIMARY KEY"
+
+        col_defs = [id_def]
         for col in columns:
             if col["column_name"] == "id":
                 continue
@@ -184,7 +200,7 @@ def load(transformed: dict, schema: dict, conn, db_type: str, truncate: bool = F
             print(f"  {table}: skipped (no schema found)")
             continue
 
-        col_names = _insertable_columns(schema[table])
+        col_names = _insertable_columns(schema[table], natural_key=(table in NATURAL_KEY_TABLES))
 
         # api_uwi in well_headers comes from the filename parse (_api), not the
         # field mapping — use it as a fallback when the mapping didn't supply it.

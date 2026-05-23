@@ -1,9 +1,14 @@
 {
     "completion_reports": [
         "id",
+        "mongo_id",
         "well_id",
         "sidetrack_id",
-        "report_name",
+        "filename",
+        "date_created",
+        "review_status",
+        "processor_name",
+        "record_group",
         "report_type_doph",
         "report_type_conversion",
         "report_type_deepening",

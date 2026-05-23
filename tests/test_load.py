@@ -136,23 +136,31 @@ def test_create_tables_sqlite_unique_constraint():
 
 
 def test_create_tables_postgres_ddl():
-    """create_tables_postgres generates correct DDL with SERIAL PK and UNIQUE."""
+    """well_headers uses a natural bigint PK; other tables use SERIAL."""
     schema = {
         "well_headers": [
             {"column_name": "id",      "data_type": "integer"},
             {"column_name": "api_uwi", "data_type": "text", "unique": True},
             {"column_name": "name",    "data_type": "text"},
-        ]
+        ],
+        "completion_reports": [
+            {"column_name": "id",        "data_type": "integer"},
+            {"column_name": "well_name", "data_type": "text"},
+        ],
     }
     conn = MagicMock()
     cur = conn.cursor.return_value
     create_tables_postgres(conn, schema)
-    assert cur.execute.called
-    ddl = cur.execute.call_args[0][0]
-    assert "CREATE TABLE IF NOT EXISTS well_headers" in ddl
-    assert "id SERIAL PRIMARY KEY" in ddl
-    assert '"api_uwi" text UNIQUE' in ddl
-    assert '"name" text' in ddl
+    assert cur.execute.call_count == 2
+    calls = {c[0][0] for c in cur.execute.call_args_list}
+    wh_ddl  = next(d for d in calls if "well_headers" in d)
+    cr_ddl  = next(d for d in calls if "completion_reports" in d)
+    # well_headers: natural key — uses id's own type, not SERIAL
+    assert "id integer PRIMARY KEY" in wh_ddl
+    assert "id SERIAL PRIMARY KEY" not in wh_ddl
+    assert '"api_uwi" text UNIQUE' in wh_ddl
+    # completion_reports: auto-generated PK
+    assert "id SERIAL PRIMARY KEY" in cr_ddl
     conn.commit.assert_called_once()
 
 

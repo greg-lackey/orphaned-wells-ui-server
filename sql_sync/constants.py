@@ -14,6 +14,12 @@ and the loader (load.py).  Keys are matched case-insensitively at call sites.
 
 WELL_TABLE = "well_headers"
 
+# Tables whose primary key is a natural key supplied by the pipeline rather
+# than an auto-generated SERIAL/AUTOINCREMENT integer.  The DDL generator and
+# loader use this set to decide whether to emit SERIAL or use the column's own
+# data type, and whether to include id in INSERT statements.
+NATURAL_KEY_TABLES = {"well_headers"}
+
 # ── Field mapping column headers ──────────────────────────────────────────────
 # Required column names in each field mapping sheet.
 # The mapping Excel spreadsheet must use these exact headers (case-sensitive).

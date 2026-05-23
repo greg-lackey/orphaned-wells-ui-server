@@ -159,9 +159,11 @@ def test_transform_includes_meta_fields_in_report_row():
     extracted = {"ProcA": [_record("ProcA", "1234567890", mongo_id="m1")]}
     result = transform(extracted, MAPPING)
     row = result["completion_reports"][0]
-    assert row["_mongo_id"] == "m1"
-    assert row["_api"] == "1234567890"
-    assert row["_review_status"] == "reviewed"
+    assert row["mongo_id"] == "m1"
+    assert row["well_id"] == 1234567890
+    assert row["review_status"] == "reviewed"
+    assert row["filename"] == "1234567890.pdf"
+    assert row["processor_name"] == "ProcA"
 
 
 def test_transform_skips_unmapped_processor():
@@ -177,9 +179,9 @@ def test_transform_different_processors_same_report_column():
         "ProcB": [_record("ProcB", "2222222222", Completion_Date="2024-06-15")],
     }
     result = transform(extracted, MAPPING)
-    comp_dates = {r["_api"]: r.get("comp_date") for r in result["completion_reports"]}
-    assert comp_dates["1111111111"] == "2023-01-01"
-    assert comp_dates["2222222222"] == "2024-06-15"
+    comp_dates = {r["well_id"]: r.get("comp_date") for r in result["completion_reports"]}
+    assert comp_dates[1111111111] == "2023-01-01"
+    assert comp_dates[2222222222] == "2024-06-15"
 
 
 def test_transform_empty_extracted_returns_empty():

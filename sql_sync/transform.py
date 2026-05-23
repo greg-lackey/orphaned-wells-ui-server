@@ -32,14 +32,25 @@ Usage:
 import argparse
 import json
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
-from constants import MAPPING_COLUMNS, WELL_TABLE
+from constants import MAPPING_COLUMNS, NATURAL_KEY_TABLES, WELL_TABLE
 
 _DATA_DIR = Path(__file__).parent / "data"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _epoch_to_iso(val) -> str | None:
+    """Convert a Unix epoch float to an ISO 8601 string (UTC)."""
+    if val is None:
+        return None
+    try:
+        return datetime.fromtimestamp(float(val), tz=timezone.utc).isoformat()
+    except (TypeError, ValueError, OSError):
+        return None
+
 
 def load_mapping(institution: str) -> dict[str, list[dict]]:
     """
@@ -158,9 +169,14 @@ def transform(extracted: dict, mappings: dict[str, list[dict]]) -> dict:
             }
             report_row = {
                 **meta,
-                "_filename":      record.get("_filename"),
-                "_date_created":  record.get("_date_created"),
-                "_review_status": record.get("_review_status"),
+                # SQL column names (no underscore prefix):
+                "mongo_id":       record["_mongo_id"],
+                "filename":       record.get("_filename"),
+                "date_created":   _epoch_to_iso(record.get("_date_created")),
+                "review_status":  record.get("_review_status"),
+                "processor_name": record.get("_processor_name"),
+                "record_group":   record.get("_record_group"),
+                "well_id":        int(api) if api else None,
             }
             master_rows: dict[str, dict] = {}
 
@@ -176,6 +192,8 @@ def transform(extracted: dict, mappings: dict[str, list[dict]]) -> dict:
                 if master_table and master_col:
                     if master_table not in master_rows:
                         master_rows[master_table] = dict(meta)
+                        if master_table in NATURAL_KEY_TABLES:
+                            master_rows[master_table]["id"] = int(api) if api else None
                     master_rows[master_table][master_col] = value
 
             by_table[report_table].append(report_row)

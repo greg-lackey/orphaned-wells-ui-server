@@ -7,7 +7,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": 1.0
+        "unique": 1.0,
+        "not_null": 1.0
     },
     {
         "column_name": "sidetrack_id",
@@ -17,7 +18,8 @@
         "units": null,
         "application": "General",
         "links": "Linked to id in sidetracks",
-        "unique": null
+        "unique": null,
+        "not_null": 1.0
     },
     {
         "column_name": "log_date",
@@ -27,7 +29,8 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "log_type",
@@ -37,6 +40,7 @@
         "units": null,
         "application": "General",
         "links": null,
-        "unique": null
+        "unique": null,
+        "not_null": null
     }
 ]

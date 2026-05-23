@@ -3,9 +3,14 @@
 
 CREATE TABLE IF NOT EXISTS completion_reports (
   id SERIAL PRIMARY KEY,
+  "mongo_id" text UNIQUE,
   "well_id" bigint,
   "sidetrack_id" bigint,
-  "report_name" text,
+  "filename" text,
+  "date_created" timestamptz,
+  "review_status" text,
+  "processor_name" text,
+  "record_group" text,
   "report_type_doph" boolean,
   "report_type_conversion" boolean,
   "report_type_deepening" boolean,
@@ -160,7 +165,7 @@ CREATE TABLE IF NOT EXISTS completion_reports (
 );
 
 CREATE TABLE IF NOT EXISTS well_headers (
-  id SERIAL PRIMARY KEY,
+  id bigint PRIMARY KEY,
   "api_uwi" text,
   "api_state" integer,
   "api_county" integer,

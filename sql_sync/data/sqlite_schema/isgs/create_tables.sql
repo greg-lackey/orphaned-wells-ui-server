@@ -3,9 +3,14 @@
 
 CREATE TABLE IF NOT EXISTS completion_reports (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  "mongo_id" TEXT UNIQUE,
   "well_id" INTEGER,
   "sidetrack_id" INTEGER,
-  "report_name" TEXT,
+  "filename" TEXT,
+  "date_created" TEXT,
+  "review_status" TEXT,
+  "processor_name" TEXT,
+  "record_group" TEXT,
   "report_type_doph" INTEGER,
   "report_type_conversion" INTEGER,
   "report_type_deepening" INTEGER,
@@ -160,7 +165,7 @@ CREATE TABLE IF NOT EXISTS completion_reports (
 );
 
 CREATE TABLE IF NOT EXISTS well_headers (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   "api_uwi" TEXT,
   "api_state" INTEGER,
   "api_county" INTEGER,
