@@ -17,7 +17,6 @@ from ogrre.internal.util import time_it
 
 _log = logging.getLogger(__name__)
 REQUIRE_AUTH = os.getenv("REQUIRE_AUTH", "true").lower() in ("1", "true", "yes")
-
 COLLABORATORS = ["isgs", "calgem", "osage"]
 DEFAULT_UNAUTHENTICATED_TEAM = {
     "name": "default",
@@ -97,13 +96,10 @@ class DataManager:
         processors = list(self.db.processors.find(query, projection=projection))
         return processors
 
-    @time_it
     def getProcessorById(self, google_id=None):
         if USE_DB_PROCESSORS:
-            _log.info(f"getting processor using database")
             processor = self.getMongoProcessorByID(google_id=google_id)
         else:
-            _log.info(f"getting processor using processor_api")
             processor = processor_api.get_processor_by_id(self.collaborator, google_id)
         return processor
 
@@ -113,7 +109,6 @@ class DataManager:
         processor_list = list(self.db.processors.find({}, projection=projection))
         return processor_list
 
-    @time_it
     def createProcessorsList(self):
         if USE_DB_PROCESSORS:
             _log.info(f"creating processor list using db")
@@ -941,22 +936,21 @@ class DataManager:
         ## try to attain lock
         attained_lock = self.tryLockingRecord(record_id, user)
         image_urls = []
-        for image in document.get("image_files", []):
+        image_files = document.get("image_files", [])
+        for image in image_files:
             if util.imageIsValid(image):
-                image_urls.append(
-                    get_document_image(
-                        document["record_group_id"], document["_id"], image
-                    )
+                next_img_url = get_document_image(
+                    document["record_group_id"], document["_id"], image
                 )
+                image_urls.append(next_img_url)
         if len(image_urls) == 0:
             if document.get("filename", False):
-                image_urls.append(
-                    get_document_image(
-                        document["record_group_id"],
-                        document["_id"],
-                        document["filename"],
-                    )
+                next_img_url = get_document_image(
+                    document["record_group_id"],
+                    document["_id"],
+                    document["filename"],
                 )
+                image_urls.append(next_img_url)
         document["img_urls"] = image_urls
 
         ## get record group name
@@ -1099,7 +1093,7 @@ class DataManager:
 
         return document
 
-    def getProcessorByRecordGroupID(self, rg_id):
+    def getProcessorByRecordGroupID(self, rg_id, returnNameOnly=False):
         _id = ObjectId(rg_id)
         try:
             cursor = self.db.record_groups.find({"_id": _id})
@@ -1112,6 +1106,11 @@ class DataManager:
             model_id = processor_document.get("Model ID", None)
             if model_id is None:
                 model_id = processor_document.get("modelId", None)
+            if returnNameOnly:
+                processor_name = processor_document.get("Processor Name", None)
+                if processor_name is None:
+                    processor_name = processor_document.get("name", None)
+                return processor_name
             return google_id, model_id, processor_attributes
         except Exception as e:
             _log.error(f"unable to find processor: {e}")
@@ -1249,6 +1248,18 @@ class DataManager:
             user_info,
             calling_function="updateRecordReviewStatus",
         )
+
+    @time_it
+    def updateRecordInternal(self, record_id, field, value):
+        _id = ObjectId(record_id)
+        search_query = {"_id": _id}
+
+        update_query = {"$set": {field: value}}
+        update_resp = self.db.records.update_one(
+            search_query,
+            update_query,
+        )
+        return update_resp
 
     @time_it
     def updateRecord(
@@ -1909,6 +1920,23 @@ class DataManager:
         update = {"$pull": {"record_groups": rg_id}}
         self.db.teams.update_many(team_query, update)
 
+    @time_it
+    def organizeRecordsByDocumentType(self, records):
+        rg_processor_map = {}
+        setsOfRecords = {}
+        for record in records:
+            record_group_id = record.get("record_group_id")
+            processor_name = rg_processor_map.get(record_group_id, None)
+            if not processor_name:
+                processor_name = self.getProcessorByRecordGroupID(
+                    record_group_id, returnNameOnly=True
+                )
+                rg_processor_map[record_group_id] = processor_name
+                setsOfRecords[processor_name] = [record]
+            else:
+                setsOfRecords[processor_name].append(record)
+        return setsOfRecords
+
     ## miscellaneous functions
     def downloadRecords(
         self,
@@ -1995,7 +2023,7 @@ class DataManager:
                 )
                 writer.writeheader()
                 writer.writerows(record_attributes)
-        else:
+        else:  ## export type is JSON
             for document in records:
                 document_id = str(document["_id"])
                 try:
@@ -2054,12 +2082,13 @@ class DataManager:
         if project is not None:
             return True
 
+    @time_it
     def checkIfRecordExists(self, filename, rg_id):
         ## remove file extension
         filename = filename.split(".")[0]
 
         ## query database
-        query = {"filename": {"$regex": filename}, "record_group_id": rg_id}
+        query = {"filename": {"$regex": f"^{filename}$"}, "record_group_id": rg_id}
         found_document = self.db.records.count_documents(query)
         if found_document > 0:
             return True

@@ -14,3 +14,10 @@ sql_sync/**/*.xlsx
 sql_sync/data/extracted/
 sql_sync/data/transformed/
 sql_sync/data/*.db
+
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform
+
+github-deploy-targets.json
