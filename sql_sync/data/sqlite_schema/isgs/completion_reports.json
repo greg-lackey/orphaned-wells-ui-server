@@ -420,7 +420,7 @@
     {
         "column_name": "operator_number",
         "column_description": "Number designating the operator",
-        "data_type": "TEXT",
+        "data_type": "INTEGER",
         "examples": 12345,
         "units": null,
         "application": "Illinois",
@@ -475,7 +475,7 @@
     {
         "column_name": "permit_number",
         "column_description": "Number associated with the permit",
-        "data_type": "TEXT",
+        "data_type": "INTEGER",
         "examples": 12345,
         "units": null,
         "application": "Illinois",
@@ -486,7 +486,7 @@
     {
         "column_name": "ref_number",
         "column_description": "Unclear. Number associated with well",
-        "data_type": "TEXT",
+        "data_type": "INTEGER",
         "examples": 12345,
         "units": null,
         "application": "Illinois",
@@ -519,7 +519,7 @@
     {
         "column_name": "section",
         "column_description": "PLSS section",
-        "data_type": "TEXT",
+        "data_type": "INTEGER",
         "examples": 5,
         "units": null,
         "application": "Illinois",
@@ -552,7 +552,7 @@
     {
         "column_name": "ns_distance",
         "column_description": "Distance from the north or south line of the quarter-quarter-quarter of the section",
-        "data_type": "TEXT",
+        "data_type": "REAL",
         "examples": 350,
         "units": "feet",
         "application": "Illinois",
@@ -574,7 +574,7 @@
     {
         "column_name": "ew_distance",
         "column_description": "Distance from the east or west line of the quarter-quarter-quarter of the section",
-        "data_type": "TEXT",
+        "data_type": "REAL",
         "examples": 300,
         "units": "feet",
         "application": "Illinois",
@@ -1432,7 +1432,7 @@
     {
         "column_name": "perf_shots",
         "column_description": "Description of the perforation shots",
-        "data_type": "TEXT",
+        "data_type": "INTEGER",
         "examples": "8/ft",
         "units": null,
         "application": "Illinois",

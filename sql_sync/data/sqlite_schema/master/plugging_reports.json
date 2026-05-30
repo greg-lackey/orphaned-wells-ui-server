@@ -1,0 +1,1292 @@
+[
+    {
+        "column_name": "id",
+        "column_description": "Unique identifier for plugging report",
+        "data_type": "INTEGER",
+        "examples": 9876,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": 1.0
+    },
+    {
+        "column_name": "county",
+        "column_description": "County name",
+        "data_type": "TEXT",
+        "examples": "Perry",
+        "units": null,
+        "application": "Illinois",
+        "links": "id in well_headers table",
+        "unique": null
+    },
+    {
+        "column_name": "operator",
+        "column_description": "Name of well operator",
+        "data_type": "TEXT",
+        "examples": "Chevron",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "operator_2",
+        "column_description": "Name of second well operator",
+        "data_type": "TEXT",
+        "examples": "Chevron",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "well_type",
+        "column_description": "Description of the well type",
+        "data_type": "TEXT",
+        "examples": "Oil",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "well_name",
+        "column_description": "Name of the well",
+        "data_type": "TEXT",
+        "examples": "Smith #15",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "north_ft",
+        "column_description": "North location of site",
+        "data_type": "REAL",
+        "examples": 101,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "south_ft",
+        "column_description": "South location of site",
+        "data_type": "REAL",
+        "examples": 102,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "east_ft",
+        "column_description": "East location of site",
+        "data_type": "REAL",
+        "examples": 103,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "west_ft",
+        "column_description": "West location of site",
+        "data_type": "REAL",
+        "examples": 330,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "corner",
+        "column_description": "Corner within section",
+        "data_type": "TEXT",
+        "examples": "SE",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "first_quarter",
+        "column_description": "Description of the first quarter",
+        "data_type": "TEXT",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "second_quarter",
+        "column_description": "Description of the second quarter",
+        "data_type": "TEXT",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "third_quarter",
+        "column_description": "Description of the third quarter",
+        "data_type": "TEXT",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "fourth_quarter",
+        "column_description": "Description of the fourth quarter",
+        "data_type": "TEXT",
+        "examples": "SW",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "section",
+        "column_description": "PLSS section",
+        "data_type": "TEXT",
+        "examples": 5,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "township",
+        "column_description": "PLSS township",
+        "data_type": "TEXT",
+        "examples": "5S",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plss_range",
+        "column_description": "PLSS range",
+        "data_type": "TEXT",
+        "examples": "4W",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "principal_meridian",
+        "column_description": "Principal Meridian number",
+        "data_type": "TEXT",
+        "examples": "Third",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "elev_df",
+        "column_description": "Derrick Floor",
+        "data_type": "REAL",
+        "examples": 380,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "elev_gr",
+        "column_description": "Elevation of the ground in feet",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "tvd",
+        "column_description": "Total Depth of the well in feet",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "prod_inj_form",
+        "column_description": "Formation Name",
+        "data_type": "TEXT",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "permit_date",
+        "column_description": "date of the permit",
+        "data_type": "TEXT",
+        "examples": "1989-12-31T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "permit_number",
+        "column_description": "Number associated with the permit",
+        "data_type": "TEXT",
+        "examples": 12345,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "permittee",
+        "column_description": "name of permit recipient",
+        "data_type": "TEXT",
+        "examples": "John Smith",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "spud_date",
+        "column_description": "date that the well was drilled",
+        "data_type": "TEXT",
+        "examples": "1970-03-31T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "comp_date",
+        "column_description": "date that drilling was completed",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "drill_tool_type",
+        "column_description": "Type of Drilling Tool",
+        "data_type": "TEXT",
+        "examples": "Rotary",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "lessor_name",
+        "column_description": "Lessor of well",
+        "data_type": "TEXT",
+        "examples": "John Smith",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "lessor_addr",
+        "column_description": "Lessor Address",
+        "data_type": "TEXT",
+        "examples": "12345 Street rd",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "lessee_name",
+        "column_description": "Lessee",
+        "data_type": "TEXT",
+        "examples": "John Smith",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "lessee_addr",
+        "column_description": "Lessee Address",
+        "data_type": "TEXT",
+        "examples": "12345 Street rd",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "drilling_contractor",
+        "column_description": "Name of the Drilling Contractor",
+        "data_type": "TEXT",
+        "examples": "Chevron",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "drill_contractor_address",
+        "column_description": "Address of the Drilling Contractor",
+        "data_type": "TEXT",
+        "examples": "12345 Street rd",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plug_type",
+        "column_description": "Type of Plug",
+        "data_type": "TEXT",
+        "examples": "Wellbore Fluid",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plug_from",
+        "column_description": "Plug bottom depth",
+        "data_type": "REAL",
+        "examples": 12345,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plug_to",
+        "column_description": "plug top depth",
+        "data_type": "REAL",
+        "examples": 5,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "workable_coal_present_ft",
+        "column_description": "Workable Coal is Present, gives depth of it",
+        "data_type": "TEXT",
+        "examples": "CEMENTED FROM 1025 TO 850 feet",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "pits_fillled_yes",
+        "column_description": "Pits Filled Yes",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "pits_filled_no",
+        "column_description": "Pits Filled No",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "equipment_yes",
+        "column_description": "Specifies if Equipment has been removed from Well",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "equipment_no",
+        "column_description": "Specifies if Equipment has NOT been removed from Well",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "concrete_base_yes",
+        "column_description": "Specifies if Concrete Bases have been removed from Well",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "concrete_base_no",
+        "column_description": "Specifies if Concrete Bases have NOT been removed from Well",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "debris_yes",
+        "column_description": "Specifies if Debris has been removed from Well",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "debris_no",
+        "column_description": "Specifies if Debris has NOT been removed from Well",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "casing_cutoff_yes",
+        "column_description": "Specifies if Well Casing has been cut off",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "casing_cutoff_no",
+        "column_description": "Specifies if Well Casing has NOT been cut off",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "well_site_leveled_yes",
+        "column_description": "Specifies if Well Site has been leveled",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "well_site_leveled_no",
+        "column_description": "Specifies if Well Site has NOT been leveled",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "last_prod_date",
+        "column_description": "date that the well was last used for production",
+        "data_type": "TEXT",
+        "examples": "1970-04-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_out_diam",
+        "column_description": "Casing outer diameter",
+        "data_type": "REAL",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_put_in_feet",
+        "column_description": "inner casing depth feet",
+        "data_type": "REAL",
+        "examples": 312,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_put_in_inches",
+        "column_description": "inner casing depth inches",
+        "data_type": "REAL",
+        "examples": 11,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_out_feet",
+        "column_description": "outer casing depth feet",
+        "data_type": "REAL",
+        "examples": 120,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_out_inches",
+        "column_description": "outer casing depth inches",
+        "data_type": "REAL",
+        "examples": 7,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_left_in_feet",
+        "column_description": "casing left in feet?",
+        "data_type": "REAL",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_left_in_inches",
+        "column_description": "casing left in inches",
+        "data_type": "REAL",
+        "examples": 3,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "csg_remarks",
+        "column_description": "casing detailed remarks",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_day",
+        "column_description": "Document signature day",
+        "data_type": "TEXT",
+        "examples": "Monday",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_month",
+        "column_description": "Document signature month",
+        "data_type": "TEXT",
+        "examples": "June",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_year",
+        "column_description": "Document signature year",
+        "data_type": "TEXT",
+        "examples": 1976,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "commission_expiration_date",
+        "column_description": "Expiration of signature",
+        "data_type": "TEXT",
+        "examples": "2026-11-02T00:00:00",
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "notary_signature",
+        "column_description": "Signature of Notary",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": null,
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "report_type_production",
+        "column_description": "Plugging Report type of Production",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_class_2",
+        "column_description": "Plugging Report type of Class 2",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_observation",
+        "column_description": "Plugging Report type of Observation",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_gas_storage",
+        "column_description": "Plugging Reprot type of Gas Storage",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_replug",
+        "column_description": "Plugging Report type of Replug",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_other",
+        "column_description": "Plugging Report type of Other",
+        "data_type": "INTEGER",
+        "examples": false,
+        "units": null,
+        "application": "Illinois",
+        "links": "*",
+        "unique": null
+    },
+    {
+        "column_name": "report_type_other_txt",
+        "column_description": "Description of Other in Plugging Report",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": "*All related to report_type",
+        "unique": null
+    },
+    {
+        "column_name": "operator_number",
+        "column_description": "Permittee Number",
+        "data_type": "REAL",
+        "examples": 12,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "ref_number",
+        "column_description": "Reference Number",
+        "data_type": "REAL",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugging_contractor_name",
+        "column_description": "Plugging Contractor",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugging_contractor_address",
+        "column_description": "Address of Permittee",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "pbtd",
+        "column_description": "Plugged_Back Depth",
+        "data_type": "REAL",
+        "examples": 413,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "freshwater_zone_base",
+        "column_description": "Specifies whether well is in a Freshwater_Zone",
+        "data_type": "INTEGER",
+        "examples": true,
+        "units": null,
+        "application": "Illinois",
+        "links": "new",
+        "unique": null
+    },
+    {
+        "column_name": "production_injection_interval_from",
+        "column_description": "Bottom of production injection interval",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_injection_interval_to",
+        "column_description": "Top of production injection interval",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugback_procedure_desc",
+        "column_description": "Description of Plugback Procedure",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": "new",
+        "unique": null
+    },
+    {
+        "column_name": "plugging_comments",
+        "column_description": "details about plugging ",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_size",
+        "column_description": "Surface casing outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_setting_depth",
+        "column_description": "Depth of the surface casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_sacks_cement",
+        "column_description": "Volume of cement injected into the surface casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_hole_size",
+        "column_description": "Diameter of the surface casing hole",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_top_of_cement",
+        "column_description": "Depth to the top of cement in the annulus outside the surface casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "surface_casing_removed",
+        "column_description": "Plugging Report casing of Surface_Casing_Removed",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_size",
+        "column_description": "intermediate casing outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_setting_depth",
+        "column_description": "Depth of the intermediate casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_sacks_cement",
+        "column_description": "Volume of cement injected into the intermediate casing for the primary cement job",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_hole_size",
+        "column_description": "intermediate casing outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_top_of_cement",
+        "column_description": "Depth to the top of cement in the annulus outside the intermediate casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "intermediate_casing_removed",
+        "column_description": "Footage of intermediate casing pulled out of the hole",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_size",
+        "column_description": "Production casing outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_setting_depth",
+        "column_description": "Depth of the production casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_sacks_cement",
+        "column_description": "Volume of cement injected into the production casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_hole_size",
+        "column_description": "Production casing outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_top_of_cement",
+        "column_description": "Depth to the top of cement in the annulus outside the production casing",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "production_casing_removed",
+        "column_description": "Footage of production casing pulled out of the hole",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "permitee_signature",
+        "column_description": "Permittee Signature",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector_signature",
+        "column_description": "Inspector Signature",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "permitee_address",
+        "column_description": "Permittee Address",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_date",
+        "column_description": "Date Date",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_city_state",
+        "column_description": "Plugging Report city of City_State",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_zip",
+        "column_description": "Zip Zip",
+        "data_type": "REAL",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector_not_present",
+        "column_description": "Inspector_Not Present",
+        "data_type": "INTEGER",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "operator_signature",
+        "column_description": "Signature_Of Permittee",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugging_start_date",
+        "column_description": "Date_Plugging Began",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "signature_address",
+        "column_description": "Address where plugging report was signed",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugging_comp_date",
+        "column_description": "Date_Plugging Complete",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "city_state_zip",
+        "column_description": "City_State Zip",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector_present",
+        "column_description": "Inspector Present",
+        "data_type": "INTEGER",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspection_activity",
+        "column_description": "Activity Inspection::Activity",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspection_date",
+        "column_description": "Activity Inspection::Date",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "manager_signature",
+        "column_description": "Manager Signature",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "manager_signature_date",
+        "column_description": "Manager_Signature Date",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "plugging_information_sent",
+        "column_description": "Plugging_Information Sent",
+        "data_type": "INTEGER",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector_visit_pick_up",
+        "column_description": "Inspector_Visit_Pick Up",
+        "data_type": "INTEGER",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector",
+        "column_description": "Inspector Inspector",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "inspector_date",
+        "column_description": "Inspector Date",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "controller",
+        "column_description": "Controller_Of Well",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": "No examples of admin_info stuff being found in any Plugging reports?",
+        "unique": null
+    },
+    {
+        "column_name": "controller_signature",
+        "column_description": "Controller Signature",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "controller_position",
+        "column_description": "Controller Position",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "controller_address",
+        "column_description": "Controller Address",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "supervisor_signature",
+        "column_description": "Supervising Signature",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "supervisor_position",
+        "column_description": "Supervising Position",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "supervisor_address",
+        "column_description": "Supervising Address",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    },
+    {
+        "column_name": "notary_name",
+        "column_description": "Notary_Name_From Seal",
+        "data_type": "TEXT",
+        "examples": null,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null
+    }
+]

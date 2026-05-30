@@ -37,27 +37,43 @@ _DATA_DIR = Path(__file__).parent.parent / "sql_sync" / "data"
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-def _normalize(val):
+def _normalize(val, col_type: str = None):
     """Normalize a value so equivalent representations compare equal.
 
     Handles:
-      bool  → int       (SQLite stores True/False as 1/0)
-      float → int       (9210.0 → 9210 when the value is a whole number,
-                         avoiding spurious float-vs-INTEGER mismatches)
+      bool  → int         (SQLite stores True/False as 1/0)
+      float → int         (9210.0 → 9210 for whole numbers, avoiding
+                           spurious float-vs-INTEGER mismatches)
+      numeric → str       (for TEXT columns: int/float inserted by the
+                           pipeline are stored and returned as strings,
+                           e.g. 1785 → '1785')
     """
     if val is None:
         return None
+    is_text = col_type and col_type.upper() in ("TEXT", "VARCHAR", "CHAR")
     if isinstance(val, bool):
-        return int(val)
+        int_val = int(val)
+        return str(int_val) if is_text else int_val
+    if is_text:
+        if isinstance(val, (int, float)):
+            return str(val)
+        return val
+    # Non-TEXT: coerce numeric strings to numbers (mirrors SQLite's type affinity)
+    if isinstance(val, str):
+        try:
+            f = float(val)
+            return int(f) if f == int(f) else f
+        except (ValueError, OverflowError):
+            pass
     if isinstance(val, float) and val == int(val):
         return int(val)
     return val
 
 
-def _sorted_vals(rows: list[dict], col: str) -> list:
+def _sorted_vals(rows: list[dict], col: str, col_type: str = None) -> list:
     """Return a sorted list of normalized values for col across all rows."""
     return sorted(
-        (_normalize(r.get(col)) for r in rows),
+        (_normalize(r.get(col), col_type) for r in rows),
         key=lambda x: (x is None, str(x)),
     )
 
@@ -107,10 +123,12 @@ def _check_roundtrip(institution: str, conn: sqlite3.Connection, db_type: str) -
             )
             continue  # column diffs are misleading when row counts differ
 
+        col_type_map = {c["column_name"]: c["data_type"] for c in schema[table]}
         schema_cols = [c["column_name"] for c in schema[table] if c["column_name"] != "id"]
         for col in schema_cols:
-            expected_vals = _sorted_vals(expected_rows, col)
-            actual_vals = _sorted_vals(db_rows, col)
+            col_type = col_type_map.get(col)
+            expected_vals = _sorted_vals(expected_rows, col, col_type)
+            actual_vals = _sorted_vals(db_rows, col, col_type)
             if expected_vals != actual_vals:
                 # Use repr() so type differences surface: repr(605) != repr('605')
                 exp_set = set(map(repr, expected_vals))

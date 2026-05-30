@@ -90,7 +90,7 @@
     {
         "column_name": "perf_shots",
         "column_description": "Description of the perforation shots",
-        "data_type": "TEXT",
+        "data_type": "REAL",
         "examples": "8/Ft.",
         "units": null,
         "application": "General",
