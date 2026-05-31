@@ -251,3 +251,58 @@ def test_validate_mapping_headers_includes_table_name_in_warning(capsys):
     _validate_mapping_headers(bad_mapping, table_name="plugging_reports")
     out = capsys.readouterr().out
     assert "plugging_reports" in out
+
+
+# ── non-None overwrites ───────────────────────────────────────────────────────
+
+_ALIAS_MAPPING = {
+    "completion_reports": [
+        # Two field names alias to the same column (single vs numbered casing)
+        {
+            "google_processor": "ProcG",
+            "ogrre_field": "Casing_Record_Depth",
+            "report_table": "completion_reports",
+            "report_table_field": "casing_1_depth",
+            "well_table": None,
+            "well_table_field": None,
+        },
+        {
+            "google_processor": "ProcG",
+            "ogrre_field": "Casing_Record_1_Depth",
+            "report_table": "completion_reports",
+            "report_table_field": "casing_1_depth",
+            "well_table": None,
+            "well_table_field": None,
+        },
+    ]
+}
+
+
+def test_non_none_overwrites_single_casing_record():
+    """Single-casing doc: un-numbered key has value, numbered key is absent."""
+    extracted = {
+        "ProcG": [_record("ProcG", "1234567890", Casing_Record_Depth=1234)]
+    }
+    result = transform(extracted, _ALIAS_MAPPING)
+    assert result["completion_reports"][0]["casing_1_depth"] == 1234
+
+
+def test_non_none_overwrites_multi_casing_record():
+    """Multi-casing doc: numbered key has value, un-numbered key is absent."""
+    extracted = {
+        "ProcG": [_record("ProcG", "1234567890", Casing_Record_1_Depth=5678)]
+    }
+    result = transform(extracted, _ALIAS_MAPPING)
+    assert result["completion_reports"][0]["casing_1_depth"] == 5678
+
+
+def test_non_none_does_not_overwrite_with_none():
+    """A None value must not overwrite a previously set non-None value."""
+    # Both present but only Casing_Record_Depth has a value
+    extracted = {
+        "ProcG": [_record("ProcG", "1234567890",
+                           Casing_Record_Depth=999,
+                           Casing_Record_1_Depth=None)]
+    }
+    result = transform(extracted, _ALIAS_MAPPING)
+    assert result["completion_reports"][0]["casing_1_depth"] == 999

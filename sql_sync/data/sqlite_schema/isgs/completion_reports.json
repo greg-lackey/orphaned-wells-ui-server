@@ -991,7 +991,7 @@
     },
     {
         "column_name": "int_csg_out_diam",
-        "column_description": "intermediate casing outer diameter",
+        "column_description": "Intermediate casing outer diameter",
         "data_type": "REAL",
         "examples": 9.625,
         "units": "inches",
@@ -1133,28 +1133,6 @@
         "not_null": null
     },
     {
-        "column_name": "tubing_type",
-        "column_description": "Description of the tubing type",
-        "data_type": "TEXT",
-        "examples": "Siphon string",
-        "units": null,
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null
-    },
-    {
-        "column_name": "tubing_size",
-        "column_description": "Outer diameter of the tubing",
-        "data_type": "REAL",
-        "examples": 3.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null
-    },
-    {
         "column_name": "oth_cem_top",
         "column_description": "Depth to the top of cement in the annulus outside the other casing",
         "data_type": "REAL",
@@ -1221,10 +1199,10 @@
         "not_null": null
     },
     {
-        "column_name": "csg_depth",
-        "column_description": "Casing depth",
+        "column_name": "casing_1_depth",
+        "column_description": "Casing 1 setting depth",
         "data_type": "REAL",
-        "examples": 1000,
+        "examples": null,
         "units": "feet",
         "application": "Illinois",
         "links": null,
@@ -1232,10 +1210,10 @@
         "not_null": null
     },
     {
-        "column_name": "csg_out_diam",
-        "column_description": "Outer diameter of the casing",
+        "column_name": "casing_1_size",
+        "column_description": "Casing 1 outer diameter",
         "data_type": "REAL",
-        "examples": 9.5,
+        "examples": null,
         "units": "inches",
         "application": "Illinois",
         "links": null,
@@ -1243,10 +1221,153 @@
         "not_null": null
     },
     {
-        "column_name": "csg_type",
-        "column_description": "Casing type",
+        "column_name": "casing_1_cem_vol",
+        "column_description": "Casing 1 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_depth",
+        "column_description": "Casing 2 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_size",
+        "column_description": "Casing 2 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_cem_vol",
+        "column_description": "Casing 2 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_depth",
+        "column_description": "Casing 3 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_size",
+        "column_description": "Casing 3 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_cem_vol",
+        "column_description": "Casing 3 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_depth",
+        "column_description": "Casing 4 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_size",
+        "column_description": "Casing 4 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_cem_vol",
+        "column_description": "Casing 4 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_depth",
+        "column_description": "Casing 5 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_size",
+        "column_description": "Casing 5 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_cem_vol",
+        "column_description": "Casing 5 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "tubing_type",
+        "column_description": "Description of the tubing type",
         "data_type": "TEXT",
-        "examples": "production",
+        "examples": "Siphon string",
         "units": null,
         "application": "Illinois",
         "links": null,
@@ -1254,11 +1375,11 @@
         "not_null": null
     },
     {
-        "column_name": "cem_vol",
-        "column_description": "Volume of cement injected into the casing for the primary cement job",
+        "column_name": "tubing_size",
+        "column_description": "Outer diameter of the tubing",
         "data_type": "REAL",
-        "examples": 300,
-        "units": "sacks",
+        "examples": 3.5,
+        "units": "inches",
         "application": "Illinois",
         "links": null,
         "unique": null,

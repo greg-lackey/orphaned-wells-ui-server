@@ -185,7 +185,11 @@ def transform(extracted: dict, mappings: dict[str, list[dict]]) -> dict:
 
                 report_col = col_info["report_col"]
                 if report_col:
-                    report_row[report_col] = value
+                    # Non-None overwrites: a None value only writes the initial slot;
+                    # a non-None value always wins (handles dual field-name aliases
+                    # such as Casing_Record_Depth / Casing_Record_1_Depth → casing_1_depth).
+                    if value is not None or report_col not in report_row:
+                        report_row[report_col] = value
 
                 master_table = col_info["master_table"]
                 master_col = col_info["master_col"]
@@ -194,7 +198,8 @@ def transform(extracted: dict, mappings: dict[str, list[dict]]) -> dict:
                         master_rows[master_table] = dict(meta)
                         if master_table in NATURAL_KEY_TABLES:
                             master_rows[master_table]["id"] = int(api) if api else None
-                    master_rows[master_table][master_col] = value
+                    if value is not None or master_col not in master_rows[master_table]:
+                        master_rows[master_table][master_col] = value
 
             by_table[report_table].append(report_row)
 

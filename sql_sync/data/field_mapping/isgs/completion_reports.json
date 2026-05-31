@@ -117,33 +117,6 @@
         "Unnamed: 6": null
     },
     {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_WellCompletion_G",
-        "ogrre_field": "Casing_Record::Size",
-        "report_table": "completion_reports",
-        "report_table_field": "csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
         "google_processor": "IL_Ver_B_Well_Completion",
         "ogrre_field": "City_State",
         "report_table": "completion_reports",
@@ -684,15 +657,6 @@
         "Unnamed: 6": null
     },
     {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size",
-        "Unnamed: 6": null
-    },
-    {
         "google_processor": "IL_WellCompletion_G",
         "ogrre_field": "Initial_Production_After",
         "report_table": "completion_reports",
@@ -744,60 +708,6 @@
         "report_table_field": "inj_form",
         "well_table": "injection_testing",
         "well_table_field": "form",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size",
-        "Unnamed: 6": "many"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top",
         "Unnamed: 6": null
     },
     {
@@ -865,42 +775,6 @@
     },
     {
         "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_size",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Liner_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "liner_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
         "ogrre_field": "List_Amount_Used",
         "report_table": "completion_reports",
         "report_table_field": "treatment_amnt",
@@ -924,42 +798,6 @@
         "report_table_field": "plss_loc",
         "well_table": "well_header",
         "well_table_field": "plss_loc",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "int_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Mine_or_Intermediate_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "int_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
         "Unnamed: 6": null
     },
     {
@@ -1041,60 +879,6 @@
         "report_table_field": "treatment_other",
         "well_table": "completions",
         "well_table_field": "treatment",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "other_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size",
-        "Unnamed: 6": "many"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "other_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Other_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "oth_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top",
         "Unnamed: 6": null
     },
     {
@@ -1206,102 +990,12 @@
         "Unnamed: 6": null
     },
     {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
         "google_processor": "IL_Ver_B_Well_Completion",
         "ogrre_field": "Producing_Formations",
         "report_table": "completion_reports",
         "report_table_field": "prod_inj_form",
         "well_table": "production_testing",
         "well_table_field": "form",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Producing_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size",
-        "Unnamed: 6": "many"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Production_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "prod_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top",
         "Unnamed: 6": null
     },
     {
@@ -1500,96 +1194,6 @@
         "report_table_field": "type_str_test",
         "well_table": "sidetracks",
         "well_table_field": "type",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Csg_Pulled",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_pulled",
-        "well_table": "casings",
-        "well_table_field": "pulled",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Hole_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_hole_size",
-        "well_table": "casings",
-        "well_table_field": "hole_size",
-        "Unnamed: 6": "many"
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Sacks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Setting_Depth",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_depth",
-        "well_table": "casings",
-        "well_table_field": "tvd",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Size",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_csg_out_diam",
-        "well_table": "casings",
-        "well_table_field": "out_diam",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_A_WellCompletion",
-        "ogrre_field": "Surface_Sks_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_vol",
-        "well_table": "casings",
-        "well_table_field": "cem_vol",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Top_Determined_By",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_top_meth",
-        "well_table": "casings",
-        "well_table_field": "cem_top_method",
-        "Unnamed: 6": null
-    },
-    {
-        "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Surface_Top_Of_Cement",
-        "report_table": "completion_reports",
-        "report_table_field": "surf_cem_top",
-        "well_table": "casings",
-        "well_table_field": "cem_top",
         "Unnamed: 6": null
     },
     {
@@ -2040,6 +1644,537 @@
         "report_table_field": "dst_zone",
         "well_table": "sidetracks",
         "well_table_field": "dst_zone",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Surface_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Mine_or_Intermediate_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Producing_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_size",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Sks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_A_WellCompletion",
+        "ogrre_field": "Liner_Csg_Pulled",
+        "report_table": "completion_reports",
+        "report_table_field": "liner_pulled",
+        "well_table": "casings",
+        "well_table_field": "pulled",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Surface_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "surf_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "int_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Intermedate_Mine_String_Or_Liner_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "int_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Production_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "prod_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Setting_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_csg_depth",
+        "well_table": "casings",
+        "well_table_field": "tvd",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_cem_vol",
+        "well_table": "casings",
+        "well_table_field": "cem_vol",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Hole_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "other_hole_size",
+        "well_table": "casings",
+        "well_table_field": "hole_size",
+        "Unnamed: 6": "many"
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Top_Of_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "oth_cem_top",
+        "well_table": "casings",
+        "well_table_field": "cem_top",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_Ver_B_Well_Completion",
+        "ogrre_field": "Other_Top_Determined_By",
+        "report_table": "completion_reports",
+        "report_table_field": "other_cem_top_meth",
+        "well_table": "casings",
+        "well_table_field": "cem_top_method",
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_1_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_1_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_1_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_1_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_2_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_2_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_2_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_2_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_2_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_2_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_3_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_3_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_3_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_3_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_3_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_3_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_4_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_4_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_4_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_4_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_4_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_4_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_5_Depth",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_5_depth",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_5_Size",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_5_size",
+        "well_table": null,
+        "well_table_field": null,
+        "Unnamed: 6": null
+    },
+    {
+        "google_processor": "IL_WellCompletion_G",
+        "ogrre_field": "Casing_Record_5_Sacks_Cement",
+        "report_table": "completion_reports",
+        "report_table_field": "casing_5_cem_vol",
+        "well_table": null,
+        "well_table_field": null,
         "Unnamed: 6": null
     }
 ]

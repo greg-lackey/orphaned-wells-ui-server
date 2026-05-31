@@ -116,20 +116,42 @@ def _extract_api(filename: str) -> str | None:
     return None
 
 
-def _flatten_attributes(attributes_list: list) -> dict:
-    """Convert [{key, normalized_value, value, ...}, ...] to {key: best_value}.
+def _best_value(attr: dict):
+    """Return normalized_value if present, else fall back to value."""
+    val = attr.get("normalized_value")
+    return val if val is not None else attr.get("value")
 
-    normalized_value holds the human-reviewed answer; value holds the raw AI
-    extraction. Prefer normalized_value, fall back to value when not yet reviewed.
+
+def _flatten_attributes(attributes_list: list) -> dict:
+    """Convert attributesList to a flat {key: value} dict.
+
+    Naming convention:
+      - Simple field, appears once:        Key          → scalar value
+      - Subattribute field, appears once:  Key_SubKey   → scalar value
+      - Any field, appears multiple times: Key_1_SubKey, Key_2_SubKey, ...
+        (or Key_1, Key_2 if no subattributes)
+
+    normalized_value is preferred over value; falls back to value when
+    normalized_value is absent (not yet reviewed).
     """
-    result = {}
+    # Group by key, preserving document order
+    grouped = defaultdict(list)
     for attr in attributes_list:
         if "key" not in attr:
             continue
-        val = attr.get("normalized_value")
-        if val is None:
-            val = attr.get("value")
-        result[attr["key"]] = val
+        grouped[attr["key"]].append(attr)
+
+    result = {}
+    for key, attrs in grouped.items():
+        multi = len(attrs) > 1
+        for i, attr in enumerate(attrs, start=1):
+            subs = [s for s in (attr.get("subattributes") or []) if s and s.get("key")]
+            prefix = f"{key}_{i}" if multi else key
+            if subs:
+                for sub in subs:
+                    result[f"{prefix}_{sub['key']}"] = _best_value(sub)
+            else:
+                result[prefix] = _best_value(attr)
     return result
 
 

@@ -54,6 +54,105 @@ def test_flatten_attributes_skips_entries_without_key():
     assert _flatten_attributes(attrs) == {"api_uwi": "123"}
 
 
+def test_flatten_attributes_normalized_value_zero_not_treated_as_absent():
+    attrs = [{"key": "Depth", "normalized_value": 0, "value": 9999}]
+    assert _flatten_attributes(attrs) == {"Depth": 0}
+
+
+def test_flatten_attributes_single_occurrence_with_subattributes():
+    attrs = [{"key": "Gun_Perforating_Windows", "normalized_value": "", "value": "", "subattributes": [
+        {"key": "No_Shots", "normalized_value": 210,  "value": None},
+        {"key": "From",     "normalized_value": 1426, "value": None},
+        {"key": "To",       "normalized_value": 1461, "value": None},
+    ]}]
+    result = _flatten_attributes(attrs)
+    assert result == {
+        "Gun_Perforating_Windows_No_Shots": 210,
+        "Gun_Perforating_Windows_From":     1426,
+        "Gun_Perforating_Windows_To":       1461,
+    }
+
+
+def test_flatten_attributes_single_occurrence_not_numbered():
+    attrs = [{"key": "County", "normalized_value": "Cook", "value": None, "subattributes": None}]
+    result = _flatten_attributes(attrs)
+    assert "County" in result
+    assert "County_1" not in result
+
+
+def test_flatten_attributes_repeated_field_with_subattributes_is_numbered():
+    attrs = [
+        {"key": "Casing_Record", "normalized_value": "", "value": "", "subattributes": [
+            {"key": "Size",         "normalized_value": 8.625, "value": None},
+            {"key": "Depth",        "normalized_value": 1567,  "value": None},
+            {"key": "Sacks_Cement", "normalized_value": 470,   "value": None},
+        ]},
+        {"key": "Casing_Record", "normalized_value": None, "value": "", "subattributes": [
+            {"key": "Size",         "normalized_value": 13.375, "value": None},
+            {"key": "Depth",        "normalized_value": 293,    "value": None},
+            {"key": "Sacks_Cement", "normalized_value": 225,    "value": None},
+        ]},
+    ]
+    result = _flatten_attributes(attrs)
+    assert result == {
+        "Casing_Record_1_Size":         8.625,
+        "Casing_Record_1_Depth":        1567,
+        "Casing_Record_1_Sacks_Cement": 470,
+        "Casing_Record_2_Size":         13.375,
+        "Casing_Record_2_Depth":        293,
+        "Casing_Record_2_Sacks_Cement": 225,
+    }
+
+
+def test_flatten_attributes_repeated_simple_field_is_numbered():
+    attrs = [
+        {"key": "Note", "normalized_value": "first",  "value": None, "subattributes": None},
+        {"key": "Note", "normalized_value": "second", "value": None, "subattributes": None},
+    ]
+    assert _flatten_attributes(attrs) == {"Note_1": "first", "Note_2": "second"}
+
+
+def test_flatten_attributes_null_subattributes_treated_as_simple():
+    attrs = [{"key": "Well_Name", "normalized_value": "Test", "value": None, "subattributes": None}]
+    assert _flatten_attributes(attrs) == {"Well_Name": "Test"}
+
+
+def test_flatten_attributes_subattributes_without_key_are_skipped():
+    attrs = [{"key": "Group", "normalized_value": "", "value": "", "subattributes": [
+        {"value": "no key"},
+        {"key": "Valid", "normalized_value": 42, "value": None},
+    ]}]
+    assert _flatten_attributes(attrs) == {"Group_Valid": 42}
+
+
+def test_flatten_attributes_none_entries_in_subattributes_are_skipped():
+    attrs = [{"key": "Group", "normalized_value": "", "value": "", "subattributes": [
+        None,
+        {"key": "Valid", "normalized_value": 99, "value": None},
+    ]}]
+    assert _flatten_attributes(attrs) == {"Group_Valid": 99}
+
+
+def test_flatten_attributes_mix_of_all_field_types():
+    attrs = [
+        {"key": "County",       "normalized_value": "Cook", "value": None, "subattributes": None},
+        {"key": "Casing_Record", "normalized_value": "", "value": "", "subattributes": [
+            {"key": "Size", "normalized_value": 8.625, "value": None},
+        ]},
+        {"key": "Casing_Record", "normalized_value": None, "value": "", "subattributes": [
+            {"key": "Size", "normalized_value": 13.375, "value": None},
+        ]},
+        {"key": "Gun_Perforating_Windows", "normalized_value": "", "value": "", "subattributes": [
+            {"key": "No_Shots", "normalized_value": 210, "value": None},
+        ]},
+    ]
+    result = _flatten_attributes(attrs)
+    assert result["County"] == "Cook"
+    assert result["Casing_Record_1_Size"] == 8.625
+    assert result["Casing_Record_2_Size"] == 13.375
+    assert result["Gun_Perforating_Windows_No_Shots"] == 210
+
+
 # ── extract() ────────────────────────────────────────────────────────────────
 
 def _make_db(records, record_groups, processors):

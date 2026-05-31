@@ -944,8 +944,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_cem_top_meth",
@@ -956,8 +955,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_cem_vol",
@@ -968,8 +966,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_depth",
@@ -980,8 +977,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_pulled",
@@ -992,8 +988,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_out_diam",
@@ -1004,8 +999,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_hole_size",
@@ -1016,8 +1010,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_top",
@@ -1028,8 +1021,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_top_meth",
@@ -1040,8 +1032,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_vol",
@@ -1052,8 +1043,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_depth",
@@ -1064,8 +1054,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_pulled",
@@ -1076,20 +1065,18 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_out_diam",
-        "column_description": "intermediate casing outer diameter",
+        "column_description": "Intermediate casing outer diameter",
         "data_type": "REAL",
         "examples": 9.625,
         "units": "inches",
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_hole_size",
@@ -1100,8 +1087,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_top",
@@ -1112,8 +1098,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_top_meth",
@@ -1124,8 +1109,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_vol",
@@ -1136,8 +1120,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_depth",
@@ -1148,8 +1131,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_pulled",
@@ -1160,8 +1142,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_out_diam",
@@ -1172,8 +1153,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_hole_size",
@@ -1184,8 +1164,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_cem_vol",
@@ -1196,8 +1175,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_depth",
@@ -1208,8 +1186,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_pulled",
@@ -1220,8 +1197,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_size",
@@ -1232,8 +1208,238 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
+    },
+    {
+        "column_name": "oth_cem_top",
+        "column_description": "Depth to the top of cement in the annulus outside the other casing",
+        "data_type": "REAL",
+        "examples": 500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_cem_vol",
+        "column_description": "Volume of cement injected into the other casing for the primary cement job",
+        "data_type": "REAL",
+        "examples": 300,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_csg_depth",
+        "column_description": "Depth of the other casing",
+        "data_type": "REAL",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_csg_out_diam",
+        "column_description": "Other casing outer diameter",
+        "data_type": "REAL",
+        "examples": 5.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "other_cem_top_meth",
+        "column_description": "Method for determining the other casing cement top",
+        "data_type": "TEXT",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "other_hole_size",
+        "column_description": "Diameter of the other casing hole",
+        "data_type": "REAL",
+        "examples": 7.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_1_depth",
+        "column_description": "Casing 1 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_1_size",
+        "column_description": "Casing 1 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_1_cem_vol",
+        "column_description": "Casing 1 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_depth",
+        "column_description": "Casing 2 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_size",
+        "column_description": "Casing 2 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_2_cem_vol",
+        "column_description": "Casing 2 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_depth",
+        "column_description": "Casing 3 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_size",
+        "column_description": "Casing 3 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_3_cem_vol",
+        "column_description": "Casing 3 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_depth",
+        "column_description": "Casing 4 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_size",
+        "column_description": "Casing 4 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_4_cem_vol",
+        "column_description": "Casing 4 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_depth",
+        "column_description": "Casing 5 setting depth",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_size",
+        "column_description": "Casing 5 outer diameter",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "casing_5_cem_vol",
+        "column_description": "Casing 5 cement volume",
+        "data_type": "REAL",
+        "examples": null,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
     },
     {
         "column_name": "tubing_type",
@@ -1253,126 +1459,6 @@
         "data_type": "REAL",
         "examples": 3.5,
         "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_cem_top",
-        "column_description": "Depth to the top of cement in the annulus outside the other casing",
-        "data_type": "REAL",
-        "examples": 500,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_cem_vol",
-        "column_description": "Volume of cement injected into the other casing for the primary cement job",
-        "data_type": "REAL",
-        "examples": 300,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_csg_depth",
-        "column_description": "Depth of the other casing",
-        "data_type": "REAL",
-        "examples": 1000,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_csg_out_diam",
-        "column_description": "Other casing outer diameter",
-        "data_type": "REAL",
-        "examples": 5.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "other_cem_top_meth",
-        "column_description": "Method for determining the other casing cement top",
-        "data_type": "TEXT",
-        "examples": "Cement bond log",
-        "units": null,
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "other_hole_size",
-        "column_description": "Diameter of the other casing hole",
-        "data_type": "REAL",
-        "examples": 7.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "csg_depth",
-        "column_description": "Casing depth",
-        "data_type": "REAL",
-        "examples": 1000,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "csg_out_diam",
-        "column_description": "Outer diameter of the casing",
-        "data_type": "REAL",
-        "examples": 9.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "csg_type",
-        "column_description": "Casing type",
-        "data_type": "TEXT",
-        "examples": "production",
-        "units": null,
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": "What field maps to this in the completion reports?"
-    },
-    {
-        "column_name": "cem_vol",
-        "column_description": "Volume of cement injected into the casing for the primary cement job",
-        "data_type": "REAL",
-        "examples": 300,
-        "units": "sacks",
         "application": "Illinois",
         "links": null,
         "unique": null,
