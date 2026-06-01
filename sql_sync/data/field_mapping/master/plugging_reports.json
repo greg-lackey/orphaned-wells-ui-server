@@ -1,0 +1,2142 @@
+[
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "County_Of",
+        "report_table": "plugging_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "County",
+        "report_table": "plugging_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "County",
+        "report_table": "plugging_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Operator_1",
+        "report_table": "plugging_reports",
+        "report_table_field": "operator",
+        "well_table": "well_header",
+        "well_table_field": "operator",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Operator_2",
+        "report_table": "plugging_reports",
+        "report_table_field": "operator_2",
+        "well_table": "well_header",
+        "well_table_field": "operator_2",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Well_Type",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_type",
+        "well_table": "sidetracks",
+        "well_table_field": "type",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Well_Name",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_name",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Well_Name",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_name",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Well_Name",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_name",
+        "well_table": "well_header",
+        "well_table_field": "well_name",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Ft_North",
+        "report_table": "plugging_reports",
+        "report_table_field": "north_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Ft_North",
+        "report_table": "plugging_reports",
+        "report_table_field": "north_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Ft_North",
+        "report_table": "plugging_reports",
+        "report_table_field": "north_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Ft_South",
+        "report_table": "plugging_reports",
+        "report_table_field": "south_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Ft_South",
+        "report_table": "plugging_reports",
+        "report_table_field": "south_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Ft_South",
+        "report_table": "plugging_reports",
+        "report_table_field": "south_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Ft_East",
+        "report_table": "plugging_reports",
+        "report_table_field": "east_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Ft_East",
+        "report_table": "plugging_reports",
+        "report_table_field": "east_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Ft_East",
+        "report_table": "plugging_reports",
+        "report_table_field": "east_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Ft_West",
+        "report_table": "plugging_reports",
+        "report_table_field": "west_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Ft_West",
+        "report_table": "plugging_reports",
+        "report_table_field": "west_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Ft_West",
+        "report_table": "plugging_reports",
+        "report_table_field": "south_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Corner",
+        "report_table": "plugging_reports",
+        "report_table_field": "corner",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Corner",
+        "report_table": "plugging_reports",
+        "report_table_field": "corner",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Corner",
+        "report_table": "plugging_reports",
+        "report_table_field": "west_ft",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "First_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "first_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "First_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "first_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "First_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "first_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Second_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "second_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Second_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "second_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Second_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "second_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Third_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "third_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Third_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "third_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Third_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "third_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Fourth_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "fourth_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Fourth_Quarter",
+        "report_table": "plugging_reports",
+        "report_table_field": "fourth_quarter",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Section",
+        "report_table": "plugging_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Section",
+        "report_table": "plugging_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Section",
+        "report_table": "plugging_reports",
+        "report_table_field": "section",
+        "well_table": "well_header",
+        "well_table_field": "section",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Township",
+        "report_table": "plugging_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Township",
+        "report_table": "plugging_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Twp",
+        "report_table": "plugging_reports",
+        "report_table_field": "township",
+        "well_table": "well_header",
+        "well_table_field": "township",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Range",
+        "report_table": "plugging_reports",
+        "report_table_field": "plss_range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Range",
+        "report_table": "plugging_reports",
+        "report_table_field": "plss_range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Range",
+        "report_table": "plugging_reports",
+        "report_table_field": "plss_range",
+        "well_table": "well_header",
+        "well_table_field": "range",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Principal_Meridian",
+        "report_table": "plugging_reports",
+        "report_table_field": "principal_meridian",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "County",
+        "report_table": "plugging_reports",
+        "report_table_field": "county",
+        "well_table": "well_header",
+        "well_table_field": "county",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Derrick_Floor",
+        "report_table": "plugging_reports",
+        "report_table_field": "elev_df",
+        "well_table": "well_header",
+        "well_table_field": "elev_df",
+        "Note": "new",
+        "Unnamed: 7": "Changed to elev_df"
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Ground",
+        "report_table": "plugging_reports",
+        "report_table_field": "elev_gr",
+        "well_table": "well_header",
+        "well_table_field": "elev_gr",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Elevation",
+        "report_table": "plugging_reports",
+        "report_table_field": "elev_gr",
+        "well_table": "well_header",
+        "well_table_field": "elev_gr",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Elevation",
+        "report_table": "plugging_reports",
+        "report_table_field": "elev_gr",
+        "well_table": "well_header",
+        "well_table_field": "elev_gr",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Total_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Total_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Total_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "tvd",
+        "well_table": "sidetracks",
+        "well_table_field": "tvd",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Formation",
+        "report_table": "plugging_reports",
+        "report_table_field": "prod_inj_form",
+        "well_table": "production_testing",
+        "well_table_field": "form",
+        "Note": "new",
+        "Unnamed: 7": "Changed to prod_inj_form. We've been storing this in production_tests or injection_tests. We can probabl"
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Permit_Issued",
+        "report_table": "plugging_reports",
+        "report_table_field": "permit_date",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_date",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Permit_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Permit_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Permit_Number",
+        "report_table": "plugging_reports",
+        "report_table_field": "permit_number",
+        "well_table": "sidetracks",
+        "well_table_field": "permit_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Permit_Issued_To",
+        "report_table": "plugging_reports",
+        "report_table_field": "permittee",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Permittee",
+        "report_table": "plugging_reports",
+        "report_table_field": "permittee",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Permittee",
+        "report_table": "plugging_reports",
+        "report_table_field": "permittee",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Drilling_Began",
+        "report_table": "plugging_reports",
+        "report_table_field": "spud_date",
+        "well_table": "sidetracks",
+        "well_table_field": "spud_date",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Drilling_Completed",
+        "report_table": "plugging_reports",
+        "report_table_field": "comp_date",
+        "well_table": "sidetracks",
+        "well_table_field": "comp_date",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Kind_Of_Drilling_Tool",
+        "report_table": "plugging_reports",
+        "report_table_field": "drill_tool_type",
+        "well_table": "sidetracks",
+        "well_table_field": "drill_tool_type",
+        "Note": "new",
+        "Unnamed: 7": "Not sure what to do with this one. The completion reports explicitly specify the drill tool type "
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Plugging_Began",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_start_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_start_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Date_Plugging_Began",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_start_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_start_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Date_Plugging_Began",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_start_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_start_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Plugging_Completed",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_comp_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_comp_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Date_Plugging_Completed",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_comp_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_comp_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Date_Plugging_Complete",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_comp_date",
+        "well_table": "plugs",
+        "well_table_field": "plug_comp_date",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Lessor",
+        "report_table": "plugging_reports",
+        "report_table_field": "lessor_name",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Lessor_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "lessor_addr",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Lessee",
+        "report_table": "plugging_reports",
+        "report_table_field": "lessee_name",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Lessee_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "lessee_addr",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Drilling_Contractor",
+        "report_table": "plugging_reports",
+        "report_table_field": "drilling_contractor",
+        "well_table": "plugs",
+        "well_table_field": "drilling_contractor",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Drilling_Contractor_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "drill_contractor_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Filled_With",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_type",
+        "well_table": "plugs",
+        "well_table_field": "type",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Filled_With",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_type",
+        "well_table": "plugs",
+        "well_table_field": "type",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Filled_With",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_type",
+        "well_table": "plugs",
+        "well_table_field": "type",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Filled_With_From",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_from",
+        "well_table": "plugs",
+        "well_table_field": "bot_depth",
+        "Note": "Added depth for clarity. ",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::From",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_from",
+        "well_table": "plugs",
+        "well_table_field": "bot_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::From",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_from",
+        "well_table": "plugs",
+        "well_table_field": "bot_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Filled_With_To",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_to",
+        "well_table": "plugs",
+        "well_table_field": "top_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::To",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_to",
+        "well_table": "plugs",
+        "well_table_field": "top_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::To",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_to",
+        "well_table": "plugs",
+        "well_table_field": "top_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Kind_Of_Plug",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_type",
+        "well_table": "plugs",
+        "well_table_field": "type",
+        "Note": "*Haven't seen",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Kind_Of_Plug_From",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_from",
+        "well_table": "plugs",
+        "well_table_field": "bot_depth",
+        "Note": "any forms with",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Details_Of_Plugging::Kind_Of_Plug_To",
+        "report_table": "plugging_reports",
+        "report_table_field": "plug_to",
+        "well_table": "plugs",
+        "well_table_field": "top_depth",
+        "Note": "these entries",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Workable_Coal_Beds",
+        "report_table": "plugging_reports",
+        "report_table_field": "workable_coal_present_ft",
+        "well_table": "plugs",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Workable_Coal_Present",
+        "report_table": "plugging_reports",
+        "report_table_field": "workable_coal_present_ft",
+        "well_table": "plugs",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Workable_Coal",
+        "report_table": "plugging_reports",
+        "report_table_field": "workable_coal_present_ft",
+        "well_table": "plugs",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Have_Pits_Filled_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "pits_fillled_yes",
+        "well_table": "plugs",
+        "well_table_field": "pits_filled",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Have_Pits_Filled_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "pits_filled_no",
+        "well_table": "plugs",
+        "well_table_field": "pits_filled",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Equipment_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "equipment_yes",
+        "well_table": "plugs",
+        "well_table_field": "equipment",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Equipment_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "equipment_no",
+        "well_table": "plugs",
+        "well_table_field": "equipment",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Concrete_Bases_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "concrete_base_yes",
+        "well_table": "plugs",
+        "well_table_field": "concrete_bases",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Concrete_Bases_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "concrete_base_no",
+        "well_table": "plugs",
+        "well_table_field": "concrete_bases",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Debris_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "debris_yes",
+        "well_table": "plugs",
+        "well_table_field": "debris",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Debris_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "debris_no",
+        "well_table": "plugs",
+        "well_table_field": "debris",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Cut_Off_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "casing_cutoff_yes",
+        "well_table": "plugs",
+        "well_table_field": "casing_cut",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Cut_Off_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "casing_cutoff_no",
+        "well_table": "plugs",
+        "well_table_field": "casing_cut",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Well_Site_Leveled_Yes",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_site_leveled_yes",
+        "well_table": "plugs",
+        "well_table_field": "well_site_leveled",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Well_Site_Leveled_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "well_site_leveled_no",
+        "well_table": "plugs",
+        "well_table_field": "well_site_leveled",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Date_Amount_Last_Production",
+        "report_table": "plugging_reports",
+        "report_table_field": "last_prod_date",
+        "well_table": "plugs",
+        "well_table_field": "last_prod_date",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_out_diam",
+        "well_table": "casings",
+        "well_table_field": "out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Put_In_Feet",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_put_in_feet",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Put_In_Inches",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_put_in_inches",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Pulled_Out_Feet",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_out_feet",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Pulled_Out_Inches",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_out_inches",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Left_In_Feet",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_left_in_feet",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Left_In_Inches",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_left_in_inches",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Casing_Record::Remarks",
+        "report_table": "plugging_reports",
+        "report_table_field": "csg_remarks",
+        "well_table": "casings",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_production",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_production",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Class_II",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_class_2",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Class_II",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_class_2",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Observation",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_observation",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Observation",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_observation",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Gas_Storage",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_gas_storage",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Gas_Storage",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_gas_storage",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Replug",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_replug",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Replug",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_replug",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Other",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_other",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Other",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_other",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Other_Text",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_other_txt",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*All related to report_type",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Other_Text",
+        "report_table": "plugging_reports",
+        "report_table_field": "report_type_other_txt",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "*and new(probably)",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Permittee_Number",
+        "report_table": "plugging_reports",
+        "report_table_field": "operator_number",
+        "well_table": "well_header",
+        "well_table_field": "operator_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Permittee_Number",
+        "report_table": "plugging_reports",
+        "report_table_field": "operator_number",
+        "well_table": "well_header",
+        "well_table_field": "operator_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Reference_No",
+        "report_table": "plugging_reports",
+        "report_table_field": "ref_number",
+        "well_table": "well_header",
+        "well_table_field": "ref_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Reference_Number",
+        "report_table": "plugging_reports",
+        "report_table_field": "ref_number",
+        "well_table": "well_header",
+        "well_table_field": "ref_number",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Plugging_Contractor",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_contractor_name",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_contractor_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Plugged_Back_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "pbtd",
+        "well_table": "sidetracks",
+        "well_table_field": "pbtd",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Plugback_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "pbtd",
+        "well_table": "sidetracks",
+        "well_table_field": "pbtd",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Freshwater_Zone",
+        "report_table": "plugging_reports",
+        "report_table_field": "freshwater_zone_base",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Freshwater_Zone",
+        "report_table": "plugging_reports",
+        "report_table_field": "freshwater_zone_base",
+        "well_table": "well_header",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Producing_Injection_Interval::From",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_injection_interval_from",
+        "well_table": "plugs",
+        "well_table_field": "bot",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Injection_Interval::From",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_injection_interval_from",
+        "well_table": "plugs",
+        "well_table_field": "bot",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Producing_Injection_Interval::To",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_injection_interval_to",
+        "well_table": "plugs",
+        "well_table_field": "top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Injection_Interval::To",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_injection_interval_to",
+        "well_table": "plugs",
+        "well_table_field": "top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Plugback_Procedure",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugback_procedure_desc",
+        "well_table": "plugs",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Describe_Plugback_Proceedure",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugback_procedure_desc",
+        "well_table": "plugs",
+        "well_table_field": null,
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Comments",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_comments",
+        "well_table": "plugs",
+        "well_table_field": "details",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Comments",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_comments",
+        "well_table": "plugs",
+        "well_table_field": "details",
+        "Note": "new",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_size",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_size",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "surf_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "surf_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_hole_size",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_hole_size",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "surf_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "surf_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Surface_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Surface_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "surface_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "surf_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_size",
+        "well_table": "casings",
+        "well_table_field": "int_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_size",
+        "well_table": "casings",
+        "well_table_field": "int_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "int_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "int_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "int_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "int_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_hole_size",
+        "well_table": "casings",
+        "well_table_field": "int_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_hole_size",
+        "well_table": "casings",
+        "well_table_field": "int_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "int_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "int_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Intermediate_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "int_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Intermediate_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "intermediate_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "int_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_size",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_size",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Setting_Depth",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_setting_depth",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_depth",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Sacks_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_sacks_cement",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_vol",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_hole_size",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Hole_Size",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_hole_size",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_out_diam",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Top_Of_Cement",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_top_of_cement",
+        "well_table": "casings",
+        "well_table_field": "prod_cem_top",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Production_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Production_Casing_Removed",
+        "report_table": "plugging_reports",
+        "report_table_field": "production_casing_removed",
+        "well_table": "casings",
+        "well_table_field": "prod_csg_pulled",
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Permittee_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "permitee_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Inspector_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Permittee_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "permitee_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Date",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "City_State",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_city_state",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Zip",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_zip",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_B_PluggingReport",
+        "ogrre_field": "Inspector_Not_Present",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_not_present",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Inspector_Not_Present",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_not_present",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Signature_Of_Permittee",
+        "report_table": "plugging_reports",
+        "report_table_field": "operator_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "City_State_Zip",
+        "report_table": "plugging_reports",
+        "report_table_field": "city_state_zip",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Inspector_Present",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_present",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Activity_Inspection::Inspector_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Activity_Inspection::Activity",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspection_activity",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Activity_Inspection::Date",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspection_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Manager_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "manager_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Manager_Signature_Date",
+        "report_table": "plugging_reports",
+        "report_table_field": "manager_signature_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Plugging_Information_Sent",
+        "report_table": "plugging_reports",
+        "report_table_field": "plugging_information_sent",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Inspector_Visit_Pick_Up",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_visit_pick_up",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Inspector",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_C_PluggingReport",
+        "ogrre_field": "Inspector_Date",
+        "report_table": "plugging_reports",
+        "report_table_field": "inspector_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Controller_Of_Well",
+        "report_table": "plugging_reports",
+        "report_table_field": "controller",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": "No examples of admin_info stuff being found in any Plugging reports?",
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Controller_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "controller_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Controller_Position",
+        "report_table": "plugging_reports",
+        "report_table_field": "controller_position",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Controller_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "controller_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Supervising_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "supervisor_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Supervising_Position",
+        "report_table": "plugging_reports",
+        "report_table_field": "supervisor_position",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Supervising_Address",
+        "report_table": "plugging_reports",
+        "report_table_field": "supervisor_address",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Notary_Name_From_Seal",
+        "report_table": "plugging_reports",
+        "report_table_field": "notary_name",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Day",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_day",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Month",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_month",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Year",
+        "report_table": "plugging_reports",
+        "report_table_field": "signature_year",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Commission_Expires",
+        "report_table": "plugging_reports",
+        "report_table_field": "commission_expiration_date",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    },
+    {
+        "google_processor": "IL_Ver_A_PluggingReport",
+        "ogrre_field": "Notary_Signature",
+        "report_table": "plugging_reports",
+        "report_table_field": "notary_signature",
+        "well_table": null,
+        "well_table_field": null,
+        "Note": null,
+        "Unnamed: 7": null
+    }
+]

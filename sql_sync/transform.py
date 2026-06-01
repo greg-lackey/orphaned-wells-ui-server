@@ -30,6 +30,7 @@ Usage:
 """
 
 import argparse
+import itertools
 import json
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -181,25 +182,51 @@ def transform(extracted: dict, mappings: dict[str, list[dict]]) -> dict:
             master_rows: dict[str, dict] = {}
 
             for ogrre_name, col_info in proc_map.items():
-                value = record.get(ogrre_name)
-
-                report_col = col_info["report_col"]
-                if report_col:
-                    # Non-None overwrites: a None value only writes the initial slot;
-                    # a non-None value always wins (handles dual field-name aliases
-                    # such as Casing_Record_Depth / Casing_Record_1_Depth → casing_1_depth).
-                    if value is not None or report_col not in report_row:
-                        report_row[report_col] = value
-
+                report_col   = col_info["report_col"]
                 master_table = col_info["master_table"]
-                master_col = col_info["master_col"]
-                if master_table and master_col:
-                    if master_table not in master_rows:
-                        master_rows[master_table] = dict(meta)
-                        if master_table in NATURAL_KEY_TABLES:
-                            master_rows[master_table]["id"] = int(api) if api else None
-                    if value is not None or master_col not in master_rows[master_table]:
-                        master_rows[master_table][master_col] = value
+                master_col   = col_info["master_col"]
+
+                if "::" in ogrre_name:
+                    # One-to-many subattribute field (e.g. "Casing_Record::Depth").
+                    # _flatten_attributes emits either Key_Sub (single occurrence) or
+                    # Key_N_Sub (multiple occurrences).  We collect all occurrences and
+                    # write to report_col_1, report_col_2, … automatically.
+                    parent, sub = ogrre_name.split("::", 1)
+                    single_key = f"{parent}_{sub}"
+                    if single_key in record:
+                        occurrences = [(1, record[single_key])]
+                    else:
+                        occurrences = []
+                        for n in itertools.count(1):
+                            key = f"{parent}_{n}_{sub}"
+                            if key not in record:
+                                break
+                            occurrences.append((n, record[key]))
+                    for n, value in occurrences:
+                        if report_col:
+                            report_row[f"{report_col}_{n}"] = value
+                        if n == 1 and master_table and master_col:
+                            if master_table not in master_rows:
+                                master_rows[master_table] = dict(meta)
+                                if master_table in NATURAL_KEY_TABLES:
+                                    master_rows[master_table]["id"] = int(api) if api else None
+                            if master_col not in master_rows[master_table]:
+                                master_rows[master_table][master_col] = value
+                else:
+                    value = record.get(ogrre_name)
+                    if report_col:
+                        # Non-None overwrites: a None value only writes the initial slot;
+                        # a non-None value always wins (handles dual field-name aliases
+                        # such as Casing_Record_Depth / Casing_Record_1_Depth → casing_1_depth).
+                        if value is not None or report_col not in report_row:
+                            report_row[report_col] = value
+                    if master_table and master_col:
+                        if master_table not in master_rows:
+                            master_rows[master_table] = dict(meta)
+                            if master_table in NATURAL_KEY_TABLES:
+                                master_rows[master_table]["id"] = int(api) if api else None
+                        if value is not None or master_col not in master_rows[master_table]:
+                            master_rows[master_table][master_col] = value
 
             by_table[report_table].append(report_row)
 

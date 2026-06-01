@@ -770,7 +770,7 @@
         "not_null": null
     },
     {
-        "column_name": "log_date",
+        "column_name": "log_date_1",
         "column_description": "date that wireline/electric logs were run",
         "data_type": "date",
         "examples": "1970-05-01T00:00:00",
@@ -781,7 +781,95 @@
         "not_null": null
     },
     {
-        "column_name": "log_type",
+        "column_name": "log_date_2",
+        "column_description": "date that wireline/electric logs were run",
+        "data_type": "date",
+        "examples": "1970-05-01T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_date_3",
+        "column_description": "date that wireline/electric logs were run",
+        "data_type": "date",
+        "examples": "1970-05-01T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_date_4",
+        "column_description": "date that wireline/electric logs were run",
+        "data_type": "date",
+        "examples": "1970-05-01T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_date_5",
+        "column_description": "date that wireline/electric logs were run",
+        "data_type": "date",
+        "examples": "1970-05-01T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_type_1",
+        "column_description": "Wireline/electric log type",
+        "data_type": "text",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_type_2",
+        "column_description": "Wireline/electric log type",
+        "data_type": "text",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_type_3",
+        "column_description": "Wireline/electric log type",
+        "data_type": "text",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_type_4",
+        "column_description": "Wireline/electric log type",
+        "data_type": "text",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "log_type_5",
         "column_description": "Wireline/electric log type",
         "data_type": "text",
         "examples": "Cement bond log",
@@ -866,8 +954,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_cem_top_meth",
@@ -878,8 +965,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_cem_vol",
@@ -890,8 +976,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_depth",
@@ -902,8 +987,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_pulled",
@@ -914,8 +998,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_csg_out_diam",
@@ -926,8 +1009,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "surf_hole_size",
@@ -938,8 +1020,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_top",
@@ -950,8 +1031,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_top_meth",
@@ -962,8 +1042,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_cem_vol",
@@ -974,8 +1053,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_depth",
@@ -986,8 +1064,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_pulled",
@@ -998,20 +1075,18 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_csg_out_diam",
-        "column_description": "Intermediate casing outer diameter",
+        "column_description": "intermediate casing outer diameter",
         "data_type": "double precision",
         "examples": 9.625,
         "units": "inches",
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "int_hole_size",
@@ -1022,8 +1097,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_top",
@@ -1034,8 +1108,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_top_meth",
@@ -1046,8 +1119,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_cem_vol",
@@ -1058,8 +1130,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_depth",
@@ -1070,8 +1141,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_pulled",
@@ -1082,8 +1152,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_csg_out_diam",
@@ -1094,8 +1163,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "prod_hole_size",
@@ -1106,8 +1174,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_cem_vol",
@@ -1118,8 +1185,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_depth",
@@ -1130,8 +1196,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_pulled",
@@ -1142,8 +1207,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "liner_size",
@@ -1154,260 +1218,7 @@
         "application": "Illinois",
         "links": null,
         "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_cem_top",
-        "column_description": "Depth to the top of cement in the annulus outside the other casing",
-        "data_type": "double precision",
-        "examples": 500,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_cem_vol",
-        "column_description": "Volume of cement injected into the other casing for the primary cement job",
-        "data_type": "double precision",
-        "examples": 300,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_csg_depth",
-        "column_description": "Depth of the other casing",
-        "data_type": "double precision",
-        "examples": 1000,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "oth_csg_out_diam",
-        "column_description": "Other casing outer diameter",
-        "data_type": "double precision",
-        "examples": 5.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "other_cem_top_meth",
-        "column_description": "Method for determining the other casing cement top",
-        "data_type": "text",
-        "examples": "Cement bond log",
-        "units": null,
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "other_hole_size",
-        "column_description": "Diameter of the other casing hole",
-        "data_type": "double precision",
-        "examples": 7.5,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_1_depth",
-        "column_description": "Casing 1 setting depth",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_1_size",
-        "column_description": "Casing 1 outer diameter",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_1_cem_vol",
-        "column_description": "Casing 1 cement volume",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_2_depth",
-        "column_description": "Casing 2 setting depth",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_2_size",
-        "column_description": "Casing 2 outer diameter",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_2_cem_vol",
-        "column_description": "Casing 2 cement volume",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_3_depth",
-        "column_description": "Casing 3 setting depth",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_3_size",
-        "column_description": "Casing 3 outer diameter",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_3_cem_vol",
-        "column_description": "Casing 3 cement volume",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_4_depth",
-        "column_description": "Casing 4 setting depth",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_4_size",
-        "column_description": "Casing 4 outer diameter",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_4_cem_vol",
-        "column_description": "Casing 4 cement volume",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_5_depth",
-        "column_description": "Casing 5 setting depth",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "feet",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_5_size",
-        "column_description": "Casing 5 outer diameter",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "inches",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
-    },
-    {
-        "column_name": "casing_5_cem_vol",
-        "column_description": "Casing 5 cement volume",
-        "data_type": "double precision",
-        "examples": null,
-        "units": "sacks",
-        "application": "Illinois",
-        "links": null,
-        "unique": null,
-        "not_null": null,
-        "Unnamed: 9": null
+        "not_null": null
     },
     {
         "column_name": "tubing_type",
@@ -1432,7 +1243,117 @@
         "not_null": null
     },
     {
-        "column_name": "packer_type",
+        "column_name": "oth_cem_top",
+        "column_description": "Depth to the top of cement in the annulus outside the other casing",
+        "data_type": "double precision",
+        "examples": 500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_cem_vol",
+        "column_description": "Volume of cement injected into the other casing for the primary cement job",
+        "data_type": "double precision",
+        "examples": 300,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_csg_depth",
+        "column_description": "Depth of the other casing",
+        "data_type": "double precision",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "oth_csg_out_diam",
+        "column_description": "Other casing outer diameter",
+        "data_type": "double precision",
+        "examples": 5.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "other_cem_top_meth",
+        "column_description": "Method for determining the other casing cement top",
+        "data_type": "text",
+        "examples": "Cement bond log",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "other_hole_size",
+        "column_description": "Diameter of the other casing hole",
+        "data_type": "double precision",
+        "examples": 7.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "csg_depth",
+        "column_description": "Casing depth",
+        "data_type": "double precision",
+        "examples": 1000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "csg_out_diam",
+        "column_description": "Outer diameter of the casing",
+        "data_type": "double precision",
+        "examples": 9.5,
+        "units": "inches",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "csg_type",
+        "column_description": "Casing type",
+        "data_type": "text",
+        "examples": "production",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "cem_vol",
+        "column_description": "Volume of cement injected into the casing for the primary cement job",
+        "data_type": "double precision",
+        "examples": 300,
+        "units": "sacks",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "packer_type_1",
         "column_description": "Description of the packer used in the well",
         "data_type": "text",
         "examples": "Brown(Baker)D Hanger/Packer",
@@ -1443,7 +1364,51 @@
         "not_null": null
     },
     {
-        "column_name": "packer_depth",
+        "column_name": "packer_type_2",
+        "column_description": "Description of the packer used in the well",
+        "data_type": "text",
+        "examples": "Brown(Baker)D Hanger/Packer",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "packer_type_3",
+        "column_description": "Description of the packer used in the well",
+        "data_type": "text",
+        "examples": "Brown(Baker)D Hanger/Packer",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "packer_depth_1",
+        "column_description": "Depth of the packer in the well",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "packer_depth_2",
+        "column_description": "Depth of the packer in the well",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "packer_depth_3",
         "column_description": "Depth of the packer in the well",
         "data_type": "double precision",
         "examples": 4500,
@@ -1465,7 +1430,51 @@
         "not_null": null
     },
     {
-        "column_name": "lithology",
+        "column_name": "lithology_1",
+        "column_description": "Lithology of the target formation for production or injection",
+        "data_type": "text",
+        "examples": "Sandstone",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "lithology_2",
+        "column_description": "Lithology of the target formation for production or injection",
+        "data_type": "text",
+        "examples": "Sandstone",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "lithology_3",
+        "column_description": "Lithology of the target formation for production or injection",
+        "data_type": "text",
+        "examples": "Sandstone",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "lithology_4",
+        "column_description": "Lithology of the target formation for production or injection",
+        "data_type": "text",
+        "examples": "Sandstone",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "lithology_5",
         "column_description": "Lithology of the target formation for production or injection",
         "data_type": "text",
         "examples": "Sandstone",
@@ -1564,7 +1573,7 @@
         "not_null": null
     },
     {
-        "column_name": "comp_form",
+        "column_name": "comp_form_1",
         "column_description": "Formation in which the well was completed",
         "data_type": "text",
         "examples": "Mt Simon",
@@ -1575,7 +1584,51 @@
         "not_null": null
     },
     {
-        "column_name": "perf_from",
+        "column_name": "comp_form_2",
+        "column_description": "Formation in which the well was completed",
+        "data_type": "text",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "comp_form_3",
+        "column_description": "Formation in which the well was completed",
+        "data_type": "text",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "comp_form_4",
+        "column_description": "Formation in which the well was completed",
+        "data_type": "text",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "comp_form_5",
+        "column_description": "Formation in which the well was completed",
+        "data_type": "text",
+        "examples": "Mt Simon",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_from_1",
         "column_description": "Shallowest depth at which the well was perforated",
         "data_type": "double precision",
         "examples": 4500,
@@ -1586,7 +1639,51 @@
         "not_null": null
     },
     {
-        "column_name": "perf_int",
+        "column_name": "perf_from_2",
+        "column_description": "Shallowest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_from_3",
+        "column_description": "Shallowest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_from_4",
+        "column_description": "Shallowest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_from_5",
+        "column_description": "Shallowest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 4500,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_int_1",
         "column_description": "interval over which the well was perforated",
         "data_type": "text",
         "examples": "4500-5000",
@@ -1597,7 +1694,51 @@
         "not_null": null
     },
     {
-        "column_name": "perf_shots",
+        "column_name": "perf_int_2",
+        "column_description": "interval over which the well was perforated",
+        "data_type": "text",
+        "examples": "4500-5000",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_int_3",
+        "column_description": "interval over which the well was perforated",
+        "data_type": "text",
+        "examples": "4500-5000",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_int_4",
+        "column_description": "interval over which the well was perforated",
+        "data_type": "text",
+        "examples": "4500-5000",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_int_5",
+        "column_description": "interval over which the well was perforated",
+        "data_type": "text",
+        "examples": "4500-5000",
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_shots_1",
         "column_description": "Description of the perforation shots",
         "data_type": "integer",
         "examples": "8/ft",
@@ -1608,7 +1749,95 @@
         "not_null": null
     },
     {
-        "column_name": "perf_to",
+        "column_name": "perf_shots_2",
+        "column_description": "Description of the perforation shots",
+        "data_type": "integer",
+        "examples": "8/ft",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_shots_3",
+        "column_description": "Description of the perforation shots",
+        "data_type": "integer",
+        "examples": "8/ft",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_shots_4",
+        "column_description": "Description of the perforation shots",
+        "data_type": "integer",
+        "examples": "8/ft",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_shots_5",
+        "column_description": "Description of the perforation shots",
+        "data_type": "integer",
+        "examples": "8/ft",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_to_1",
+        "column_description": "Deepest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_to_2",
+        "column_description": "Deepest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_to_3",
+        "column_description": "Deepest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_to_4",
+        "column_description": "Deepest depth at which the well was perforated",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": "feet",
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "perf_to_5",
         "column_description": "Deepest depth at which the well was perforated",
         "data_type": "double precision",
         "examples": 5000,
@@ -1630,7 +1859,7 @@
         "not_null": null
     },
     {
-        "column_name": "treatment_acidized_fractures_other",
+        "column_name": "treatment_acidized_fractures_other_1",
         "column_description": "Description of the treatment applied during completion",
         "data_type": "text",
         "examples": "9/7/84 Acidized 4000 gal 15% HCL",
@@ -1641,7 +1870,51 @@
         "not_null": null
     },
     {
-        "column_name": "treatment_amnt",
+        "column_name": "treatment_acidized_fractures_other_2",
+        "column_description": "Description of the treatment applied during completion",
+        "data_type": "text",
+        "examples": "9/7/84 Acidized 4000 gal 15% HCL",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_acidized_fractures_other_3",
+        "column_description": "Description of the treatment applied during completion",
+        "data_type": "text",
+        "examples": "9/7/84 Acidized 4000 gal 15% HCL",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_acidized_fractures_other_4",
+        "column_description": "Description of the treatment applied during completion",
+        "data_type": "text",
+        "examples": "9/7/84 Acidized 4000 gal 15% HCL",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_acidized_fractures_other_5",
+        "column_description": "Description of the treatment applied during completion",
+        "data_type": "text",
+        "examples": "9/7/84 Acidized 4000 gal 15% HCL",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_amnt_1",
         "column_description": "Amount of the treatment applied",
         "data_type": "text",
         "examples": "250 get 7370 + 250 gel 15%",
@@ -1652,7 +1925,29 @@
         "not_null": null
     },
     {
-        "column_name": "treatment_date",
+        "column_name": "treatment_amnt_2",
+        "column_description": "Amount of the treatment applied",
+        "data_type": "text",
+        "examples": "250 get 7370 + 250 gel 15%",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_amnt_3",
+        "column_description": "Amount of the treatment applied",
+        "data_type": "text",
+        "examples": "250 get 7370 + 250 gel 15%",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_date_1",
         "column_description": "date that treatment was applied",
         "data_type": "date",
         "examples": "2005-05-10T00:00:00",
@@ -1663,7 +1958,51 @@
         "not_null": null
     },
     {
-        "column_name": "treatment_from",
+        "column_name": "treatment_date_2",
+        "column_description": "date that treatment was applied",
+        "data_type": "date",
+        "examples": "2005-05-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_date_3",
+        "column_description": "date that treatment was applied",
+        "data_type": "date",
+        "examples": "2005-05-10T00:00:00",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_from_1",
+        "column_description": "Shallowest depth at which the well was treated",
+        "data_type": "double precision",
+        "examples": 4000,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_from_2",
+        "column_description": "Shallowest depth at which the well was treated",
+        "data_type": "double precision",
+        "examples": 4000,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_from_3",
         "column_description": "Shallowest depth at which the well was treated",
         "data_type": "double precision",
         "examples": 4000,
@@ -1718,7 +2057,29 @@
         "not_null": null
     },
     {
-        "column_name": "treatment_to",
+        "column_name": "treatment_to_1",
+        "column_description": "Deepest depth at which the treatment was applied",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_to_2",
+        "column_description": "Deepest depth at which the treatment was applied",
+        "data_type": "double precision",
+        "examples": 5000,
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "treatment_to_3",
         "column_description": "Deepest depth at which the treatment was applied",
         "data_type": "double precision",
         "examples": 5000,
@@ -1740,7 +2101,51 @@
         "not_null": null
     },
     {
-        "column_name": "open_hole_interval",
+        "column_name": "open_hole_interval_1",
+        "column_description": "interval over which the well has an open uncased hole",
+        "data_type": "double precision",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "open_hole_interval_2",
+        "column_description": "interval over which the well has an open uncased hole",
+        "data_type": "double precision",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "open_hole_interval_3",
+        "column_description": "interval over which the well has an open uncased hole",
+        "data_type": "double precision",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "open_hole_interval_4",
+        "column_description": "interval over which the well has an open uncased hole",
+        "data_type": "double precision",
+        "examples": "4000-5000",
+        "units": null,
+        "application": "Illinois",
+        "links": null,
+        "unique": null,
+        "not_null": null
+    },
+    {
+        "column_name": "open_hole_interval_5",
         "column_description": "interval over which the well has an open uncased hole",
         "data_type": "double precision",
         "examples": "4000-5000",

@@ -221,7 +221,20 @@ def schema_to_json(excel_file_path, institution, out_dir=None, type_map=None,
                 normalised = str(record["data_type"]).strip().lower()
                 if normalised in type_map:
                     record["data_type"] = type_map[normalised]
-            columns.append(record)
+            # max_occurrences: expand one row into col_1, col_2, … col_N
+            max_n = record.pop("max_occurrences", None)
+            try:
+                max_n = int(max_n) if max_n is not None else 1
+            except (TypeError, ValueError):
+                max_n = 1
+            if max_n > 1:
+                base_name = record["column_name"]
+                for n in range(1, max_n + 1):
+                    col = dict(record)
+                    col["column_name"] = f"{base_name}_{n}"
+                    columns.append(col)
+            else:
+                columns.append(record)
 
         out_path = os.path.join(schema_dir, f"{sheet}.json")
         with open(out_path, "w", encoding="utf-8") as f:

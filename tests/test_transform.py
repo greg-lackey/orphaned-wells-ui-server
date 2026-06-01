@@ -306,3 +306,106 @@ def test_non_none_does_not_overwrite_with_none():
     }
     result = transform(extracted, _ALIAS_MAPPING)
     assert result["completion_reports"][0]["casing_1_depth"] == 999
+
+
+# ── :: subattribute auto-numbering ────────────────────────────────────────────
+
+_COLON_MAPPING = {
+    "completion_reports": [
+        {
+            "google_processor": "ProcG",
+            "ogrre_field": "Casing_Record::Depth",
+            "report_table": "completion_reports",
+            "report_table_field": "csg_depth",
+            "well_table": None,
+            "well_table_field": None,
+        },
+        {
+            "google_processor": "ProcG",
+            "ogrre_field": "Casing_Record::Size",
+            "report_table": "completion_reports",
+            "report_table_field": "csg_out_diam",
+            "well_table": None,
+            "well_table_field": None,
+        },
+        {
+            "google_processor": "ProcB",
+            "ogrre_field": "Type_Of_Logs::Date",
+            "report_table": "completion_reports",
+            "report_table_field": "log_date",
+            "well_table": "logs",
+            "well_table_field": "log_date",
+        },
+    ]
+}
+
+
+def test_colon_single_occurrence_writes_to_numbered_1():
+    """A single-occurrence :: field writes to report_col_1."""
+    # _flatten_attributes emits Casing_Record_Depth (no number) for a single occurrence
+    extracted = {"ProcG": [_record("ProcG", "1234567890", Casing_Record_Depth=1500)]}
+    result = transform(extracted, _COLON_MAPPING)
+    row = result["completion_reports"][0]
+    assert row.get("csg_depth_1") == 1500
+    assert "csg_depth_2" not in row
+
+
+def test_colon_multi_occurrence_writes_to_numbered_columns():
+    """Multiple occurrences of a :: field write to report_col_1, _2, etc."""
+    extracted = {
+        "ProcG": [_record("ProcG", "1234567890",
+                           Casing_Record_1_Depth=1500,
+                           Casing_Record_2_Depth=2500,
+                           Casing_Record_3_Depth=3500)]
+    }
+    result = transform(extracted, _COLON_MAPPING)
+    row = result["completion_reports"][0]
+    assert row.get("csg_depth_1") == 1500
+    assert row.get("csg_depth_2") == 2500
+    assert row.get("csg_depth_3") == 3500
+    assert "csg_depth_4" not in row
+
+
+def test_colon_no_occurrence_writes_nothing():
+    """When neither single nor numbered keys exist, no numbered columns are written."""
+    extracted = {"ProcG": [_record("ProcG", "1234567890")]}
+    result = transform(extracted, _COLON_MAPPING)
+    row = result["completion_reports"][0]
+    assert "csg_depth_1" not in row
+
+
+def test_colon_multiple_subfields_same_parent():
+    """Two :: mappings sharing the same parent both expand correctly."""
+    extracted = {
+        "ProcG": [_record("ProcG", "1234567890",
+                           Casing_Record_1_Depth=100, Casing_Record_2_Depth=200,
+                           Casing_Record_1_Size=8.625, Casing_Record_2_Size=13.375)]
+    }
+    result = transform(extracted, _COLON_MAPPING)
+    row = result["completion_reports"][0]
+    assert row.get("csg_depth_1") == 100
+    assert row.get("csg_depth_2") == 200
+    assert row.get("csg_out_diam_1") == 8.625
+    assert row.get("csg_out_diam_2") == 13.375
+
+
+def test_colon_first_occurrence_written_to_master_table():
+    """For a :: field with a master_table, only the first occurrence is written."""
+    extracted = {
+        "ProcB": [_record("ProcB", "1234567890",
+                           Type_Of_Logs_1_Date="2020-01-01",
+                           Type_Of_Logs_2_Date="2020-06-01")]
+    }
+    result = transform(extracted, _COLON_MAPPING)
+    assert "logs" in result
+    assert result["logs"][0]["log_date"] == "2020-01-01"
+
+
+def test_colon_single_occurrence_master_table():
+    """Single-occurrence :: field writes its value to the master table."""
+    extracted = {
+        "ProcB": [_record("ProcB", "1234567890", Type_Of_Logs_Date="2023-01-15")]
+    }
+    result = transform(extracted, _COLON_MAPPING)
+    assert "logs" in result
+    assert result["logs"][0]["log_date"] == "2023-01-15"

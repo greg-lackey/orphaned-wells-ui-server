@@ -1747,7 +1747,7 @@
     },
     {
         "google_processor": "IL_Ver_B_Well_Completion",
-        "ogrre_field": "Type_Of_Logs:Type_Of_Log",
+        "ogrre_field": "Type_Of_Logs::Type_Of_Log",
         "report_table": "completion_reports",
         "report_table_field": "log_type",
         "well_table": "logs",
